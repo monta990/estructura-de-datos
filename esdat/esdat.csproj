@@ -51,6 +51,7 @@
     <Compile Include="AboutBox1.Designer.cs">
       <DependentUpon>AboutBox1.cs</DependentUpon>
     </Compile>
+    <Compile Include="ComplexNumber.cs" />
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
     </Compile>

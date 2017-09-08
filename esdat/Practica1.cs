@@ -12,8 +12,8 @@ namespace esdat
 {
     public partial class Practica1 : Form
     {
-        private int column = 0;
-        private int row = 0;
+        private int column = 0; //valor de columna
+        private int row = 0; //valor de renglon
         private int res; //variable para los trayparse
         public Practica1()
         {
@@ -24,7 +24,7 @@ namespace esdat
             txtElemento.Enabled = true;
             btnCapturar.Enabled = true;
         }
-        private void Practica1_Load(object sender, EventArgs e)
+        private void Practica1_Load(object sender, EventArgs e) //carga de datagredview
         {
             Initialize_dgvElementos();
             txtElemento.Focus();
@@ -165,6 +165,7 @@ namespace esdat
         {
             #region Codigo de captura a dgvElementos
             dgvElementos[column, row].Value = txtElemento.Text;
+            dgvElementos[column, row].Selected = false;
             column++;
             if (column == 3)
             {
@@ -175,6 +176,12 @@ namespace esdat
             {
                 txtElemento.Enabled = false;
                 btnCapturar.Enabled = false;
+            }
+            else
+            {
+                dgvElementos.CurrentCell = dgvElementos[1, row]; //controla movimeinto en la tabla
+                dgvElementos[1, row].Selected = false; 
+                dgvElementos[column, row].Selected = true;
             }
             if (row < 3)
             {
@@ -189,14 +196,22 @@ namespace esdat
         {
             dgvElementos.Rows.Clear();
             txtElemento.Clear();
+            txtElemento2.Clear();
             txtElemento.Focus();
             lbElementoIngresar.Text = "Elemento [0,0]:";
+            lbSeleccionado.Text = "[0,0]"; //a label seleccionado
+            Initialize_dgvElementos();
             botones();
         }
 
         private void btSalir_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void dgvElementos_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            lbSeleccionado.Text = "[" + e.RowIndex.ToString()+","+ e.ColumnIndex.ToString() + "]"; //a label sleccionado
         }
     }
 }

@@ -43,6 +43,8 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lbSeleccionado = new System.Windows.Forms.Label();
+            this.txtElemento2 = new System.Windows.Forms.TextBox();
+            this.lblValor2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvElementos)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -117,6 +119,7 @@
             this.dgvElementos.ReadOnly = true;
             this.dgvElementos.Size = new System.Drawing.Size(512, 150);
             this.dgvElementos.TabIndex = 6;
+            this.dgvElementos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvElementos_CellClick);
             // 
             // Column1
             // 
@@ -152,20 +155,22 @@
             this.groupBox1.Controls.Add(this.tbLimpiar);
             this.groupBox1.Location = new System.Drawing.Point(338, 10);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(187, 75);
+            this.groupBox1.Size = new System.Drawing.Size(187, 94);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Acciones";
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.lblValor2);
+            this.groupBox2.Controls.Add(this.txtElemento2);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.lbElementoIngresar);
             this.groupBox2.Controls.Add(this.txtElemento);
             this.groupBox2.Controls.Add(this.lblValor);
             this.groupBox2.Location = new System.Drawing.Point(13, 10);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(319, 75);
+            this.groupBox2.Size = new System.Drawing.Size(319, 94);
             this.groupBox2.TabIndex = 9;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Datos a ingresar en:";
@@ -187,6 +192,22 @@
             this.lbSeleccionado.Size = new System.Drawing.Size(28, 13);
             this.lbSeleccionado.TabIndex = 10;
             this.lbSeleccionado.Text = "[0,0]";
+            // 
+            // txtElemento2
+            // 
+            this.txtElemento2.Location = new System.Drawing.Point(92, 54);
+            this.txtElemento2.Name = "txtElemento2";
+            this.txtElemento2.Size = new System.Drawing.Size(134, 20);
+            this.txtElemento2.TabIndex = 4;
+            // 
+            // lblValor2
+            // 
+            this.lblValor2.AutoSize = true;
+            this.lblValor2.Location = new System.Drawing.Point(246, 60);
+            this.lblValor2.Name = "lblValor2";
+            this.lblValor2.Size = new System.Drawing.Size(11, 13);
+            this.lblValor2.TabIndex = 5;
+            this.lblValor2.Text = "*";
             // 
             // Practica1
             // 
@@ -229,5 +250,7 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lbSeleccionado;
+        private System.Windows.Forms.Label lblValor2;
+        private System.Windows.Forms.TextBox txtElemento2;
     }
 }

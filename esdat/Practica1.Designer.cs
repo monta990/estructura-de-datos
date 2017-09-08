@@ -30,7 +30,7 @@
         {
             this.lbElementoIngresar = new System.Windows.Forms.Label();
             this.txtElemento = new System.Windows.Forms.TextBox();
-            this.lblVALOR = new System.Windows.Forms.Label();
+            this.lblValor = new System.Windows.Forms.Label();
             this.btnCapturar = new System.Windows.Forms.Button();
             this.tbLimpiar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -64,14 +64,14 @@
             this.txtElemento.Size = new System.Drawing.Size(134, 20);
             this.txtElemento.TabIndex = 1;
             // 
-            // lblVALOR
+            // lblValor
             // 
-            this.lblVALOR.AutoSize = true;
-            this.lblVALOR.Location = new System.Drawing.Point(245, 30);
-            this.lblVALOR.Name = "lblVALOR";
-            this.lblVALOR.Size = new System.Drawing.Size(11, 13);
-            this.lblVALOR.TabIndex = 2;
-            this.lblVALOR.Text = "*";
+            this.lblValor.AutoSize = true;
+            this.lblValor.Location = new System.Drawing.Point(245, 30);
+            this.lblValor.Name = "lblValor";
+            this.lblValor.Size = new System.Drawing.Size(11, 13);
+            this.lblValor.TabIndex = 2;
+            this.lblValor.Text = "*";
             // 
             // btnCapturar
             // 
@@ -162,7 +162,7 @@
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.lbElementoIngresar);
             this.groupBox2.Controls.Add(this.txtElemento);
-            this.groupBox2.Controls.Add(this.lblVALOR);
+            this.groupBox2.Controls.Add(this.lblValor);
             this.groupBox2.Location = new System.Drawing.Point(13, 10);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(319, 75);
@@ -216,7 +216,7 @@
 
         private System.Windows.Forms.Label lbElementoIngresar;
         private System.Windows.Forms.TextBox txtElemento;
-        private System.Windows.Forms.Label lblVALOR;
+        private System.Windows.Forms.Label lblValor;
         private System.Windows.Forms.Button btnCapturar;
         private System.Windows.Forms.Button tbLimpiar;
         private System.Windows.Forms.Label label2;

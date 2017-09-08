@@ -32,7 +32,7 @@ namespace esdat
         public Practica1(string dataType) //se obtine del el tipo de dato seleciconado en el form anterior
         {
             InitializeComponent();
-            lblVALOR.Text = "(" + dataType + ")";
+            lblValor.Text = "(" + dataType + ")";
         }
         private void Initialize_dgvElementos() //creacion de campos para el datagredview
         {
@@ -53,7 +53,7 @@ namespace esdat
         {
             //inicio validaciones
             #region validaciones
-            if (lblVALOR.Text == "(INT)") //seleccionado int
+            if (lblValor.Text == "(INT)") //seleccionado int
             {
                 if (txtElemento.Text.Trim() == "") //se verifica si el campo esta vacio
                 {
@@ -72,7 +72,7 @@ namespace esdat
                     }
                 }
             }
-            if (lblVALOR.Text == "(DOUBLE)") //seleccionado double
+            if (lblValor.Text == "(DOUBLE)") //seleccionado double
             {
                 if (txtElemento.Text.Trim() == "") //que no exista campo vacio a capturar
                 {
@@ -98,7 +98,7 @@ namespace esdat
                     }
                 }
             }
-            if (lblVALOR.Text == "(DECIMAL)") //seleccionado decimal
+            if (lblValor.Text == "(DECIMAL)") //seleccionado decimal
             {
                 if (txtElemento.Text == "")
                 {
@@ -117,7 +117,7 @@ namespace esdat
                     }
                 }
             }
-            if (lblVALOR.Text == "(STRING)") //seleccionado string
+            if (lblValor.Text == "(STRING)") //seleccionado string
             {
                 if (txtElemento.Text == "")
                 {
@@ -137,7 +137,7 @@ namespace esdat
                     }
                 }
             }
-            if (lblVALOR.Text == "(CHAR)") //seleccionado string
+            if (lblValor.Text == "(CHAR)") //seleccionado string
             {
                 if (txtElemento.Text == "")
                 {

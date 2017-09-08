@@ -17,9 +17,19 @@ namespace esdat
             InitializeComponent();
         }
 
-        private void unidad2ArreglosToolStripMenuItem_Click(object sender, EventArgs e)
+        private void btSalir_Click(object sender, EventArgs e)
         {
+            Application.Exit();
+        }
 
+        private void practicaUnoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new TipoDatos().ShowDialog();
+        }
+
+        private void acercaDeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new AboutBox1().ShowDialog();
         }
     }
 }

@@ -85,7 +85,7 @@
             // practicaUnoToolStripMenuItem
             // 
             this.practicaUnoToolStripMenuItem.Name = "practicaUnoToolStripMenuItem";
-            this.practicaUnoToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
+            this.practicaUnoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.practicaUnoToolStripMenuItem.Text = "Practica Uno";
             this.practicaUnoToolStripMenuItem.Click += new System.EventHandler(this.practicaUnoToolStripMenuItem_Click);
             // 
@@ -105,7 +105,8 @@
             // 
             this.fibonnachiToolStripMenuItem.Name = "fibonnachiToolStripMenuItem";
             this.fibonnachiToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
-            this.fibonnachiToolStripMenuItem.Text = "Fibonnachi";
+            this.fibonnachiToolStripMenuItem.Text = "Fibonnaci";
+            this.fibonnachiToolStripMenuItem.Click += new System.EventHandler(this.fibonnachiToolStripMenuItem_Click);
             // 
             // mCDToolStripMenuItem
             // 
@@ -172,7 +173,7 @@
             // acercaDeToolStripMenuItem
             // 
             this.acercaDeToolStripMenuItem.Name = "acercaDeToolStripMenuItem";
-            this.acercaDeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.acercaDeToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
             this.acercaDeToolStripMenuItem.Text = "Acerca de";
             this.acercaDeToolStripMenuItem.Click += new System.EventHandler(this.acercaDeToolStripMenuItem_Click);
             // 

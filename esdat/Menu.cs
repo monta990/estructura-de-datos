@@ -31,5 +31,10 @@ namespace esdat
         {
             new AboutBox1().ShowDialog();
         }
+
+        private void fibonnachiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new Fibonacci().ShowDialog();
+        }
     }
 }

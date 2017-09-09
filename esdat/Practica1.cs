@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Numerics;
 
 namespace esdat
 {
@@ -32,7 +33,14 @@ namespace esdat
         public Practica1(string dataType) //se obtine del el tipo de dato seleciconado en el form anterior
         {
             InitializeComponent();
+            txtElemento2.Hide();
+            lblValor2.Hide();
             lblValor.Text = "(" + dataType + ")";
+            if (lblValor.Text == "(COMPLEX)")
+            {
+                txtElemento2.Show();
+                lblValor2.Show();
+            }
         }
         private void Initialize_dgvElementos() //creacion de campos para el datagredview
         {
@@ -156,6 +164,11 @@ namespace esdat
                         txtElemento.Focus();
                     }
                 }
+            }
+            if (lblValor.Text == "(COMPLEX)")
+            {
+                Complex c1 = Complex.FromPolarCoordinates(10, .524);
+                lbSeleccionado.Text = (c1.ToString()+"i");
             }
             #endregion
             //fin validaciones

@@ -36,11 +36,13 @@
             this.rBint = new System.Windows.Forms.RadioButton();
             this.btnContinuar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.rBComplex = new System.Windows.Forms.RadioButton();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.rBComplex);
             this.groupBox1.Controls.Add(this.rBstring);
             this.groupBox1.Controls.Add(this.rBchar);
             this.groupBox1.Controls.Add(this.rBdecimal);
@@ -127,6 +129,17 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Elige un tipo de dato de lista y a continuación,\r\nda click en Continuar";
             // 
+            // rBComplex
+            // 
+            this.rBComplex.AutoSize = true;
+            this.rBComplex.Location = new System.Drawing.Point(18, 146);
+            this.rBComplex.Name = "rBComplex";
+            this.rBComplex.Size = new System.Drawing.Size(76, 17);
+            this.rBComplex.TabIndex = 5;
+            this.rBComplex.TabStop = true;
+            this.rBComplex.Text = "COMPLEX";
+            this.rBComplex.UseVisualStyleBackColor = true;
+            // 
             // TipoDatos
             // 
             this.AcceptButton = this.btnContinuar;
@@ -155,5 +168,6 @@
         private System.Windows.Forms.RadioButton rBdouble;
         private System.Windows.Forms.RadioButton rBint;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.RadioButton rBComplex;
     }
 }

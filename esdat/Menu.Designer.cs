@@ -104,32 +104,32 @@
             // fibonnachiToolStripMenuItem
             // 
             this.fibonnachiToolStripMenuItem.Name = "fibonnachiToolStripMenuItem";
-            this.fibonnachiToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
-            this.fibonnachiToolStripMenuItem.Text = "Fibonnaci";
+            this.fibonnachiToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
+            this.fibonnachiToolStripMenuItem.Text = "Fibonacci";
             this.fibonnachiToolStripMenuItem.Click += new System.EventHandler(this.fibonnachiToolStripMenuItem_Click);
             // 
             // mCDToolStripMenuItem
             // 
             this.mCDToolStripMenuItem.Name = "mCDToolStripMenuItem";
-            this.mCDToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
+            this.mCDToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
             this.mCDToolStripMenuItem.Text = "MCD";
             // 
             // busquedaBinariaToolStripMenuItem
             // 
             this.busquedaBinariaToolStripMenuItem.Name = "busquedaBinariaToolStripMenuItem";
-            this.busquedaBinariaToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
+            this.busquedaBinariaToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
             this.busquedaBinariaToolStripMenuItem.Text = "Busqueda Binaria";
             // 
             // pruebaDeFibonnachiToolStripMenuItem
             // 
             this.pruebaDeFibonnachiToolStripMenuItem.Name = "pruebaDeFibonnachiToolStripMenuItem";
-            this.pruebaDeFibonnachiToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
-            this.pruebaDeFibonnachiToolStripMenuItem.Text = "Prueba de Fibonnachi";
+            this.pruebaDeFibonnachiToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
+            this.pruebaDeFibonnachiToolStripMenuItem.Text = "Prueba de Fibonacci";
             // 
             // fractalDeHilbertToolStripMenuItem
             // 
             this.fractalDeHilbertToolStripMenuItem.Name = "fractalDeHilbertToolStripMenuItem";
-            this.fractalDeHilbertToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
+            this.fractalDeHilbertToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
             this.fractalDeHilbertToolStripMenuItem.Text = "Fractal de Hilbert";
             // 
             // unidad2ArreglosToolStripMenuItem

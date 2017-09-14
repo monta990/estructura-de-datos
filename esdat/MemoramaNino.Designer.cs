@@ -1,6 +1,6 @@
 ﻿namespace esdat
 {
-    partial class Memorama
+    partial class MemoramaNino
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Memorama));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MemoramaNino));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -39,9 +39,10 @@
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.axWMP1 = new AxWMPLib.AxWindowsMediaPlayer();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.tSSLdescintentos = new System.Windows.Forms.ToolStripStatusLabel();
             this.tSSlintentos = new System.Windows.Forms.ToolStripStatusLabel();
+            this.tSStLjugador = new System.Windows.Forms.ToolStripStatusLabel();
+            this.tSSLnombre = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.reinicarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.elegirMemoramaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -90,6 +91,7 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.pictureBox1.DoubleClick += new System.EventHandler(this.pictureBox1_DoubleClick);
             // 
             // pictureBox2
             // 
@@ -187,9 +189,10 @@
             // statusStrip1
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel1,
-            this.toolStripStatusLabel2,
-            this.tSSlintentos});
+            this.tSSLdescintentos,
+            this.tSSlintentos,
+            this.tSStLjugador,
+            this.tSSLnombre});
             this.statusStrip1.Location = new System.Drawing.Point(0, 628);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(567, 25);
@@ -197,19 +200,12 @@
             this.statusStrip1.TabIndex = 13;
             this.statusStrip1.Text = "statusStrip1";
             // 
-            // toolStripStatusLabel1
+            // tSSLdescintentos
             // 
-            this.toolStripStatusLabel1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(72, 20);
-            this.toolStripStatusLabel1.Text = "Intentos:";
-            // 
-            // toolStripStatusLabel2
-            // 
-            this.toolStripStatusLabel2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
-            this.toolStripStatusLabel2.Size = new System.Drawing.Size(13, 20);
-            this.toolStripStatusLabel2.Text = "0";
+            this.tSSLdescintentos.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tSSLdescintentos.Name = "tSSLdescintentos";
+            this.tSSLdescintentos.Size = new System.Drawing.Size(72, 20);
+            this.tSSLdescintentos.Text = "Intentos:";
             // 
             // tSSlintentos
             // 
@@ -217,6 +213,19 @@
             this.tSSlintentos.Name = "tSSlintentos";
             this.tSSlintentos.Size = new System.Drawing.Size(18, 20);
             this.tSSlintentos.Text = "0";
+            // 
+            // tSStLjugador
+            // 
+            this.tSStLjugador.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.tSStLjugador.Name = "tSStLjugador";
+            this.tSStLjugador.Size = new System.Drawing.Size(71, 20);
+            this.tSStLjugador.Text = "Jugador:";
+            // 
+            // tSSLnombre
+            // 
+            this.tSSLnombre.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.tSSLnombre.Name = "tSSLnombre";
+            this.tSSLnombre.Size = new System.Drawing.Size(0, 20);
             // 
             // menuStrip1
             // 
@@ -260,18 +269,21 @@
             this.nivel1ToolStripMenuItem.Name = "nivel1ToolStripMenuItem";
             this.nivel1ToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
             this.nivel1ToolStripMenuItem.Text = "Nivel 1";
+            this.nivel1ToolStripMenuItem.Click += new System.EventHandler(this.nivel1ToolStripMenuItem_Click);
             // 
             // nivel2ToolStripMenuItem
             // 
             this.nivel2ToolStripMenuItem.Name = "nivel2ToolStripMenuItem";
             this.nivel2ToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
             this.nivel2ToolStripMenuItem.Text = "Nivel 2";
+            this.nivel2ToolStripMenuItem.Click += new System.EventHandler(this.nivel2ToolStripMenuItem_Click);
             // 
             // nivel3ToolStripMenuItem
             // 
             this.nivel3ToolStripMenuItem.Name = "nivel3ToolStripMenuItem";
             this.nivel3ToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
             this.nivel3ToolStripMenuItem.Text = "Nivel 3";
+            this.nivel3ToolStripMenuItem.Click += new System.EventHandler(this.nivel3ToolStripMenuItem_Click);
             // 
             // salirToolStripMenuItem
             // 
@@ -376,7 +388,7 @@
             this.pictureBox16.TabStop = false;
             this.pictureBox16.Click += new System.EventHandler(this.pictureBox16_Click);
             // 
-            // Memorama
+            // MemoramaNino
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -406,7 +418,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
-            this.Name = "Memorama";
+            this.Name = "MemoramaNino";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Memorama";
             this.Load += new System.EventHandler(this.Memorama_Load);
@@ -448,9 +460,8 @@
         private System.Windows.Forms.PictureBox pictureBox8;
         private AxWMPLib.AxWindowsMediaPlayer axWMP1;
         private System.Windows.Forms.StatusStrip statusStrip1;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        private System.Windows.Forms.ToolStripStatusLabel tSSLdescintentos;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
         private System.Windows.Forms.ToolStripStatusLabel tSSlintentos;
         private System.Windows.Forms.ToolStripMenuItem reinicarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem elegirMemoramaToolStripMenuItem;
@@ -467,5 +478,7 @@
         private System.Windows.Forms.PictureBox pictureBox14;
         private System.Windows.Forms.PictureBox pictureBox15;
         private System.Windows.Forms.PictureBox pictureBox16;
+        private System.Windows.Forms.ToolStripStatusLabel tSSLnombre;
+        private System.Windows.Forms.ToolStripStatusLabel tSStLjugador;
     }
 }

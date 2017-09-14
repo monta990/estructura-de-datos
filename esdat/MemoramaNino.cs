@@ -10,7 +10,7 @@ using System.Threading;
 using System.Windows.Forms;
 ///To-Do
 /// Version niño y niña
-/// 3 niveles de dificultad (ajustar mini segundos)
+/// 3 niveles de dificultad (ajustar mini segundos) check
 /// Mensajes para intentos
 /// 8-12
 /// 12-24
@@ -20,24 +20,26 @@ using System.Windows.Forms;
 
 namespace esdat
 {
-    public partial class Memorama : Form
+    public partial class MemoramaNino : Form
     {
-        public Memorama()
+        public MemoramaNino(int dificultad, string nombre)
         {
             InitializeComponent();
+            this.nombre = nombre; //cargar de manera local el nombre
         }
-        private int[] set = { 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8};
-        private bool esperando = false;
+        public int dificultad = 1000; //milisegundo de segundos de volteo de tarjeta, nivel 1 = 1000, nivel = 500 , nivel =250
+        private int[] set = { 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8}; //arreglo para cartas
+        private bool esperando = false; //esperando la segunda tarjeta
         private int temporal;
-        private PictureBox imagentemporal;
-        private int intentos;
+        private string nombre;
+        private PictureBox imagentemporal; //control de tarjeta volteada
+        private int intentos; //contador de intentos
         private void restart()
         {
             set = set.OrderBy(s => Guid.NewGuid()).ToArray(); //generar shuffle
-            //MessageBox.Show(string.Join("  ", set));
             for (int i = 1; i <= 16; i++)
             {
-                //pictureBox1.Image = Properties.Resources.reverso;
+                //pictureBox[i].Image = Properties.Resources.reverso;
             }
             pictureBox1.Image = Properties.Resources.reverso;
             pictureBox2.Image = Properties.Resources.reverso;
@@ -129,8 +131,9 @@ namespace esdat
             {
                 voltear.Image = esdat.Properties.Resources._8;
             }
-            voltear.Update();
-            if (esperando == false)
+            voltear.Enabled = false; //fix click en si mismo
+            voltear.Update(); //actualiza el picturebox
+            if (esperando == false) //al seleccionar la primera carta
             {
                 temporal = elemento;
                 imagentemporal = voltear;
@@ -138,23 +141,26 @@ namespace esdat
             }
             else
             {
-                intentos++;
-                tSSlintentos.Text = intentos.ToString();
+                intentos++; //suma uno al intento
+                tSSlintentos.Text = intentos.ToString(); //muestra la cantidad de intentos
                 if (set[elemento]==set[temporal]) //verificar pares, si precionado tiene el el valor del actual
                 {
-                    //MessageBox.Show("Que buena memoria tienes.");
+                    //MessageBox.Show("Que buena memoria tienes."); //debug
                     imagentemporal.Enabled = false;
                     imagentemporal.Visible = false;
                     voltear.Enabled = false;
                     voltear.Visible = false;
                 }
-                else
+                else //si no fueron iguales las 2 cartas elegidas
                 {
-                    Thread.Sleep(250); //tiempo que se muestra un par erroneo
+                    Thread.Sleep(dificultad); //tiempo que se muestra un par erroneo, seleccionada desde el menu dificultad
                     imagentemporal.Image = Properties.Resources.reverso; //regreso al reverso
                     voltear.Image = Properties.Resources.reverso; //regreso al reverso
+                    imagentemporal.Enabled = true; //fix click en si mismo
+                    voltear.Enabled = true; //fix click en si mismo
+
                 }
-                esperando = false;
+                esperando = false; 
             }
         }
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -239,8 +245,9 @@ namespace esdat
         private void Memorama_Load(object sender, EventArgs e)
         {
             restart();
-            //axWMP1.URL = @"D:\BGM.mp3"; //archivo a reproducir
+            axWMP1.URL = @"D:\BGM.mp3"; //archivo a reproducir
             axWMP1.Visible = false;
+            tSSLnombre.Text = this.nombre;
         }
 
         private void reinicarToolStripMenuItem_Click(object sender, EventArgs e)
@@ -251,6 +258,29 @@ namespace esdat
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void nivel1ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            dificultad = 1000; //nivel 1
+            restart();
+        }
+
+        private void nivel2ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            dificultad = 500; //nivel 2
+            restart();
+        }
+
+        private void nivel3ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            dificultad = 250; //nivel 3
+            restart();
+        }
+
+        private void pictureBox1_DoubleClick(object sender, EventArgs e)
+        {
+            
         }
     }
 }

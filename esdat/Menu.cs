@@ -39,7 +39,7 @@ namespace esdat
 
         private void memoramaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            new Memorama().ShowDialog();
+            new SelectorMemorama().ShowDialog();
         }
     }
 }

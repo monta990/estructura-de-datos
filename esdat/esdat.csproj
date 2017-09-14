@@ -66,11 +66,11 @@
     <Compile Include="MCD.Designer.cs">
       <DependentUpon>MCD.cs</DependentUpon>
     </Compile>
-    <Compile Include="Memorama.cs">
+    <Compile Include="MemoramaNino.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Memorama.Designer.cs">
-      <DependentUpon>Memorama.cs</DependentUpon>
+    <Compile Include="MemoramaNino.Designer.cs">
+      <DependentUpon>MemoramaNino.cs</DependentUpon>
     </Compile>
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
@@ -86,6 +86,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SelectorMemorama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectorMemorama.Designer.cs">
+      <DependentUpon>SelectorMemorama.cs</DependentUpon>
+    </Compile>
     <Compile Include="TipoDatos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,8 +113,8 @@
     <EmbeddedResource Include="MCD.resx">
       <DependentUpon>MCD.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Memorama.resx">
-      <DependentUpon>Memorama.cs</DependentUpon>
+    <EmbeddedResource Include="MemoramaNino.resx">
+      <DependentUpon>MemoramaNino.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
@@ -126,6 +132,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="SelectorMemorama.resx">
+      <DependentUpon>SelectorMemorama.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TipoDatos.resx">
       <DependentUpon>TipoDatos.cs</DependentUpon>
     </EmbeddedResource>
@@ -193,6 +202,12 @@
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\niño.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\niña.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

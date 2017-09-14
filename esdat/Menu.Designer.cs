@@ -46,6 +46,8 @@
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.acercaDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btSalir = new System.Windows.Forms.Button();
+            this.matrizToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.memoramaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -134,6 +136,8 @@
             // 
             // unidad2ArreglosToolStripMenuItem
             // 
+            this.unidad2ArreglosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.matrizToolStripMenuItem});
             this.unidad2ArreglosToolStripMenuItem.Name = "unidad2ArreglosToolStripMenuItem";
             this.unidad2ArreglosToolStripMenuItem.Size = new System.Drawing.Size(116, 20);
             this.unidad2ArreglosToolStripMenuItem.Text = "Unidad 2: Arreglos";
@@ -187,6 +191,21 @@
             this.btSalir.UseVisualStyleBackColor = true;
             this.btSalir.Click += new System.EventHandler(this.btSalir_Click);
             // 
+            // matrizToolStripMenuItem
+            // 
+            this.matrizToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.memoramaToolStripMenuItem});
+            this.matrizToolStripMenuItem.Name = "matrizToolStripMenuItem";
+            this.matrizToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.matrizToolStripMenuItem.Text = "Matriz";
+            // 
+            // memoramaToolStripMenuItem
+            // 
+            this.memoramaToolStripMenuItem.Name = "memoramaToolStripMenuItem";
+            this.memoramaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.memoramaToolStripMenuItem.Text = "Memorama";
+            this.memoramaToolStripMenuItem.Click += new System.EventHandler(this.memoramaToolStripMenuItem_Click);
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -224,6 +243,8 @@
         private System.Windows.Forms.Button btSalir;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem acercaDeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem matrizToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem memoramaToolStripMenuItem;
     }
 }
 

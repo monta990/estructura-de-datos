@@ -36,5 +36,10 @@ namespace esdat
         {
             new Fibonacci().ShowDialog();
         }
+
+        private void memoramaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new Memorama().ShowDialog();
+        }
     }
 }

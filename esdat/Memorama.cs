@@ -6,7 +6,17 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
 using System.Windows.Forms;
+///To-Do
+/// Version niño y niña
+/// 3 niveles de dificultad (ajustar mini segundos)
+/// Mensajes para intentos
+/// 8-12
+/// 12-24
+/// 24 ->
+/// 
+
 
 namespace esdat
 {
@@ -16,7 +26,42 @@ namespace esdat
         {
             InitializeComponent();
         }
-        private int[] set = { 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7 ,8, 8 };
+        private int[] set = { 1, 1, 2, 2, 3, 3, 4, 4};
+        private bool esperando = false;
+        private int temporal;
+        private PictureBox imagentemporal;
+        private int intentos;
+        private void restart()
+        {
+            set = set.OrderBy(s => Guid.NewGuid()).ToArray(); //generar shuffle
+            //MessageBox.Show(string.Join("  ", set));
+            pictureBox1.Image = Properties.Resources.reverso;
+            pictureBox2.Image = Properties.Resources.reverso;
+            pictureBox3.Image = Properties.Resources.reverso;
+            pictureBox4.Image = Properties.Resources.reverso;
+            pictureBox5.Image = Properties.Resources.reverso;
+            pictureBox6.Image = Properties.Resources.reverso;
+            pictureBox7.Image = Properties.Resources.reverso;
+            pictureBox8.Image = Properties.Resources.reverso;
+            pictureBox1.Visible = true;
+            pictureBox2.Visible = true;
+            pictureBox3.Visible = true;
+            pictureBox4.Visible = true;
+            pictureBox5.Visible = true;
+            pictureBox6.Visible = true;
+            pictureBox7.Visible = true;
+            pictureBox8.Visible = true;
+            pictureBox1.Enabled = true;
+            pictureBox2.Enabled = true;
+            pictureBox3.Enabled = true;
+            pictureBox4.Enabled = true;
+            pictureBox5.Enabled = true;
+            pictureBox6.Enabled = true;
+            pictureBox7.Enabled = true;
+            pictureBox8.Enabled = true;
+            intentos = 0; //reincia contador de intentos
+            tSSlintentos.Text = intentos.ToString(); //reinicia label de intentos
+        }
 
         private void flip(PictureBox voltear, int elemento) //voltear la carta
         {
@@ -53,6 +98,33 @@ namespace esdat
             if (set[elemento] == 8)
             {
                 voltear.Image = esdat.Properties.Resources._8;
+            }
+            voltear.Update();
+            if (esperando == false)
+            {
+                temporal = elemento;
+                imagentemporal = voltear;
+                esperando = true;
+            }
+            else
+            {
+                intentos++;
+                tSSlintentos.Text = intentos.ToString();
+                if (set[elemento]==set[temporal]) //verificar pares, si precionado tiene el el valor del actual
+                {
+                    //MessageBox.Show("Que buena memoria tienes.");
+                    imagentemporal.Enabled = false;
+                    imagentemporal.Visible = false;
+                    voltear.Enabled = false;
+                    voltear.Visible = false;
+                }
+                else
+                {
+                    Thread.Sleep(250); //tiempo que se muestra un par erroneo
+                    imagentemporal.Image = Properties.Resources.reverso; //regreso al reverso
+                    voltear.Image = Properties.Resources.reverso; //regreso al reverso
+                }
+                esperando = false;
             }
         }
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -95,10 +167,21 @@ namespace esdat
             flip(pictureBox8,7);
         }
 
-        private void btShuffle_Click(object sender, EventArgs e)
+        private void Memorama_Load(object sender, EventArgs e)
         {
-            set = set.OrderBy(s => Guid.NewGuid()).ToArray(); //generar shuffle
-            MessageBox.Show(string.Join("  ",set));
+            restart();
+            axWMP1.URL = @"D:\BGM.mp3"; //archivo a reproducior
+            axWMP1.Visible = false;
+        }
+
+        private void reinicarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            restart();
+        }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

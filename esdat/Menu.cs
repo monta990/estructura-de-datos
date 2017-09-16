@@ -41,5 +41,10 @@ namespace esdat
         {
             new SelectorMemorama().ShowDialog();
         }
+
+        private void mCDToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new MCD().ShowDialog();
+        }
     }
 }

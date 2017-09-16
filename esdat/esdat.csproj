@@ -66,6 +66,12 @@
     <Compile Include="MCD.Designer.cs">
       <DependentUpon>MCD.cs</DependentUpon>
     </Compile>
+    <Compile Include="MemoramaNina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MemoramaNina.designer.cs">
+      <DependentUpon>MemoramaNina.cs</DependentUpon>
+    </Compile>
     <Compile Include="MemoramaNino.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,6 +118,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MCD.resx">
       <DependentUpon>MCD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MemoramaNina.resx">
+      <DependentUpon>MemoramaNina.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MemoramaNino.resx">
       <DependentUpon>MemoramaNino.cs</DependentUpon>
@@ -208,6 +217,33 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\niña.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\memoramanina.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\memorananina1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\memorananina2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\memorananina3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\memorananina4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\memorananina5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\memorananina6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\memorananina7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\memorananina8.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

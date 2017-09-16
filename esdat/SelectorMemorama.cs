@@ -21,7 +21,14 @@ namespace esdat
 
         private void btNino_Click(object sender, EventArgs e)
         {
-            new MemoramaNino(dificultad,nombre).ShowDialog();
+            if (tBnombre.Text.Trim()=="")
+            {
+                MessageBox.Show("Ingresa tu nombre","Falta tu nombre",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
+            else
+            {
+                new MemoramaNino(dificultad, nombre).ShowDialog();
+            }
         }
 
         private void sToolStripMenuItem_Click(object sender, EventArgs e)
@@ -47,6 +54,23 @@ namespace esdat
         private void radioButton3_CheckedChanged(object sender, EventArgs e)
         {
             dificultad = 250;
+        }
+
+        private void SelectorMemorama_Load(object sender, EventArgs e)
+        {
+            rBprincipiante.Checked = true;
+        }
+
+        private void btNina_Click(object sender, EventArgs e)
+        {
+            if (tBnombre.Text.Trim() == "")
+            {
+                MessageBox.Show("Ingresa tu nombre", "Falta tu nombre", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                new MemoramaNina(dificultad, nombre).ShowDialog();
+            }
         }
     }
 }

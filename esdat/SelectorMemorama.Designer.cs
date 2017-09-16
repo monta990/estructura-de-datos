@@ -33,9 +33,9 @@
             this.tBnombre = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.rBprincipiante = new System.Windows.Forms.RadioButton();
+            this.rBexperto = new System.Windows.Forms.RadioButton();
             this.rBintermedio = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.rBprincipiante = new System.Windows.Forms.RadioButton();
             this.btNina = new System.Windows.Forms.Button();
             this.btNino = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
@@ -48,7 +48,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(8, 23);
+            this.label1.Location = new System.Drawing.Point(8, 39);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(220, 18);
@@ -58,7 +58,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(13, 212);
+            this.label2.Location = new System.Drawing.Point(13, 219);
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(218, 18);
@@ -67,11 +67,11 @@
             // 
             // tBnombre
             // 
-            this.tBnombre.Location = new System.Drawing.Point(13, 244);
+            this.tBnombre.Location = new System.Drawing.Point(13, 251);
             this.tBnombre.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.tBnombre.Name = "tBnombre";
             this.tBnombre.Size = new System.Drawing.Size(422, 24);
-            this.tBnombre.TabIndex = 2;
+            this.tBnombre.TabIndex = 3;
             this.tBnombre.Leave += new System.EventHandler(this.tBnombre_Leave);
             // 
             // label3
@@ -86,30 +86,30 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.radioButton3);
+            this.groupBox1.Controls.Add(this.rBexperto);
             this.groupBox1.Controls.Add(this.rBintermedio);
             this.groupBox1.Controls.Add(this.rBprincipiante);
-            this.groupBox1.Location = new System.Drawing.Point(13, 57);
+            this.groupBox1.Location = new System.Drawing.Point(13, 64);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.groupBox1.Size = new System.Drawing.Size(422, 138);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Selecciona dificultad";
+            this.groupBox1.Text = "Selecciona la dificultad";
             // 
-            // rBprincipiante
+            // rBexperto
             // 
-            this.rBprincipiante.AutoSize = true;
-            this.rBprincipiante.Location = new System.Drawing.Point(27, 26);
-            this.rBprincipiante.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.rBprincipiante.Name = "rBprincipiante";
-            this.rBprincipiante.Size = new System.Drawing.Size(328, 22);
-            this.rBprincipiante.TabIndex = 0;
-            this.rBprincipiante.TabStop = true;
-            this.rBprincipiante.Text = "Principiante (ver cartas por un segundo)";
-            this.rBprincipiante.UseVisualStyleBackColor = true;
-            this.rBprincipiante.CheckedChanged += new System.EventHandler(this.rBprincipiante_CheckedChanged);
+            this.rBexperto.AutoSize = true;
+            this.rBexperto.Location = new System.Drawing.Point(27, 90);
+            this.rBexperto.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.rBexperto.Name = "rBexperto";
+            this.rBexperto.Size = new System.Drawing.Size(374, 22);
+            this.rBexperto.TabIndex = 2;
+            this.rBexperto.TabStop = true;
+            this.rBexperto.Text = "Experto (ver cartas por un cuarto de segundo)";
+            this.rBexperto.UseVisualStyleBackColor = true;
+            this.rBexperto.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
             // 
             // rBintermedio
             // 
@@ -124,18 +124,18 @@
             this.rBintermedio.UseVisualStyleBackColor = true;
             this.rBintermedio.CheckedChanged += new System.EventHandler(this.rBintermedio_CheckedChanged);
             // 
-            // radioButton3
+            // rBprincipiante
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(27, 90);
-            this.radioButton3.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(374, 22);
-            this.radioButton3.TabIndex = 2;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Experto (ver cartas por un cuarto de segundo)";
-            this.radioButton3.UseVisualStyleBackColor = true;
-            this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
+            this.rBprincipiante.AutoSize = true;
+            this.rBprincipiante.Location = new System.Drawing.Point(27, 26);
+            this.rBprincipiante.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.rBprincipiante.Name = "rBprincipiante";
+            this.rBprincipiante.Size = new System.Drawing.Size(328, 22);
+            this.rBprincipiante.TabIndex = 0;
+            this.rBprincipiante.TabStop = true;
+            this.rBprincipiante.Text = "Principiante (ver cartas por un segundo)";
+            this.rBprincipiante.UseVisualStyleBackColor = true;
+            this.rBprincipiante.CheckedChanged += new System.EventHandler(this.rBprincipiante_CheckedChanged);
             // 
             // btNina
             // 
@@ -145,8 +145,9 @@
             this.btNina.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btNina.Name = "btNina";
             this.btNina.Size = new System.Drawing.Size(125, 188);
-            this.btNina.TabIndex = 6;
+            this.btNina.TabIndex = 5;
             this.btNina.UseVisualStyleBackColor = false;
+            this.btNina.Click += new System.EventHandler(this.btNina_Click);
             // 
             // btNino
             // 
@@ -156,7 +157,7 @@
             this.btNino.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btNino.Name = "btNino";
             this.btNino.Size = new System.Drawing.Size(125, 188);
-            this.btNino.TabIndex = 5;
+            this.btNino.TabIndex = 4;
             this.btNino.UseVisualStyleBackColor = false;
             this.btNino.Click += new System.EventHandler(this.btNino_Click);
             // 
@@ -177,14 +178,15 @@
             this.sToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(449, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(449, 28);
             this.menuStrip1.TabIndex = 8;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // sToolStripMenuItem
             // 
+            this.sToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sToolStripMenuItem.Name = "sToolStripMenuItem";
-            this.sToolStripMenuItem.Size = new System.Drawing.Size(133, 20);
+            this.sToolStripMenuItem.Size = new System.Drawing.Size(171, 24);
             this.sToolStripMenuItem.Text = "Salir a Menú Principal";
             this.sToolStripMenuItem.Click += new System.EventHandler(this.sToolStripMenuItem_Click);
             // 
@@ -208,6 +210,7 @@
             this.Name = "SelectorMemorama";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Selector de Memorama";
+            this.Load += new System.EventHandler(this.SelectorMemorama_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
@@ -224,7 +227,7 @@
         private System.Windows.Forms.TextBox tBnombre;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.RadioButton rBexperto;
         private System.Windows.Forms.RadioButton rBintermedio;
         private System.Windows.Forms.RadioButton rBprincipiante;
         private System.Windows.Forms.Button btNino;

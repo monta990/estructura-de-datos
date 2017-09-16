@@ -39,6 +39,8 @@
             this.pruebaDeFibonnachiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fractalDeHilbertToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.unidad2ArreglosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.matrizToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.memoramaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.unidad3ListasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.unidad4PilasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.unidad5ColasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -46,8 +48,6 @@
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.acercaDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btSalir = new System.Windows.Forms.Button();
-            this.matrizToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.memoramaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -87,7 +87,7 @@
             // practicaUnoToolStripMenuItem
             // 
             this.practicaUnoToolStripMenuItem.Name = "practicaUnoToolStripMenuItem";
-            this.practicaUnoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.practicaUnoToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.practicaUnoToolStripMenuItem.Text = "Practica Uno";
             this.practicaUnoToolStripMenuItem.Click += new System.EventHandler(this.practicaUnoToolStripMenuItem_Click);
             // 
@@ -115,6 +115,7 @@
             this.mCDToolStripMenuItem.Name = "mCDToolStripMenuItem";
             this.mCDToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
             this.mCDToolStripMenuItem.Text = "MCD";
+            this.mCDToolStripMenuItem.Click += new System.EventHandler(this.mCDToolStripMenuItem_Click);
             // 
             // busquedaBinariaToolStripMenuItem
             // 
@@ -141,6 +142,21 @@
             this.unidad2ArreglosToolStripMenuItem.Name = "unidad2ArreglosToolStripMenuItem";
             this.unidad2ArreglosToolStripMenuItem.Size = new System.Drawing.Size(116, 20);
             this.unidad2ArreglosToolStripMenuItem.Text = "Unidad 2: Arreglos";
+            // 
+            // matrizToolStripMenuItem
+            // 
+            this.matrizToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.memoramaToolStripMenuItem});
+            this.matrizToolStripMenuItem.Name = "matrizToolStripMenuItem";
+            this.matrizToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.matrizToolStripMenuItem.Text = "Matriz";
+            // 
+            // memoramaToolStripMenuItem
+            // 
+            this.memoramaToolStripMenuItem.Name = "memoramaToolStripMenuItem";
+            this.memoramaToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.memoramaToolStripMenuItem.Text = "Memorama";
+            this.memoramaToolStripMenuItem.Click += new System.EventHandler(this.memoramaToolStripMenuItem_Click);
             // 
             // unidad3ListasToolStripMenuItem
             // 
@@ -190,21 +206,6 @@
             this.btSalir.Text = "&Salir";
             this.btSalir.UseVisualStyleBackColor = true;
             this.btSalir.Click += new System.EventHandler(this.btSalir_Click);
-            // 
-            // matrizToolStripMenuItem
-            // 
-            this.matrizToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.memoramaToolStripMenuItem});
-            this.matrizToolStripMenuItem.Name = "matrizToolStripMenuItem";
-            this.matrizToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.matrizToolStripMenuItem.Text = "Matriz";
-            // 
-            // memoramaToolStripMenuItem
-            // 
-            this.memoramaToolStripMenuItem.Name = "memoramaToolStripMenuItem";
-            this.memoramaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.memoramaToolStripMenuItem.Text = "Memorama";
-            this.memoramaToolStripMenuItem.Click += new System.EventHandler(this.memoramaToolStripMenuItem_Click);
             // 
             // Menu
             // 

@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace esdat
 {
-    public partial class MemoramaNino : Form
+    public partial class MemoramaNina : Form
     {
-        public MemoramaNino(int dificultad, string nombre)
+        public MemoramaNina(int dificultad, string nombre)
         {
             InitializeComponent();
             this.nombre = nombre; //cargar de manera local el nombre
@@ -25,6 +25,7 @@ namespace esdat
         private string nombre; //nombre del juagador
         private PictureBox imagentemporal; //control de tarjeta volteada
         private int intentos; //contador de intentos
+
         private void Memorama_Load(object sender, EventArgs e)
         {
             restart();
@@ -48,38 +49,38 @@ namespace esdat
 #endregion
         private void flip(PictureBox voltear, int elemento) //voltear la carta
         {
-#region asignación de arreglo de cartas
+#region asignación de arreglo de cartas y su imagen
             if (set[elemento] == 1)
             {
-                voltear.Image = esdat.Properties.Resources._1;
+                voltear.Image = esdat.Properties.Resources.memorananina1;
             }
             if (set[elemento] == 2)
             {
-                voltear.Image = esdat.Properties.Resources._2;
+                voltear.Image = esdat.Properties.Resources.memorananina2;
             }
             if (set[elemento] == 3)
             {
-                voltear.Image = esdat.Properties.Resources._3;
+                voltear.Image = esdat.Properties.Resources.memorananina3;
             }
             if (set[elemento] == 4)
             {
-                voltear.Image = esdat.Properties.Resources._4;
+                voltear.Image = esdat.Properties.Resources.memorananina4;
             }
             if (set[elemento] == 5)
             {
-                voltear.Image = esdat.Properties.Resources._5;
+                voltear.Image = esdat.Properties.Resources.memorananina5;
             }
             if (set[elemento] == 6)
             {
-                voltear.Image = esdat.Properties.Resources._6;
+                voltear.Image = esdat.Properties.Resources.memorananina6;
             }
             if (set[elemento] == 7)
             {
-                voltear.Image = esdat.Properties.Resources._7;
+                voltear.Image = esdat.Properties.Resources.memorananina7;
             }
             if (set[elemento] == 8)
             {
-                voltear.Image = esdat.Properties.Resources._8;
+                voltear.Image = esdat.Properties.Resources.memorananina8;
             }
 #endregion
             voltear.Enabled = false; //fix click en si mismo

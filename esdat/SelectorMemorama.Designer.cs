@@ -117,10 +117,10 @@
             this.rBintermedio.Location = new System.Drawing.Point(27, 58);
             this.rBintermedio.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.rBintermedio.Name = "rBintermedio";
-            this.rBintermedio.Size = new System.Drawing.Size(341, 22);
+            this.rBintermedio.Size = new System.Drawing.Size(347, 22);
             this.rBintermedio.TabIndex = 1;
             this.rBintermedio.TabStop = true;
-            this.rBintermedio.Text = "Intermedio (ver cartas por medio segundo";
+            this.rBintermedio.Text = "Intermedio (ver cartas por medio segundo)";
             this.rBintermedio.UseVisualStyleBackColor = true;
             this.rBintermedio.CheckedChanged += new System.EventHandler(this.rBintermedio_CheckedChanged);
             // 

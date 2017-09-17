@@ -17,11 +17,12 @@ namespace esdat
         {
             InitializeComponent();
             this.nombre = nombre; //cargar de manera local el nombre
+            this.dificultad = dificultad; //se asigna dificultad
         }
-        public int dificultad; //milisegundo de segundos de volteo de tarjeta, nivel 1 = 1000, nivel = 500 , nivel =250
+        public int dificultad; //milisegundos para mostrar la carta, principiante = 1000, intermedio = 500 , experto =250
         private int[] set = { 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8}; //arreglo para cartas
         private bool esperando = false; //esperando la segunda tarjeta
-        private int temporal;
+        private int temporal; //se almacena la primera carta volteada
         private string nombre; //nombre del juagador
         private PictureBox imagentemporal; //control de tarjeta volteada
         private int intentos; //contador de intentos
@@ -231,17 +232,17 @@ namespace esdat
 
         private void nivel1ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            dificultad = 1000; //principiante
+            dificultad = 1000; //difucultad principiante
             restart();
         }
         private void nivel2ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            dificultad = 500; //intermedio
+            dificultad = 500; //dificultad intermedio
             restart();
         }
         private void nivel3ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            dificultad = 250; //facil
+            dificultad = 250; //dificultad facil
             restart();
         }
     }

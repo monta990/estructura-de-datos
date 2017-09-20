@@ -153,6 +153,16 @@ namespace esdat.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap MCD {
+            get {
+                object obj = ResourceManager.GetObject("MCD", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap memoramanina {
             get {
                 object obj = ResourceManager.GetObject("memoramanina", resourceCulture);

@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+//to-do
+//validaciones
 
 namespace esdat
 {
@@ -19,10 +21,11 @@ namespace esdat
 
         private int MCDmetodo(int a, int b)
         {
-            if (a < 0 & b < 0)
+            if (a < 0 || b < 0)
             {
-                MessageBox.Show("Solo positivos");
-                return -1;
+                a = a < 0 ? a * -1 : a;
+                b = b < 0 ? b * -1 : b;
+                return MCDmetodo (a,b);
             }
             else if (b > a)
             {
@@ -38,7 +41,7 @@ namespace esdat
         }
         private void btCalcular_Click(object sender, EventArgs e)
         {
-
+            lbMCDresultado.Text=MCDmetodo(int.Parse(tBentero1.Text),int.Parse(tBentero2.Text)).ToString();
         }
     }
 }

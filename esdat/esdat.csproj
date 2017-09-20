@@ -53,6 +53,12 @@
     <Compile Include="AboutBox1.Designer.cs">
       <DependentUpon>AboutBox1.cs</DependentUpon>
     </Compile>
+    <Compile Include="BusquedaBinaria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BusquedaBinaria.Designer.cs">
+      <DependentUpon>BusquedaBinaria.cs</DependentUpon>
+    </Compile>
     <Compile Include="ComplexNumber.cs" />
     <Compile Include="fibonacci.cs">
       <SubType>Form</SubType>
@@ -112,6 +118,9 @@
     </Compile>
     <EmbeddedResource Include="AboutBox1.resx">
       <DependentUpon>AboutBox1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BusquedaBinaria.resx">
+      <DependentUpon>BusquedaBinaria.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fibonacci.resx">
       <DependentUpon>fibonacci.cs</DependentUpon>
@@ -244,6 +253,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\memorananina8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MCD.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -122,6 +122,7 @@
             this.busquedaBinariaToolStripMenuItem.Name = "busquedaBinariaToolStripMenuItem";
             this.busquedaBinariaToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
             this.busquedaBinariaToolStripMenuItem.Text = "Busqueda Binaria";
+            this.busquedaBinariaToolStripMenuItem.Click += new System.EventHandler(this.busquedaBinariaToolStripMenuItem_Click);
             // 
             // pruebaDeFibonnachiToolStripMenuItem
             // 

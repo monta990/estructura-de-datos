@@ -43,5 +43,18 @@ namespace esdat
         {
             lbMCDresultado.Text=MCDmetodo(int.Parse(tBentero1.Text),int.Parse(tBentero2.Text)).ToString();
         }
+
+        private void btLimpiar_Click(object sender, EventArgs e)
+        {
+            lbMCDresultado.Text = "0";
+            tBentero1.Clear();
+            tBentero2.Clear();
+            tBentero1.Focus();
+        }
+
+        private void btSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

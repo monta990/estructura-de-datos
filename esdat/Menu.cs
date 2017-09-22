@@ -46,5 +46,10 @@ namespace esdat
         {
             new MCD().ShowDialog();
         }
+
+        private void busquedaBinariaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new BusquedaBinaria().ShowDialog();
+        }
     }
 }

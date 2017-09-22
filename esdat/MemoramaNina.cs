@@ -30,7 +30,7 @@ namespace esdat
         private void Memorama_Load(object sender, EventArgs e)
         {
             restart();
-            axWMP1.URL = @"D:\BGM.mp3"; //archivo a reproducir
+            axWMP1.URL = @"D:\Peachs.mp3"; //archivo a reproducir
             axWMP1.Visible = false;
             tSSLnombre.Text = this.nombre;
         }
@@ -228,7 +228,7 @@ namespace esdat
 
         private void reproducirToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            axWMP1.URL = @"D:\BGM.mp3"; //volver a reproducir
+            axWMP1.URL = @"D:\Peachs.mp3"; //volver a reproducir
         }
 
         private void nivel1ToolStripMenuItem_Click(object sender, EventArgs e)

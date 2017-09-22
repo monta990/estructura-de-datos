@@ -37,7 +37,25 @@ namespace esdat
 
         private void btBuscar_Click(object sender, EventArgs e)
         {
+            MessageBox.Show("Proximamente");
+        }
 
+        private void btSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void BusquedaBinaria_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btLimpiar_Click(object sender, EventArgs e)
+        {
+            dGViewElementos.Rows.Clear();
+            tBelementos.Clear();
+            tBlimite.Clear();
+            tBbuscar.Clear();
         }
     }
 }

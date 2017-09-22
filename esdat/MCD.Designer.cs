@@ -37,12 +37,16 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btSalir = new System.Windows.Forms.Button();
+            this.btLimpiar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btLimpiar);
+            this.groupBox1.Controls.Add(this.btSalir);
             this.groupBox1.Controls.Add(this.btCalcular);
             this.groupBox1.Controls.Add(this.lbMCDresultado);
             this.groupBox1.Controls.Add(this.label3);
@@ -52,14 +56,14 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(13, 13);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(216, 178);
+            this.groupBox1.Size = new System.Drawing.Size(216, 334);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ingrese 2 numeros enteros";
             // 
             // btCalcular
             // 
-            this.btCalcular.Location = new System.Drawing.Point(91, 151);
+            this.btCalcular.Location = new System.Drawing.Point(135, 99);
             this.btCalcular.Name = "btCalcular";
             this.btCalcular.Size = new System.Drawing.Size(75, 23);
             this.btCalcular.TabIndex = 6;
@@ -94,7 +98,7 @@
             // 
             // tBentero1
             // 
-            this.tBentero1.Location = new System.Drawing.Point(66, 13);
+            this.tBentero1.Location = new System.Drawing.Point(66, 17);
             this.tBentero1.Name = "tBentero1";
             this.tBentero1.Size = new System.Drawing.Size(100, 20);
             this.tBentero1.TabIndex = 2;
@@ -127,6 +131,26 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
+            // btSalir
+            // 
+            this.btSalir.Location = new System.Drawing.Point(135, 163);
+            this.btSalir.Name = "btSalir";
+            this.btSalir.Size = new System.Drawing.Size(75, 23);
+            this.btSalir.TabIndex = 7;
+            this.btSalir.Text = "&Salir";
+            this.btSalir.UseVisualStyleBackColor = true;
+            this.btSalir.Click += new System.EventHandler(this.btSalir_Click);
+            // 
+            // btLimpiar
+            // 
+            this.btLimpiar.Location = new System.Drawing.Point(10, 163);
+            this.btLimpiar.Name = "btLimpiar";
+            this.btLimpiar.Size = new System.Drawing.Size(75, 23);
+            this.btLimpiar.TabIndex = 8;
+            this.btLimpiar.Text = "&Limpiar";
+            this.btLimpiar.UseVisualStyleBackColor = true;
+            this.btLimpiar.Click += new System.EventHandler(this.btLimpiar_Click);
+            // 
             // MCD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -135,7 +159,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox1);
             this.Name = "MCD";
-            this.Text = "MCD";
+            this.Text = "Maximo Común Divisor";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -154,5 +178,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btLimpiar;
+        private System.Windows.Forms.Button btSalir;
     }
 }

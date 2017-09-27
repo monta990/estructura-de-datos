@@ -16,37 +16,36 @@ namespace esdat
         {
             InitializeComponent();
         }
-
-        private void FrmCuadradoMagico_Load(object sender, EventArgs e)
+        private void CuadroMagico()
         {
-            dGVcuadradoMagico.Columns[0].Width = 20;
-            dGVcuadradoMagico.Columns[1].Width = 20;
-            dGVcuadradoMagico.Columns[2].Width = 20;
-            dGVcuadradoMagico.Columns[3].Width = 20;
-            dGVcuadradoMagico.Width = 83;
-            dGVcuadradoMagico.Height = 91;
-            dGVcuadradoMagico.Rows.Add();
-            dGVcuadradoMagico.Rows.Add();
-            dGVcuadradoMagico.Rows.Add();
-            dGVcuadradoMagico.Rows.Add();
+            dGVcuadradoMagico.Width = 123; //ancho de datagridview
+            dGVcuadradoMagico.Height = 92; //alto de datagridview
+            for (int i = 0; i <= 3; i++) //numero de columnas
+            {
+                dGVcuadradoMagico.Columns[i].Width = 30; //tamaño de columna
+                dGVcuadradoMagico.Rows.Add(); //agregar renglon
+            }
         }
-
-        private void button1_Click(object sender, EventArgs e)
+        private void Ejemplo1() //desde boton ejemplo 1
         {
             dGVcuadradoMagico.Rows.Clear();
-            dGVcuadradoMagico.Rows.Add("0","0","0","0");
+            dGVcuadradoMagico.Rows.Add("0", "0", "0", "0");
             dGVcuadradoMagico.Rows.Add("0", "0", "0", "0");
             dGVcuadradoMagico.Rows.Add("0", "0", "0", "0");
             dGVcuadradoMagico.Rows.Add("0", "0", "0", "0");
         }
-
-        private void button2_Click(object sender, EventArgs e)
+        private void Ejemplo2() //desde boton ejemplo 2
         {
             dGVcuadradoMagico.Rows.Clear();
             dGVcuadradoMagico.Rows.Add("16", "3", "2", "13");
             dGVcuadradoMagico.Rows.Add("5", "10", "11", "8");
             dGVcuadradoMagico.Rows.Add("9", "6", "7", "12");
             dGVcuadradoMagico.Rows.Add("4", "15", "14", "1");
+        }
+
+        private void FrmCuadradoMagico_Load(object sender, EventArgs e)
+        {
+            CuadroMagico();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -56,6 +55,16 @@ namespace esdat
             dGVcuadradoMagico.Rows.Add();
             dGVcuadradoMagico.Rows.Add();
             dGVcuadradoMagico.Rows.Add();
+        }
+
+        private void btEjemplo1_Click(object sender, EventArgs e)
+        {
+            Ejemplo1();
+        }
+
+        private void btEjemplo2_Click(object sender, EventArgs e)
+        {
+            Ejemplo2();
         }
     }
 }

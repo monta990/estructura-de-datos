@@ -21,15 +21,15 @@ namespace esdat
         {
             if (int.TryParse(tBlimite.Text, out int s)) //verificar si es entero
             {
-                dataGridView1.Rows.Clear();
+                dGViewFibo.Rows.Clear();
                 double a = 0;
                 double b = 1;
                 for (double c = 0; c <= int.Parse(tBlimite.Text);) //se establece limite (c), 
                 {
-                    dataGridView1.Rows.Add(c.ToString()); //se agrega c
+                    dGViewFibo.Rows.Add(c.ToString()); //se agrega c
                     if (c == 1)
                     {
-                        dataGridView1.Rows.Add("1");
+                        dGViewFibo.Rows.Add("1");
                     }
                     c = a + b;
                     a = b;
@@ -44,7 +44,7 @@ namespace esdat
 
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
-            dataGridView1.Rows.Clear();
+            dGViewFibo.Rows.Clear();
             tBlimite.Clear();
         }
 
@@ -56,6 +56,11 @@ namespace esdat
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             System.Diagnostics.Process.Start("https://es.wikipedia.org/wiki/Sucesi%C3%B3n_de_Fibonacci");
+        }
+
+        private void Fibonacci_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

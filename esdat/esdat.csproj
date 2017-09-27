@@ -75,6 +75,24 @@
     <Compile Include="fibonacci.Designer.cs">
       <DependentUpon>fibonacci.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmCuadradoMagico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCuadradoMagico.Designer.cs">
+      <DependentUpon>FrmCuadradoMagico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmHilbert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmHilbert.designer.cs">
+      <DependentUpon>FrmHilbert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPruebaFibonacci.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPruebaFibonacci.Designer.cs">
+      <DependentUpon>FrmPruebaFibonacci.cs</DependentUpon>
+    </Compile>
     <Compile Include="MCD.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -133,6 +151,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fibonacci.resx">
       <DependentUpon>fibonacci.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCuadradoMagico.resx">
+      <DependentUpon>FrmCuadradoMagico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmHilbert.resx">
+      <DependentUpon>FrmHilbert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPruebaFibonacci.resx">
+      <DependentUpon>FrmPruebaFibonacci.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MCD.resx">
       <DependentUpon>MCD.cs</DependentUpon>

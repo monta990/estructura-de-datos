@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Fibonacci));
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dGViewFibo = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tBlimite = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -39,22 +39,22 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dGViewFibo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dGViewFibo
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dGViewFibo.AllowUserToAddRows = false;
+            this.dGViewFibo.AllowUserToDeleteRows = false;
+            this.dGViewFibo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dGViewFibo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 83);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(144, 351);
-            this.dataGridView1.TabIndex = 0;
+            this.dGViewFibo.Location = new System.Drawing.Point(12, 83);
+            this.dGViewFibo.Name = "dGViewFibo";
+            this.dGViewFibo.ReadOnly = true;
+            this.dGViewFibo.Size = new System.Drawing.Size(144, 351);
+            this.dGViewFibo.TabIndex = 0;
             // 
             // Column1
             // 
@@ -157,10 +157,11 @@
             this.Controls.Add(this.btnCalcular);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tBlimite);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dGViewFibo);
             this.Name = "Fibonacci";
             this.Text = "Sucesión de Fibonacci";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.Fibonacci_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dGViewFibo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -169,7 +170,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dGViewFibo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.TextBox tBlimite;
         private System.Windows.Forms.Label label1;

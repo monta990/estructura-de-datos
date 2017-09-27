@@ -39,7 +39,7 @@ namespace esdat
 
         private void memoramaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            new SelectorMemorama().ShowDialog();
+            
         }
 
         private void mCDToolStripMenuItem_Click(object sender, EventArgs e)
@@ -50,6 +50,26 @@ namespace esdat
         private void busquedaBinariaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             new BusquedaBinaria().ShowDialog();
+        }
+
+        private void fractalDeHilbertToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new FrmHilbert().ShowDialog();
+        }
+
+        private void pruebaDeFibonnachiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new FrmPruebaFibonacci().ShowDialog();
+        }
+
+        private void memoramaToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            new SelectorMemorama().ShowDialog();
+        }
+
+        private void matrizToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

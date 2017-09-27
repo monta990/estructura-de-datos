@@ -16,7 +16,7 @@ namespace esdat
         {
             InitializeComponent();
         }
-        private void Generar()
+        private void Generar() 
         {
             dGViewFibo.Rows.Clear();
             double a = 0;

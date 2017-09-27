@@ -16,7 +16,7 @@ namespace esdat
         {
             InitializeComponent();
         }
-        private void CuadroMagico()
+        private void CuadroMagico() //configuración inicial de cuadro magico
         {
             dGVcuadradoMagico.Width = 123; //ancho de datagridview
             dGVcuadradoMagico.Height = 92; //alto de datagridview
@@ -42,13 +42,7 @@ namespace esdat
             dGVcuadradoMagico.Rows.Add("9", "6", "7", "12");
             dGVcuadradoMagico.Rows.Add("4", "15", "14", "1");
         }
-
-        private void FrmCuadradoMagico_Load(object sender, EventArgs e)
-        {
-            CuadroMagico();
-        }
-
-        private void button3_Click(object sender, EventArgs e)
+        private void Limpiar() //limpia cuadromagico
         {
             dGVcuadradoMagico.Rows.Clear();
             dGVcuadradoMagico.Rows.Add();
@@ -56,15 +50,29 @@ namespace esdat
             dGVcuadradoMagico.Rows.Add();
             dGVcuadradoMagico.Rows.Add();
         }
+        private void Calcular() //calculo del cuadro magico
+        {
 
+        }
+        private void FrmCuadradoMagico_Load(object sender, EventArgs e)
+        {
+            CuadroMagico();
+        }
         private void btEjemplo1_Click(object sender, EventArgs e)
         {
             Ejemplo1();
         }
-
         private void btEjemplo2_Click(object sender, EventArgs e)
         {
             Ejemplo2();
+        }
+        private void btLimpiar_Click(object sender, EventArgs e)
+        {
+            Limpiar();
+        }
+        private void btCalcular_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

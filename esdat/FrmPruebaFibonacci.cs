@@ -54,17 +54,24 @@ namespace esdat
         }
         private void Buscar()
         {
-            if (int.Parse(textBox1.Text) == 1)
+            if (int.TryParse(textBox1.Text, out int r))
             {
-                label3.Text = "El 1 numero de fibonacci es: 0";
-            }
-            else if (int.Parse(textBox1.Text) == 2)
-            {
-                label3.Text = "El 2 numero de fibonacci es: 1";
+                if (int.Parse(textBox1.Text) == 1)
+                {
+                    label3.Text = "El 1 numero de fibonacci es: 0";
+                }
+                else if (int.Parse(textBox1.Text) == 2)
+                {
+                    label3.Text = "El 2 numero de fibonacci es: 1";
+                }
+                else
+                {
+                    label3.Text = "El " + textBox1.Text + " numero de fibonacci es: " + Prueba(int.Parse(textBox1.Text) - 2);
+                }
             }
             else
             {
-                label3.Text = "El " + textBox1.Text + " numero de fibonacci es: " + Prueba(int.Parse(textBox1.Text)-2);
+                MessageBox.Show("Solo numeros enteros de 1 en adelante","Solo numeros enteros positivos",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
         }
         private void button1_Click(object sender, EventArgs e)

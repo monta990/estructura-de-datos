@@ -123,9 +123,9 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(12, 104);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 13);
+            this.label3.Size = new System.Drawing.Size(162, 26);
             this.label3.TabIndex = 11;
-            this.label3.Text = "label3";
+            this.label3.Text = "Ingresa un numero para buscarlo\r\nen la tabla";
             // 
             // FrmPruebaFibonacci
             // 

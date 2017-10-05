@@ -38,7 +38,7 @@ namespace esdat
             }
             else
             {
-                MessageBox.Show("El limite incorrecto");
+                MessageBox.Show("Solo numeros enteros positivos", "El limite incorrecto",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
         }
 

@@ -32,9 +32,12 @@ namespace esdat
             restart();
             axWMP1.URL = @"D:\Peachs.mp3"; //archivo a reproducir
             axWMP1.Visible = false;
+            axWMP1.settings.setMode("loop", true);
             tSSLnombre.Text = this.nombre;
         }
-#region reinciar
+        /// <summary>
+        /// Reinica el la baraja
+        /// </summary>
         private void restart()
         {
             set = set.OrderBy(s => Guid.NewGuid()).ToArray(); //generar shuffle
@@ -47,7 +50,11 @@ namespace esdat
             intentos = 0; //reinicia contador de intentos
             tSSlintentos.Text = intentos.ToString(); //reinicia label de intentos
         }
-#endregion
+        /// <summary>
+        /// Accion de verificar la primera carta volteada con la segunda
+        /// </summary>
+        /// <param name="voltear"></param>
+        /// <param name="elemento"></param>
         private void flip(PictureBox voltear, int elemento) //voltear la carta
         {
 #region asignación de arreglo de cartas y su imagen
@@ -217,18 +224,18 @@ namespace esdat
 
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            axWMP1.URL = @"D:\falso.mp3"; //silenciar al salir
+            axWMP1.close(); //silenciar al salir
             this.Close();
         }
 
         private void silenciarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            axWMP1.URL = @"D:\falso.mp3"; //silenciar dentro del juego
+            axWMP1.settings.mute = true; //silenciar dentro del juego
         }
 
         private void reproducirToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            axWMP1.URL = @"D:\Peachs.mp3"; //volver a reproducir
+            axWMP1.settings.mute = false; //volver a reproducir
         }
 
         private void nivel1ToolStripMenuItem_Click(object sender, EventArgs e)

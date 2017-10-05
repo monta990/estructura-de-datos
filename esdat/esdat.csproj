@@ -87,6 +87,12 @@
     <Compile Include="FrmHilbert.designer.cs">
       <DependentUpon>FrmHilbert.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmOrdenamientoBusqueda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmOrdenamientoBusqueda.Designer.cs">
+      <DependentUpon>FrmOrdenamientoBusqueda.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmPruebaFibonacci.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -157,6 +163,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmHilbert.resx">
       <DependentUpon>FrmHilbert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmOrdenamientoBusqueda.resx">
+      <DependentUpon>FrmOrdenamientoBusqueda.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPruebaFibonacci.resx">
       <DependentUpon>FrmPruebaFibonacci.cs</DependentUpon>

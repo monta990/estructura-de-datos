@@ -16,6 +16,9 @@ namespace esdat
         {
             InitializeComponent();
         }
+        /// <summary>
+        /// Prepara el cuadrado magico, con renglones, columnas y tamaño
+        /// </summary>
         private void CuadroMagico() //configuración inicial de cuadro magico
         {
             dGVcuadradoMagico.Width = 123; //ancho de datagridview
@@ -26,6 +29,9 @@ namespace esdat
                 dGVcuadradoMagico.Rows.Add(); //agregar renglon
             }
         }
+        /// <summary>
+        /// Carga ejemplo de botón1 (0)
+        /// </summary>
         private void Ejemplo1() //desde boton ejemplo 1
         {
             dGVcuadradoMagico.Rows.Clear();
@@ -34,6 +40,9 @@ namespace esdat
             dGVcuadradoMagico.Rows.Add("0", "0", "0", "0");
             dGVcuadradoMagico.Rows.Add("0", "0", "0", "0");
         }
+        /// <summary>
+        /// Carga ejemplo del botón 2
+        /// </summary>
         private void Ejemplo2() //desde boton ejemplo 2
         {
             dGVcuadradoMagico.Rows.Clear();
@@ -42,6 +51,9 @@ namespace esdat
             dGVcuadradoMagico.Rows.Add("9", "6", "7", "12");
             dGVcuadradoMagico.Rows.Add("4", "15", "14", "1");
         }
+        /// <summary>
+        /// Limpia el cuadrado magico y sus resultados
+        /// </summary>
         private void Limpiar() //limpia cuadromagico
         {
             dGVcuadradoMagico.Rows.Clear();
@@ -49,10 +61,55 @@ namespace esdat
             dGVcuadradoMagico.Rows.Add();
             dGVcuadradoMagico.Rows.Add();
             dGVcuadradoMagico.Rows.Add();
+            lbColumna1.Text = "0";
+            lbColumna2.Text = "0";
+            lbColumna3.Text = "0";
+            lbColumna4.Text = "0";
+            lbRenglon1.Text = "0";
+            lbRenglon2.Text = "0";
+            lbRenglon3.Text = "0";
+            lbRenglon4.Text = "0";
+            lbDiagonal1.Text = "0";
+            lbDiagonal2.Text = "0";
         }
-        private void Calcular() //calculo del cuadro magico
+        /// <summary>
+        /// Calculo de diagonales, renglones y columnas del cuadrado magico, no recibe parametros
+        /// </summary>
+        private void Calcular() //calcular diagoanles
         {
-
+            for (int ren = 0, cel = 0; ren < 4; ren++)
+            {
+                if ((String)dGVcuadradoMagico.Rows[ren].Cells[cel].Value == null )
+                {
+                    MessageBox.Show("Alguna celda esta vacia", "Celda Vacia", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                else
+                {
+                    int[] suma = new int[10];
+                    for (int i = 0, r = 3; i < 4; i++, r--) //todo en uno de una vez
+                    {
+                        lbDiagonal1.Text = (suma[0] += int.Parse(dGVcuadradoMagico[i, i].Value.ToString())).ToString();
+                        lbDiagonal2.Text = (suma[1] += int.Parse(dGVcuadradoMagico[i, r].Value.ToString())).ToString();
+                        lbRenglon1.Text = (suma[2] += int.Parse(dGVcuadradoMagico[i, 0].Value.ToString())).ToString();
+                        lbRenglon2.Text = (suma[3] += int.Parse(dGVcuadradoMagico[i, 1].Value.ToString())).ToString();
+                        lbRenglon3.Text = (suma[4] += int.Parse(dGVcuadradoMagico[i, 2].Value.ToString())).ToString();
+                        lbRenglon4.Text = (suma[5] += int.Parse(dGVcuadradoMagico[i, 3].Value.ToString())).ToString();
+                        lbColumna1.Text = (suma[6] += int.Parse(dGVcuadradoMagico[0, r].Value.ToString())).ToString();
+                        lbColumna2.Text = (suma[7] += int.Parse(dGVcuadradoMagico[1, r].Value.ToString())).ToString();
+                        lbColumna3.Text = (suma[8] += int.Parse(dGVcuadradoMagico[2, r].Value.ToString())).ToString();
+                        lbColumna4.Text = (suma[9] += int.Parse(dGVcuadradoMagico[3, r].Value.ToString())).ToString();
+                    }
+                    if (suma[9] == suma[8] && suma[8] == suma[7] && suma[7] == suma[6] && suma[6] == suma[5] && suma[5] == suma[4] && suma[4] == suma[3] && suma[3] == suma[2] && suma[2] == suma[1])
+                    {
+                        MessageBox.Show("Cuadrado magico", "Si es cuadrado magico", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("No es", "No es cuadrado magico", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
         }
         private void FrmCuadradoMagico_Load(object sender, EventArgs e)
         {
@@ -60,10 +117,12 @@ namespace esdat
         }
         private void btEjemplo1_Click(object sender, EventArgs e)
         {
+            Limpiar();
             Ejemplo1();
         }
         private void btEjemplo2_Click(object sender, EventArgs e)
         {
+            Limpiar();
             Ejemplo2();
         }
         private void btLimpiar_Click(object sender, EventArgs e)
@@ -72,7 +131,13 @@ namespace esdat
         }
         private void btCalcular_Click(object sender, EventArgs e)
         {
+            Calcular();
 
+        }
+        private void dGVcuadradoMagico_CellLeave(object sender, DataGridViewCellEventArgs e)
+        {
+            //int.TryParse(dGVcuadradoMagico.CurrentCell.Value.ToString(), out int res);
+            //MessageBox.Show(dGVcuadradoMagico.CurrentCell.ColumnIndex + " " + dGVcuadradoMagico.CurrentCell.RowIndex);
         }
     }
 }

@@ -28,6 +28,7 @@ namespace esdat
             int L = int.Parse(tBlimiteinferior.Text); //textbox de limite inferior
             int S = int.Parse(tBlimitesuperior.Text); //textbox de limite superior
             lblStartOriginal.Text = "Empezo: " + DateTime.Now.ToLongTimeString();
+            lblStartOriginal.Update();
             for (int i = 0; i < 50000; i++) //cantidad de numeros a generar
             {
                 arOriginal[i] = R.Next(L, S); //guardando numeros random en el arreglo orifinal
@@ -61,34 +62,51 @@ namespace esdat
                 view.Rows.Add(arreglo[i].ToString());
                 view.Rows[i].HeaderCell.Value = i.ToString();
             }
+            view.Update(); //actualizar modo grafico
         }
         /// <summary>
         /// Organiza los datos con metodo burbuja
         /// </summary>
         private void Burbuja()
         {
+            lblStartBurbuja.Text = "Empezo: " + DateTime.Now.ToLongTimeString();
+            lblStartBurbuja.Update();
             ImprimirArreglo(dGVburbuja, arBurbuja);
+            lblEndBurbuja.Text = "Finalizo: " + DateTime.Now.ToLongTimeString();
+            lblEndBurbuja.Update();
         }
         /// <summary>
         /// Organiza los datos con metodo Insert
         /// </summary>
         private void Insert()
         {
+            lblStartInsert.Text = "Empezo: " + DateTime.Now.ToLongTimeString();
+            lblStartInsert.Update();
             ImprimirArreglo(dGVinsert, arInsert);
+            lblEndInsert.Text = "Finalizo: " + DateTime.Now.ToLongTimeString();
+            lblEndInsert.Update();
         }
         /// <summary>
         /// Organiza los datos con metodo Shell
         /// </summary>
         private void Shell()
         {
+            lblStartShell.Text = "Empezo: " + DateTime.Now.ToLongTimeString();
+            lblStartShell.Update();
             ImprimirArreglo(dGVshell, arShell);
+            lblEndShell.Text = "Finalizo: " + DateTime.Now.ToLongTimeString();
+            lblEndShell.Update();
         }
         /// <summary>
         /// Organiza los datos con metodo QuickSort
         /// </summary>
         private void QuickSort()
         {
+            lblStartQuickSort.Text = "Empezo: " + DateTime.Now.ToLongTimeString();
+            lblStartShell.Update();
             ImprimirArreglo(dGVqucksort, arQuickSort);
+            lblEndQuickSort.Text = "Finalizo: " + DateTime.Now.ToLongTimeString();
+            lblEndQuickSort.Update();
         }
         public FrmOrdenamientoBusqueda()
         {

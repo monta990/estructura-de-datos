@@ -61,6 +61,14 @@
             this.btnSalir = new System.Windows.Forms.Button();
             this.lblStartOriginal = new System.Windows.Forms.Label();
             this.lblEndOriginal = new System.Windows.Forms.Label();
+            this.lblEndBurbuja = new System.Windows.Forms.Label();
+            this.lblStartBurbuja = new System.Windows.Forms.Label();
+            this.lblEndInsert = new System.Windows.Forms.Label();
+            this.lblStartInsert = new System.Windows.Forms.Label();
+            this.lblEndShell = new System.Windows.Forms.Label();
+            this.lblStartShell = new System.Windows.Forms.Label();
+            this.lblEndQuickSort = new System.Windows.Forms.Label();
+            this.lblStartQuickSort = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dGVoriginal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dGVburbuja)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dGVinsert)).BeginInit();
@@ -380,11 +388,91 @@
             this.lblEndOriginal.TabIndex = 27;
             this.lblEndOriginal.Text = "Finalizo:";
             // 
+            // lblEndBurbuja
+            // 
+            this.lblEndBurbuja.AutoSize = true;
+            this.lblEndBurbuja.Location = new System.Drawing.Point(170, 373);
+            this.lblEndBurbuja.Name = "lblEndBurbuja";
+            this.lblEndBurbuja.Size = new System.Drawing.Size(45, 13);
+            this.lblEndBurbuja.TabIndex = 29;
+            this.lblEndBurbuja.Text = "Finalizo:";
+            // 
+            // lblStartBurbuja
+            // 
+            this.lblStartBurbuja.AutoSize = true;
+            this.lblStartBurbuja.Location = new System.Drawing.Point(170, 350);
+            this.lblStartBurbuja.Name = "lblStartBurbuja";
+            this.lblStartBurbuja.Size = new System.Drawing.Size(48, 13);
+            this.lblStartBurbuja.TabIndex = 28;
+            this.lblStartBurbuja.Text = "Empezo:";
+            // 
+            // lblEndInsert
+            // 
+            this.lblEndInsert.AutoSize = true;
+            this.lblEndInsert.Location = new System.Drawing.Point(322, 373);
+            this.lblEndInsert.Name = "lblEndInsert";
+            this.lblEndInsert.Size = new System.Drawing.Size(45, 13);
+            this.lblEndInsert.TabIndex = 31;
+            this.lblEndInsert.Text = "Finalizo:";
+            // 
+            // lblStartInsert
+            // 
+            this.lblStartInsert.AutoSize = true;
+            this.lblStartInsert.Location = new System.Drawing.Point(322, 350);
+            this.lblStartInsert.Name = "lblStartInsert";
+            this.lblStartInsert.Size = new System.Drawing.Size(48, 13);
+            this.lblStartInsert.TabIndex = 30;
+            this.lblStartInsert.Text = "Empezo:";
+            // 
+            // lblEndShell
+            // 
+            this.lblEndShell.AutoSize = true;
+            this.lblEndShell.Location = new System.Drawing.Point(480, 373);
+            this.lblEndShell.Name = "lblEndShell";
+            this.lblEndShell.Size = new System.Drawing.Size(45, 13);
+            this.lblEndShell.TabIndex = 33;
+            this.lblEndShell.Text = "Finalizo:";
+            // 
+            // lblStartShell
+            // 
+            this.lblStartShell.AutoSize = true;
+            this.lblStartShell.Location = new System.Drawing.Point(480, 350);
+            this.lblStartShell.Name = "lblStartShell";
+            this.lblStartShell.Size = new System.Drawing.Size(48, 13);
+            this.lblStartShell.TabIndex = 32;
+            this.lblStartShell.Text = "Empezo:";
+            // 
+            // lblEndQuickSort
+            // 
+            this.lblEndQuickSort.AutoSize = true;
+            this.lblEndQuickSort.Location = new System.Drawing.Point(639, 373);
+            this.lblEndQuickSort.Name = "lblEndQuickSort";
+            this.lblEndQuickSort.Size = new System.Drawing.Size(45, 13);
+            this.lblEndQuickSort.TabIndex = 35;
+            this.lblEndQuickSort.Text = "Finalizo:";
+            // 
+            // lblStartQuickSort
+            // 
+            this.lblStartQuickSort.AutoSize = true;
+            this.lblStartQuickSort.Location = new System.Drawing.Point(639, 350);
+            this.lblStartQuickSort.Name = "lblStartQuickSort";
+            this.lblStartQuickSort.Size = new System.Drawing.Size(48, 13);
+            this.lblStartQuickSort.TabIndex = 34;
+            this.lblStartQuickSort.Text = "Empezo:";
+            // 
             // FrmOrdenamientoBusqueda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1176, 472);
+            this.Controls.Add(this.lblEndQuickSort);
+            this.Controls.Add(this.lblStartQuickSort);
+            this.Controls.Add(this.lblEndShell);
+            this.Controls.Add(this.lblStartShell);
+            this.Controls.Add(this.lblEndInsert);
+            this.Controls.Add(this.lblStartInsert);
+            this.Controls.Add(this.lblEndBurbuja);
+            this.Controls.Add(this.lblStartBurbuja);
             this.Controls.Add(this.lblEndOriginal);
             this.Controls.Add(this.lblStartOriginal);
             this.Controls.Add(this.btnSalir);
@@ -460,5 +548,13 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.Label lblStartOriginal;
         private System.Windows.Forms.Label lblEndOriginal;
+        private System.Windows.Forms.Label lblEndBurbuja;
+        private System.Windows.Forms.Label lblStartBurbuja;
+        private System.Windows.Forms.Label lblEndInsert;
+        private System.Windows.Forms.Label lblStartInsert;
+        private System.Windows.Forms.Label lblEndShell;
+        private System.Windows.Forms.Label lblStartShell;
+        private System.Windows.Forms.Label lblEndQuickSort;
+        private System.Windows.Forms.Label lblStartQuickSort;
     }
 }

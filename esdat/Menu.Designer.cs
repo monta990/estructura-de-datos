@@ -39,6 +39,12 @@
             this.pruebaDeFibonnachiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fractalDeHilbertToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.unidad2ArreglosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.metodosDeOrdenamientoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sumaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.inversaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.transpuestaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cuadradoMagicoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.memoramaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.unidad3ListasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.unidad4PilasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.unidad5ColasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -46,12 +52,6 @@
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.acercaDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btSalir = new System.Windows.Forms.Button();
-            this.memoramaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.metodosDeOrdenamientoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sumaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.inversaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.transpuestaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cuadradoMagicoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -155,6 +155,45 @@
             this.unidad2ArreglosToolStripMenuItem.Size = new System.Drawing.Size(116, 20);
             this.unidad2ArreglosToolStripMenuItem.Text = "Unidad 2: Arreglos";
             // 
+            // metodosDeOrdenamientoToolStripMenuItem
+            // 
+            this.metodosDeOrdenamientoToolStripMenuItem.Name = "metodosDeOrdenamientoToolStripMenuItem";
+            this.metodosDeOrdenamientoToolStripMenuItem.Size = new System.Drawing.Size(217, 22);
+            this.metodosDeOrdenamientoToolStripMenuItem.Text = "Metódos de Ordenamiento";
+            this.metodosDeOrdenamientoToolStripMenuItem.Click += new System.EventHandler(this.metodosDeOrdenamientoToolStripMenuItem_Click);
+            // 
+            // sumaToolStripMenuItem
+            // 
+            this.sumaToolStripMenuItem.Name = "sumaToolStripMenuItem";
+            this.sumaToolStripMenuItem.Size = new System.Drawing.Size(217, 22);
+            this.sumaToolStripMenuItem.Text = "Suma";
+            // 
+            // inversaToolStripMenuItem
+            // 
+            this.inversaToolStripMenuItem.Name = "inversaToolStripMenuItem";
+            this.inversaToolStripMenuItem.Size = new System.Drawing.Size(217, 22);
+            this.inversaToolStripMenuItem.Text = "Inversa";
+            // 
+            // transpuestaToolStripMenuItem
+            // 
+            this.transpuestaToolStripMenuItem.Name = "transpuestaToolStripMenuItem";
+            this.transpuestaToolStripMenuItem.Size = new System.Drawing.Size(217, 22);
+            this.transpuestaToolStripMenuItem.Text = "Transpuesta";
+            // 
+            // cuadradoMagicoToolStripMenuItem
+            // 
+            this.cuadradoMagicoToolStripMenuItem.Name = "cuadradoMagicoToolStripMenuItem";
+            this.cuadradoMagicoToolStripMenuItem.Size = new System.Drawing.Size(217, 22);
+            this.cuadradoMagicoToolStripMenuItem.Text = "Cuadrado Magico";
+            this.cuadradoMagicoToolStripMenuItem.Click += new System.EventHandler(this.cuadradoMagicoToolStripMenuItem_Click);
+            // 
+            // memoramaToolStripMenuItem1
+            // 
+            this.memoramaToolStripMenuItem1.Name = "memoramaToolStripMenuItem1";
+            this.memoramaToolStripMenuItem1.Size = new System.Drawing.Size(217, 22);
+            this.memoramaToolStripMenuItem1.Text = "Memorama";
+            this.memoramaToolStripMenuItem1.Click += new System.EventHandler(this.memoramaToolStripMenuItem1_Click);
+            // 
             // unidad3ListasToolStripMenuItem
             // 
             this.unidad3ListasToolStripMenuItem.Name = "unidad3ListasToolStripMenuItem";
@@ -203,43 +242,6 @@
             this.btSalir.Text = "&Salir";
             this.btSalir.UseVisualStyleBackColor = true;
             this.btSalir.Click += new System.EventHandler(this.btSalir_Click);
-            // 
-            // memoramaToolStripMenuItem1
-            // 
-            this.memoramaToolStripMenuItem1.Name = "memoramaToolStripMenuItem1";
-            this.memoramaToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
-            this.memoramaToolStripMenuItem1.Text = "Memorama";
-            this.memoramaToolStripMenuItem1.Click += new System.EventHandler(this.memoramaToolStripMenuItem1_Click);
-            // 
-            // metodosDeOrdenamientoToolStripMenuItem
-            // 
-            this.metodosDeOrdenamientoToolStripMenuItem.Name = "metodosDeOrdenamientoToolStripMenuItem";
-            this.metodosDeOrdenamientoToolStripMenuItem.Size = new System.Drawing.Size(217, 22);
-            this.metodosDeOrdenamientoToolStripMenuItem.Text = "Metódos de Ordenamiento";
-            // 
-            // sumaToolStripMenuItem
-            // 
-            this.sumaToolStripMenuItem.Name = "sumaToolStripMenuItem";
-            this.sumaToolStripMenuItem.Size = new System.Drawing.Size(217, 22);
-            this.sumaToolStripMenuItem.Text = "Suma";
-            // 
-            // inversaToolStripMenuItem
-            // 
-            this.inversaToolStripMenuItem.Name = "inversaToolStripMenuItem";
-            this.inversaToolStripMenuItem.Size = new System.Drawing.Size(217, 22);
-            this.inversaToolStripMenuItem.Text = "Inversa";
-            // 
-            // transpuestaToolStripMenuItem
-            // 
-            this.transpuestaToolStripMenuItem.Name = "transpuestaToolStripMenuItem";
-            this.transpuestaToolStripMenuItem.Size = new System.Drawing.Size(217, 22);
-            this.transpuestaToolStripMenuItem.Text = "Transpuesta";
-            // 
-            // cuadradoMagicoToolStripMenuItem
-            // 
-            this.cuadradoMagicoToolStripMenuItem.Name = "cuadradoMagicoToolStripMenuItem";
-            this.cuadradoMagicoToolStripMenuItem.Size = new System.Drawing.Size(217, 22);
-            this.cuadradoMagicoToolStripMenuItem.Text = "Cuadrado Magico";
             // 
             // Menu
             // 

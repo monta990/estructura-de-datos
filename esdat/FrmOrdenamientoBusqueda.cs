@@ -71,9 +71,25 @@ namespace esdat
         {
             lblStartBurbuja.Text = "Empezo: " + DateTime.Now.ToLongTimeString();
             lblStartBurbuja.Update();
+            int temp = 0;
+            double cont = 0;
+            for (int i = 0; i < arBurbuja.Length; i++) //primer numero
+            {
+                for (int j = 0; j < arBurbuja.Length; j++) //segundo numero
+                {
+                    cont++;
+                    if (arBurbuja[i]< arBurbuja[j]) //verificación de los numero
+                    {
+                        temp = arBurbuja[i]; //se guradar el primero
+                        arBurbuja[i] = arBurbuja[j]; //se realiza el cambio
+                        arBurbuja[j] = temp; //y se guarda el segundo numero
+                    }
+                }
+            }
             ImprimirArreglo(dGVburbuja, arBurbuja);
             lblEndBurbuja.Text = "Finalizo: " + DateTime.Now.ToLongTimeString();
             lblEndBurbuja.Update();
+            lblIeracionBurbuja.Text = cont.ToString();
         }
         /// <summary>
         /// Organiza los datos con metodo Insert
@@ -131,9 +147,9 @@ namespace esdat
         private void btnCalcular_Click(object sender, EventArgs e)
         {
             Burbuja();
-            Insert();
-            Shell();
-            QuickSort();
+            //Insert();
+            //Shell();
+            //QuickSort();
         }
     }
 }

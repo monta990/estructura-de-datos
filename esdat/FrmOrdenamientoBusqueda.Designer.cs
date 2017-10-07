@@ -297,7 +297,7 @@
             // lblIeracionBurbuja
             // 
             this.lblIeracionBurbuja.AutoSize = true;
-            this.lblIeracionBurbuja.Location = new System.Drawing.Point(258, 405);
+            this.lblIeracionBurbuja.Location = new System.Drawing.Point(238, 405);
             this.lblIeracionBurbuja.Name = "lblIeracionBurbuja";
             this.lblIeracionBurbuja.Size = new System.Drawing.Size(13, 13);
             this.lblIeracionBurbuja.TabIndex = 18;
@@ -306,7 +306,7 @@
             // lblIteracionInsert
             // 
             this.lblIteracionInsert.AutoSize = true;
-            this.lblIteracionInsert.Location = new System.Drawing.Point(414, 406);
+            this.lblIteracionInsert.Location = new System.Drawing.Point(390, 405);
             this.lblIteracionInsert.Name = "lblIteracionInsert";
             this.lblIteracionInsert.Size = new System.Drawing.Size(13, 13);
             this.lblIteracionInsert.TabIndex = 19;
@@ -315,7 +315,7 @@
             // lblInteracionShell
             // 
             this.lblInteracionShell.AutoSize = true;
-            this.lblInteracionShell.Location = new System.Drawing.Point(573, 406);
+            this.lblInteracionShell.Location = new System.Drawing.Point(545, 406);
             this.lblInteracionShell.Name = "lblInteracionShell";
             this.lblInteracionShell.Size = new System.Drawing.Size(13, 13);
             this.lblInteracionShell.TabIndex = 20;
@@ -324,7 +324,7 @@
             // lblIteracionesQuickSort
             // 
             this.lblIteracionesQuickSort.AutoSize = true;
-            this.lblIteracionesQuickSort.Location = new System.Drawing.Point(723, 405);
+            this.lblIteracionesQuickSort.Location = new System.Drawing.Point(702, 406);
             this.lblIteracionesQuickSort.Name = "lblIteracionesQuickSort";
             this.lblIteracionesQuickSort.Size = new System.Drawing.Size(13, 13);
             this.lblIteracionesQuickSort.TabIndex = 21;

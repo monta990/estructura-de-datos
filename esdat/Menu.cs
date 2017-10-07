@@ -71,5 +71,15 @@ namespace esdat
         {
 
         }
+
+        private void metodosDeOrdenamientoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new FrmOrdenamientoBusqueda();
+        }
+
+        private void cuadradoMagicoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new FrmCuadradoMagico().ShowDialog();
+        }
     }
 }

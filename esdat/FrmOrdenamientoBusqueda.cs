@@ -88,7 +88,6 @@ namespace esdat
             }
             ImprimirArreglo(dGVburbuja, arBurbuja);
             lblEndBurbuja.Text = "Finalizo: " + DateTime.Now.ToLongTimeString();
-            lblEndBurbuja.Update();
             lblIeracionBurbuja.Text = cont.ToString();
         }
         /// <summary>
@@ -98,9 +97,7 @@ namespace esdat
         {
             lblStartInsert.Text = "Empezo: " + DateTime.Now.ToLongTimeString();
             lblStartInsert.Update();
-            int auxiciliar;
-            int j;
-            int cont = 0;
+            int auxiciliar, j, cont = 0;
             for (int i = 0; i < arInsert.Length; i++) //desplazamiento vertical
             {
                 auxiciliar = arInsert[i];
@@ -111,12 +108,11 @@ namespace esdat
                     arInsert[j + 1] = arInsert[j];
                     j--;
                 }
-                arInsert[j + 1] = auxiciliar;
+                arInsert[j + 1] = auxiciliar; //regresa numero acomodado
             }
             ImprimirArreglo(dGVinsert, arInsert);
             lblIteracionInsert.Text = cont.ToString();
             lblEndInsert.Text = "Finalizo: " + DateTime.Now.ToLongTimeString();
-            lblEndInsert.Update();
         }
         /// <summary>
         /// Organiza los datos con metodo Shell
@@ -125,9 +121,33 @@ namespace esdat
         {
             lblStartShell.Text = "Empezo: " + DateTime.Now.ToLongTimeString();
             lblStartShell.Update();
+            int salto = 0, siguiente = 0, auxiliar = 0, e = 0, cont=0;
+            salto = arShell.Length/2;
+            while (salto > 0)
+            {
+                siguiente = 1;
+                while (siguiente != 0)
+                {
+                    siguiente = 0;
+                    e = 1;
+                    while (e <= (arShell.Length-salto))
+                    {
+                        cont++;
+                        if (arShell[e-1]>arShell[(e-1)+salto])
+                        {
+                            auxiliar = arShell[(e - 1) + salto];
+                            arShell[(e - 1) + salto] = arShell[e - 1];
+                            arShell[e - 1] = auxiliar;
+                            siguiente = 1;
+                        }
+                        e++;
+                    }
+                    salto = salto / 2;
+                }
+            }
             ImprimirArreglo(dGVshell, arShell);
+            lblInteracionShell.Text = cont.ToString();
             lblEndShell.Text = "Finalizo: " + DateTime.Now.ToLongTimeString();
-            lblEndShell.Update();
         }
         /// <summary>
         /// Organiza los datos con metodo QuickSort
@@ -136,9 +156,9 @@ namespace esdat
         {
             lblStartQuickSort.Text = "Empezo: " + DateTime.Now.ToLongTimeString();
             lblStartShell.Update();
+
             ImprimirArreglo(dGVqucksort, arQuickSort);
             lblEndQuickSort.Text = "Finalizo: " + DateTime.Now.ToLongTimeString();
-            lblEndQuickSort.Update();
         }
         public FrmOrdenamientoBusqueda()
         {
@@ -163,8 +183,8 @@ namespace esdat
         private void btnCalcular_Click(object sender, EventArgs e)
         {
             //Burbuja();
-            Insert();
-            //Shell();
+            //Insert();
+            Shell();
             //QuickSort();
         }
     }

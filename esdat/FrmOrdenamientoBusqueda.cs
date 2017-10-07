@@ -98,7 +98,23 @@ namespace esdat
         {
             lblStartInsert.Text = "Empezo: " + DateTime.Now.ToLongTimeString();
             lblStartInsert.Update();
+            int auxiciliar;
+            int j;
+            int cont = 0;
+            for (int i = 0; i < arInsert.Length; i++) //desplazamiento vertical
+            {
+                auxiciliar = arInsert[i];
+                j = i - 1;
+                cont++;
+                while (j >= 0 && arInsert[j] > auxiciliar) //desplamiento horizontal
+                {
+                    arInsert[j + 1] = arInsert[j];
+                    j--;
+                }
+                arInsert[j + 1] = auxiciliar;
+            }
             ImprimirArreglo(dGVinsert, arInsert);
+            lblIteracionInsert.Text = cont.ToString();
             lblEndInsert.Text = "Finalizo: " + DateTime.Now.ToLongTimeString();
             lblEndInsert.Update();
         }
@@ -146,8 +162,8 @@ namespace esdat
 
         private void btnCalcular_Click(object sender, EventArgs e)
         {
-            Burbuja();
-            //Insert();
+            //Burbuja();
+            Insert();
             //Shell();
             //QuickSort();
         }

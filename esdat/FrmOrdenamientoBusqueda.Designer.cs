@@ -80,6 +80,7 @@
             // 
             this.dGVoriginal.AllowUserToAddRows = false;
             this.dGVoriginal.AllowUserToDeleteRows = false;
+            this.dGVoriginal.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dGVoriginal.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dGVoriginal.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dGVoriginal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -101,6 +102,7 @@
             // 
             this.dGVburbuja.AllowUserToAddRows = false;
             this.dGVburbuja.AllowUserToDeleteRows = false;
+            this.dGVburbuja.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dGVburbuja.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dGVburbuja.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dGVburbuja.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -122,6 +124,7 @@
             // 
             this.dGVinsert.AllowUserToAddRows = false;
             this.dGVinsert.AllowUserToDeleteRows = false;
+            this.dGVinsert.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dGVinsert.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dGVinsert.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dGVinsert.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -143,6 +146,7 @@
             // 
             this.dGVshell.AllowUserToAddRows = false;
             this.dGVshell.AllowUserToDeleteRows = false;
+            this.dGVshell.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dGVshell.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dGVshell.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dGVshell.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -164,6 +168,7 @@
             // 
             this.dGVqucksort.AllowUserToAddRows = false;
             this.dGVqucksort.AllowUserToDeleteRows = false;
+            this.dGVqucksort.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dGVqucksort.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dGVqucksort.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dGVqucksort.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;

@@ -13,39 +13,106 @@ namespace esdat
     public partial class FrmOrdenamientoBusqueda : Form
     {
 
+        #region Declaraciones
         int[] arOriginal = new int[50000];
         int[] arBurbuja = new int[50000];
         int[] arInsert = new int[50000];
         int[] arShell = new int[50000];
         int[] arQuickSort = new int[50000];
+        private int contquicksort = 0;
+        #endregion
         /// <summary>
         /// Generar los numeros para el datagridview original
         /// </summary>
         private void Generar()
         {
-            dGVoriginal.Rows.Clear(); //limpiar datagridview
-            Random R = new Random(); //declarando random
-            int L = int.Parse(tBlimiteinferior.Text); //textbox de limite inferior
-            int S = int.Parse(tBlimitesuperior.Text); //textbox de limite superior
-            lblStartOriginal.Text = "Empezo: " + DateTime.Now.ToLongTimeString();
-            lblStartOriginal.Update();
-            for (int i = 0; i < 50000; i++) //cantidad de numeros a generar
+            if (tBlimiteinferior.Text.Trim()== "" || tBlimitesuperior.Text.Trim() == "")
             {
-                arOriginal[i] = R.Next(L, S); //guardando numeros random en el arreglo orifinal
+                MessageBox.Show("Algun campo esta vacio","Error campo vacio", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            ImprimirArreglo(dGVoriginal, arOriginal); //impresion del arreglo original en el dGVoriginal
-            lblEndOriginal.Text = "Finalizo: "+ DateTime.Now.ToLongTimeString();
-            arBurbuja = arOriginal; //igualando
-            arInsert = arBurbuja; //igualando
-            arShell = arBurbuja; //igualando
-            arQuickSort = arBurbuja; //igualando
+            else
+            {
+                if (int.TryParse(tBlimiteinferior.Text, out int res ) && int.TryParse(tBlimitesuperior.Text, out int res1))
+                {
+                    if (int.Parse(tBlimitesuperior.Text) < int.Parse(tBlimiteinferior.Text))
+                    {
+                        MessageBox.Show("Limite Superior es menor que limite inferior", "Checa tus limites", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        tBlimitesuperior.Focus();
+                        tBlimitesuperior.SelectAll();
+                    }
+                    else
+                    {
+                        tBlimiteinferior.Enabled = false;
+                        tBlimitesuperior.Enabled = false;
+                        dGVoriginal.Rows.Clear(); //limpiar datagridview
+                        Random R = new Random(); //declarando random
+                        int L = int.Parse(tBlimiteinferior.Text); //textbox de limite inferior
+                        int S = int.Parse(tBlimitesuperior.Text); //textbox de limite superior
+                        lblStartOriginal.Text = "Empezo: " + DateTime.Now.ToLongTimeString();
+                        lblStartOriginal.Update();
+                        for (int i = 0; i < 50000; i++) //cantidad de numeros a generar
+                        {
+                            arOriginal[i] = R.Next(L, S); //guardando numeros random en el arreglo orifinal
+                        }
+                        ImprimirArreglo(dGVoriginal, arOriginal); //impresion del arreglo original en el dGVoriginal
+                        lblEndOriginal.Text = "Finalizo: " + DateTime.Now.ToLongTimeString();
+                        arBurbuja = arOriginal; //igualando
+                        arInsert = arBurbuja; //igualando
+                        arShell = arBurbuja; //igualando
+                        arQuickSort = arBurbuja; //igualando
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("No son numeros enteros", "Solo enteros", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+        /// <summary>
+        /// Ordena los arreglos mediante calculo matematico
+        /// </summary>
+        private void Calcular()
+        {
+            if (tBlimiteinferior.Enabled == true && tBlimitesuperior.Enabled == true)
+            {
+                MessageBox.Show("No hay arreglo que ordenar", "No hay que ordenar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                Burbuja();
+                Insert();
+                Shell();
+                contquicksort = 0;
+                lblStartQuickSort.Text = "Empezo: " + DateTime.Now.ToLongTimeString();
+                lblStartQuickSort.Update();
+                QuickSort(0, arQuickSort.Length - 1);
+                ImprimirArreglo(dGVqucksort, arQuickSort);
+                lblEndQuickSort.Text = "Finalizo: " + DateTime.Now.ToLongTimeString();
+                lblIteracionesQuickSort.Text = contquicksort.ToString();
+            }
         }
         /// <summary>
         /// Limpia todo los campos en el form
         /// </summary>
         private void Limpiar()
         {
+            tBlimiteinferior.Enabled = true;
+            tBlimitesuperior.Enabled = true;
+            lblStartBurbuja.Text = "Empezo: ";
+            lblStartInsert.Text = "Empezo: ";
+            lblStartOriginal.Text = "Empezo: ";
+            lblStartQuickSort.Text = "Empezo: ";
+            lblStartShell.Text = "Empezo: ";
+            lblEndBurbuja.Text = "Finalizo: ";
+            lblEndInsert.Text = "Finalizo: ";
+            lblEndOriginal.Text = "Finalizo: ";
+            lblEndQuickSort.Text = "Finalizo: ";
+            lblEndShell.Text = "Finalizo: ";
             dGVoriginal.Rows.Clear();
+            dGVburbuja.Rows.Clear();
+            dGVinsert.Rows.Clear();
+            dGVshell.Rows.Clear();
+            dGVqucksort.Rows.Clear();
             tBlimiteinferior.Clear();
             tBlimitesuperior.Clear();
             tBlimiteinferior.Focus();
@@ -88,6 +155,7 @@ namespace esdat
             }
             ImprimirArreglo(dGVburbuja, arBurbuja);
             lblEndBurbuja.Text = "Finalizo: " + DateTime.Now.ToLongTimeString();
+            lblEndBurbuja.Update();
             lblIeracionBurbuja.Text = cont.ToString();
         }
         /// <summary>
@@ -113,6 +181,7 @@ namespace esdat
             ImprimirArreglo(dGVinsert, arInsert);
             lblIteracionInsert.Text = cont.ToString();
             lblEndInsert.Text = "Finalizo: " + DateTime.Now.ToLongTimeString();
+            lblEndInsert.Update();
         }
         /// <summary>
         /// Organiza los datos con metodo Shell
@@ -148,17 +217,40 @@ namespace esdat
             ImprimirArreglo(dGVshell, arShell);
             lblInteracionShell.Text = cont.ToString();
             lblEndShell.Text = "Finalizo: " + DateTime.Now.ToLongTimeString();
+            lblEndShell.Update();
         }
         /// <summary>
         /// Organiza los datos con metodo QuickSort
         /// </summary>
-        private void QuickSort()
+        private void QuickSort(int primero, int ultimo)
         {
-            lblStartQuickSort.Text = "Empezo: " + DateTime.Now.ToLongTimeString();
-            lblStartShell.Update();
-
-            ImprimirArreglo(dGVqucksort, arQuickSort);
-            lblEndQuickSort.Text = "Finalizo: " + DateTime.Now.ToLongTimeString();
+            int i, j, temp, central = (primero + ultimo) / 2;
+            double privote = arQuickSort[central];
+            i = primero;
+            j = ultimo;
+            do
+            {
+                while (arQuickSort[i] < privote) i++;
+                while (arQuickSort[j] > privote) j--;
+                if (i <= j)
+                {
+                    temp = arQuickSort[i];
+                    arQuickSort[i] = arQuickSort[j];
+                    arQuickSort[j] = temp;
+                    i++;
+                    j--;
+                    
+                }
+            } while (i<=j);
+            if (primero<j)
+            {
+                QuickSort(primero, j);
+                contquicksort++;
+            }
+            if (i < ultimo)
+            {
+                QuickSort(i, ultimo);
+            }
         }
         public FrmOrdenamientoBusqueda()
         {
@@ -182,10 +274,7 @@ namespace esdat
 
         private void btnCalcular_Click(object sender, EventArgs e)
         {
-            //Burbuja();
-            //Insert();
-            Shell();
-            //QuickSort();
+            Calcular();
         }
     }
 }

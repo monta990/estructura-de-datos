@@ -29,11 +29,12 @@
         private void InitializeComponent()
         {
             this.gBdatos = new System.Windows.Forms.GroupBox();
-            this.lblColumnas = new System.Windows.Forms.Label();
-            this.lblRenglones = new System.Windows.Forms.Label();
-            this.tBcolumnas = new System.Windows.Forms.TextBox();
             this.tBrenglones = new System.Windows.Forms.TextBox();
+            this.tBcolumnas = new System.Windows.Forms.TextBox();
+            this.lblRenglones = new System.Windows.Forms.Label();
+            this.lblColumnas = new System.Windows.Forms.Label();
             this.Generar = new System.Windows.Forms.Button();
+            this.btnSalir = new System.Windows.Forms.Button();
             this.gBdatos.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,14 +51,21 @@
             this.gBdatos.TabStop = false;
             this.gBdatos.Text = "Ingresa columnas y renglones";
             // 
-            // lblColumnas
+            // tBrenglones
             // 
-            this.lblColumnas.AutoSize = true;
-            this.lblColumnas.Location = new System.Drawing.Point(7, 20);
-            this.lblColumnas.Name = "lblColumnas";
-            this.lblColumnas.Size = new System.Drawing.Size(53, 13);
-            this.lblColumnas.TabIndex = 0;
-            this.lblColumnas.Text = "Columnas";
+            this.tBrenglones.Location = new System.Drawing.Point(10, 88);
+            this.tBrenglones.Name = "tBrenglones";
+            this.tBrenglones.Size = new System.Drawing.Size(244, 20);
+            this.tBrenglones.TabIndex = 3;
+            this.tBrenglones.Text = "3";
+            // 
+            // tBcolumnas
+            // 
+            this.tBcolumnas.Location = new System.Drawing.Point(10, 37);
+            this.tBcolumnas.Name = "tBcolumnas";
+            this.tBcolumnas.Size = new System.Drawing.Size(244, 20);
+            this.tBcolumnas.TabIndex = 2;
+            this.tBcolumnas.Text = "3";
             // 
             // lblRenglones
             // 
@@ -68,21 +76,14 @@
             this.lblRenglones.TabIndex = 1;
             this.lblRenglones.Text = "Renglones";
             // 
-            // tBcolumnas
+            // lblColumnas
             // 
-            this.tBcolumnas.Location = new System.Drawing.Point(10, 37);
-            this.tBcolumnas.Name = "tBcolumnas";
-            this.tBcolumnas.Size = new System.Drawing.Size(244, 20);
-            this.tBcolumnas.TabIndex = 2;
-            this.tBcolumnas.Text = "3";
-            // 
-            // tBrenglones
-            // 
-            this.tBrenglones.Location = new System.Drawing.Point(10, 88);
-            this.tBrenglones.Name = "tBrenglones";
-            this.tBrenglones.Size = new System.Drawing.Size(244, 20);
-            this.tBrenglones.TabIndex = 3;
-            this.tBrenglones.Text = "3";
+            this.lblColumnas.AutoSize = true;
+            this.lblColumnas.Location = new System.Drawing.Point(7, 20);
+            this.lblColumnas.Name = "lblColumnas";
+            this.lblColumnas.Size = new System.Drawing.Size(53, 13);
+            this.lblColumnas.TabIndex = 0;
+            this.lblColumnas.Text = "Columnas";
             // 
             // Generar
             // 
@@ -94,11 +95,22 @@
             this.Generar.UseVisualStyleBackColor = true;
             this.Generar.Click += new System.EventHandler(this.Generar_Click);
             // 
+            // btnSalir
+            // 
+            this.btnSalir.Location = new System.Drawing.Point(104, 200);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(75, 23);
+            this.btnSalir.TabIndex = 2;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
             // FrmGenMatriz
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.Generar);
             this.Controls.Add(this.gBdatos);
             this.Name = "FrmGenMatriz";
@@ -117,5 +129,6 @@
         private System.Windows.Forms.Label lblRenglones;
         private System.Windows.Forms.Label lblColumnas;
         private System.Windows.Forms.Button Generar;
+        private System.Windows.Forms.Button btnSalir;
     }
 }

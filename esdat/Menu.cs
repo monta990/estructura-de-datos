@@ -81,5 +81,10 @@ namespace esdat
         {
             new FrmCuadradoMagico().ShowDialog();
         }
+
+        private void sumaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new FrmGenMatriz().ShowDialog();
+        }
     }
 }

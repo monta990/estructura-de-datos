@@ -81,6 +81,12 @@
     <Compile Include="FrmCuadradoMagico.Designer.cs">
       <DependentUpon>FrmCuadradoMagico.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmGenMatriz.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmGenMatriz.Designer.cs">
+      <DependentUpon>FrmGenMatriz.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmHilbert.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,6 +104,12 @@
     </Compile>
     <Compile Include="FrmPruebaFibonacci.Designer.cs">
       <DependentUpon>FrmPruebaFibonacci.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSumaMatrices.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSumaMatrices.Designer.cs">
+      <DependentUpon>FrmSumaMatrices.cs</DependentUpon>
     </Compile>
     <Compile Include="MCD.cs">
       <SubType>Form</SubType>
@@ -161,6 +173,9 @@
     <EmbeddedResource Include="FrmCuadradoMagico.resx">
       <DependentUpon>FrmCuadradoMagico.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmGenMatriz.resx">
+      <DependentUpon>FrmGenMatriz.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmHilbert.resx">
       <DependentUpon>FrmHilbert.cs</DependentUpon>
     </EmbeddedResource>
@@ -169,6 +184,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPruebaFibonacci.resx">
       <DependentUpon>FrmPruebaFibonacci.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSumaMatrices.resx">
+      <DependentUpon>FrmSumaMatrices.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MCD.resx">
       <DependentUpon>MCD.cs</DependentUpon>

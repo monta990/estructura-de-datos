@@ -166,7 +166,8 @@
             // 
             this.sumaToolStripMenuItem.Name = "sumaToolStripMenuItem";
             this.sumaToolStripMenuItem.Size = new System.Drawing.Size(217, 22);
-            this.sumaToolStripMenuItem.Text = "Suma";
+            this.sumaToolStripMenuItem.Text = "Suma de Matrices";
+            this.sumaToolStripMenuItem.Click += new System.EventHandler(this.sumaToolStripMenuItem_Click);
             // 
             // inversaToolStripMenuItem
             // 

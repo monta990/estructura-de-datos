@@ -36,6 +36,7 @@
             this.lblMatriz1 = new System.Windows.Forms.Label();
             this.lblMatriz2 = new System.Windows.Forms.Label();
             this.lblMatrizResultado = new System.Windows.Forms.Label();
+            this.btnRandom = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dGVmatriz1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dGVmatriz2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dGVresultado)).BeginInit();
@@ -122,11 +123,22 @@
             this.lblMatrizResultado.TabIndex = 7;
             this.lblMatrizResultado.Text = "Resultado";
             // 
+            // btnRandom
+            // 
+            this.btnRandom.Location = new System.Drawing.Point(25, 238);
+            this.btnRandom.Name = "btnRandom";
+            this.btnRandom.Size = new System.Drawing.Size(75, 23);
+            this.btnRandom.TabIndex = 8;
+            this.btnRandom.Text = "Random";
+            this.btnRandom.UseVisualStyleBackColor = true;
+            this.btnRandom.Click += new System.EventHandler(this.btnRandom_Click);
+            // 
             // FrmSumaMatrices
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(868, 323);
+            this.Controls.Add(this.btnRandom);
             this.Controls.Add(this.lblMatrizResultado);
             this.Controls.Add(this.lblMatriz2);
             this.Controls.Add(this.lblMatriz1);
@@ -156,5 +168,6 @@
         private System.Windows.Forms.Label lblMatriz1;
         private System.Windows.Forms.Label lblMatriz2;
         private System.Windows.Forms.Label lblMatrizResultado;
+        private System.Windows.Forms.Button btnRandom;
     }
 }

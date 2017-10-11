@@ -14,6 +14,11 @@ namespace esdat
     {
         private int columnas, renglones;
         private Random R = new Random();
+        /// <summary>
+        /// Suma de matrices
+        /// </summary>
+        /// <param name="columnas">A generar</param>
+        /// <param name="renglones">A generar</param>
         public FrmSumaMatrices(int columnas, int renglones)
         {
             InitializeComponent();
@@ -25,6 +30,12 @@ namespace esdat
         /// </summary>
         private void Generar()
         {
+            dGVmatriz1.Rows.Clear();
+            dGVmatriz1.Columns.Clear();
+            dGVmatriz2.Rows.Clear();
+            dGVmatriz2.Columns.Clear();
+            dGVresultado.Rows.Clear();
+            dGVresultado.Columns.Clear();
             for (int c = 0; c < columnas; c++)
             {
                 dGVmatriz1.Columns.Add("C" + (c + 1), "C" + (c + 1));
@@ -62,6 +73,11 @@ namespace esdat
         private void btnIgual_Click(object sender, EventArgs e)
         {
             Igual();
+        }
+
+        private void btnRandom_Click(object sender, EventArgs e)
+        {
+            Generar();
         }
 
         private void FrmSumaMatrices_Load(object sender, EventArgs e)

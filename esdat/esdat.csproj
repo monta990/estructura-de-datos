@@ -321,5 +321,8 @@
   <ItemGroup>
     <None Include="Resources\MCD.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\suma-matrices.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -86,7 +86,7 @@ namespace esdat
             }
         }
         /// <summary>
-        /// Resolver
+        /// Resolver suma de matrices
         /// </summary>
         private void Igual()
         {

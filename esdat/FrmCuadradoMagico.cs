@@ -21,11 +21,11 @@ namespace esdat
         /// </summary>
         private void CuadroMagico() //configuración inicial de cuadro magico
         {
-            dGVcuadradoMagico.Width = 123; //ancho de datagridview
-            dGVcuadradoMagico.Height = 92; //alto de datagridview
+            dGVcuadradoMagico.Width = 203; //ancho de datagridview
+            dGVcuadradoMagico.Height = 91; //alto de datagridview
             for (int i = 0; i <= 3; i++) //numero de columnas
             {
-                dGVcuadradoMagico.Columns[i].Width = 30; //tamaño de columna
+                dGVcuadradoMagico.Columns[i].Width = 50; //tamaño de columna
                 dGVcuadradoMagico.Rows.Add(); //agregar renglon
             }
         }

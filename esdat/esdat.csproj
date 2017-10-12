@@ -87,6 +87,12 @@
     <Compile Include="FrmGenMatriz.Designer.cs">
       <DependentUpon>FrmGenMatriz.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmGenTranpuesta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmGenTranpuesta.Designer.cs">
+      <DependentUpon>FrmGenTranpuesta.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmHilbert.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +116,12 @@
     </Compile>
     <Compile Include="FrmSumaMatrices.Designer.cs">
       <DependentUpon>FrmSumaMatrices.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTranspuesta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTranspuesta.Designer.cs">
+      <DependentUpon>FrmTranspuesta.cs</DependentUpon>
     </Compile>
     <Compile Include="MCD.cs">
       <SubType>Form</SubType>
@@ -176,6 +188,9 @@
     <EmbeddedResource Include="FrmGenMatriz.resx">
       <DependentUpon>FrmGenMatriz.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmGenTranpuesta.resx">
+      <DependentUpon>FrmGenTranpuesta.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmHilbert.resx">
       <DependentUpon>FrmHilbert.cs</DependentUpon>
     </EmbeddedResource>
@@ -187,6 +202,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmSumaMatrices.resx">
       <DependentUpon>FrmSumaMatrices.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTranspuesta.resx">
+      <DependentUpon>FrmTranspuesta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MCD.resx">
       <DependentUpon>MCD.cs</DependentUpon>
@@ -323,6 +341,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\suma-matrices.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cuadradomagico.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -255,9 +255,9 @@
             // pBcuadradomagico
             // 
             this.pBcuadradomagico.Image = global::esdat.Properties.Resources.cuadradomagico;
-            this.pBcuadradomagico.Location = new System.Drawing.Point(312, 29);
+            this.pBcuadradomagico.Location = new System.Drawing.Point(280, 29);
             this.pBcuadradomagico.Name = "pBcuadradomagico";
-            this.pBcuadradomagico.Size = new System.Drawing.Size(266, 223);
+            this.pBcuadradomagico.Size = new System.Drawing.Size(305, 265);
             this.pBcuadradomagico.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pBcuadradomagico.TabIndex = 15;
             this.pBcuadradomagico.TabStop = false;
@@ -280,7 +280,7 @@
             this.gBcuadradoMagico.Size = new System.Drawing.Size(262, 195);
             this.gBcuadradoMagico.TabIndex = 16;
             this.gBcuadradoMagico.TabStop = false;
-            this.gBcuadradoMagico.Text = "Cuadrado Magico";
+            this.gBcuadradoMagico.Text = "Cuadrado Mágico";
             // 
             // gBopciones
             // 
@@ -298,11 +298,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(312, 10);
+            this.label1.Location = new System.Drawing.Point(280, 13);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(168, 13);
             this.label1.TabIndex = 18;
-            this.label1.Text = "Como resolver un cuadrado magio";
+            this.label1.Text = "Como resolver un cuadrado mágio";
             // 
             // FrmCuadradoMagico
             // 
@@ -314,7 +314,7 @@
             this.Controls.Add(this.gBcuadradoMagico);
             this.Controls.Add(this.pBcuadradomagico);
             this.Name = "FrmCuadradoMagico";
-            this.Text = "Cuadrado Magico";
+            this.Text = "Cuadrado Mágico";
             this.Load += new System.EventHandler(this.FrmCuadradoMagico_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dGVcuadradoMagico)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBcuadradomagico)).EndInit();

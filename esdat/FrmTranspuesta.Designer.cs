@@ -116,7 +116,7 @@
             this.btnTranspuesta.Name = "btnTranspuesta";
             this.btnTranspuesta.Size = new System.Drawing.Size(142, 23);
             this.btnTranspuesta.TabIndex = 7;
-            this.btnTranspuesta.Text = "Generar Trasnpuesta";
+            this.btnTranspuesta.Text = "Generar Transpuesta";
             this.btnTranspuesta.UseVisualStyleBackColor = true;
             this.btnTranspuesta.Click += new System.EventHandler(this.btnTranspuesta_Click);
             // 

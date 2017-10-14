@@ -99,6 +99,12 @@
     <Compile Include="FrmHilbert.designer.cs">
       <DependentUpon>FrmHilbert.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmInversa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmInversa.Designer.cs">
+      <DependentUpon>FrmInversa.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmOrdenamientoBusqueda.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -193,6 +199,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmHilbert.resx">
       <DependentUpon>FrmHilbert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmInversa.resx">
+      <DependentUpon>FrmInversa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmOrdenamientoBusqueda.resx">
       <DependentUpon>FrmOrdenamientoBusqueda.cs</DependentUpon>

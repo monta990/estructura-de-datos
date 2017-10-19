@@ -86,5 +86,20 @@ namespace esdat
         {
             new FrmGenMatriz().ShowDialog();
         }
+
+        private void Menu_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void imagenesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new FrmTreeImagen().ShowDialog();
+        }
+
+        private void conDatosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new FrmTreeDatos().ShowDialog();
+        }
     }
 }

@@ -18,29 +18,52 @@ namespace esdat
             Generar();
         }
         private Random R = new Random();
+        private DataGridView Data;
+        /// <summary>
+        /// Limpiar datagridview
+        /// </summary>
+        private void Clear()
+        {
+            foreach (DataGridView Data in this.Controls.OfType<DataGridView>())
+            {
+                Data.Columns.Clear();
+                Data.Rows.Clear();
+            }
+        }
+        /// <summary>
+        /// Agrega columnas
+        /// </summary>
+        private void AddColumns()
+        {
+            foreach (DataGridView Data in this.Controls.OfType<DataGridView>())
+            {
+                for (int c = 0; c < 3; c++)
+                {
+                    Data.Columns.Add("C" + (c + 1), "C" + (c + 1));
+                }
+            }
+        }
+        /// <summary>
+        /// Agrega renglones
+        /// </summary>
+        private void AddRows()
+        {
+            foreach (DataGridView Data in this.Controls.OfType<DataGridView>())
+            {
+                for (int r = 0; r < 3; r++)
+                {
+                    Data.Rows.Add();
+                    Data.Rows[r].HeaderCell.Value= "R " + (r+1);
+                }
+            }
+        }
         /// <summary>
         /// Cargar columns 
         /// </summary>
         private void Generar()
         {
-            dGVmatrizA.Columns.Clear();
-            dGVmatrizA.Rows.Clear();
-            dGVmatrizAdjunta.Columns.Clear();
-            dGVmatrizAdjunta.Rows.Clear();
-            dGVnatrizInveraAT.Columns.Clear();
-            dGVnatrizInveraAT.Rows.Clear();
-            dGVmatrizResultado.Columns.Clear();
-            dGVmatrizResultado.Rows.Clear();
-            dGVverificacion.Columns.Clear();
-            dGVverificacion.Rows.Clear();
-            for (int c = 0; c < 3; c++)
-            {
-                dGVmatrizA.Columns.Add("C" + (c + 1), "C" + (c + 1));
-                dGVmatrizAdjunta.Columns.Add("C" + (c + 1), "C" + (c + 1));
-                dGVnatrizInveraAT.Columns.Add("C" + (c + 1), "C" + (c + 1));
-                dGVmatrizResultado.Columns.Add("C" + (c + 1), "C" + (c + 1));
-                dGVverificacion.Columns.Add("C" + (c + 1), "C" + (c + 1));
-            }
+            Clear();
+            AddColumns();
             for (int r = 0; r < 3; r++)
             {
                 dGVmatrizA.Rows.Add();
@@ -59,42 +82,18 @@ namespace esdat
         /// </summary>
         private void Ejemplo()
         {
-            dGVmatrizA.Columns.Clear();
-            dGVmatrizA.Rows.Clear();
-            dGVmatrizAdjunta.Columns.Clear();
-            dGVmatrizAdjunta.Rows.Clear();
-            dGVnatrizInveraAT.Columns.Clear();
-            dGVnatrizInveraAT.Rows.Clear();
-            dGVmatrizResultado.Columns.Clear();
-            dGVmatrizResultado.Rows.Clear();
-            dGVverificacion.Columns.Clear();
-            dGVverificacion.Rows.Clear();
-            for (int c = 0; c < 3; c++)
-            {
-                dGVmatrizA.Columns.Add("C" + (c + 1), "C" + (c + 1));
-                dGVmatrizAdjunta.Columns.Add("C" + (c + 1), "C" + (c + 1));
-                dGVnatrizInveraAT.Columns.Add("C" + (c + 1), "C" + (c + 1));
-                dGVmatrizResultado.Columns.Add("C" + (c + 1), "C" + (c + 1));
-                dGVverificacion.Columns.Add("C" + (c + 1), "C" + (c + 1));
-            }
-            
-            for (int r = 0; r < 3; r++)
-            {
-                dGVmatrizA.Rows.Add();
-                dGVmatrizAdjunta.Rows.Add();
-                dGVnatrizInveraAT.Rows.Add();
-                dGVmatrizResultado.Rows.Add();
-                dGVverificacion.Rows.Add();
-            }
-            dGVmatrizA[0, 0].Value = "3".ToString();
-            dGVmatrizA[1, 0].Value = "2".ToString();
-            dGVmatrizA[2, 0].Value = "1".ToString();
-            dGVmatrizA[0, 1].Value = "0".ToString();
-            dGVmatrizA[1, 1].Value = "2".ToString();
-            dGVmatrizA[2, 1].Value = "-5".ToString();
-            dGVmatrizA[0, 2].Value = "-2".ToString();
-            dGVmatrizA[1, 2].Value = "1".ToString();
-            dGVmatrizA[2, 2].Value = "4".ToString();
+            Clear();
+            AddColumns();
+            AddRows();
+            dGVmatrizA[0, 0].Value = "3";
+            dGVmatrizA[1, 0].Value = "2";
+            dGVmatrizA[2, 0].Value = "1";
+            dGVmatrizA[0, 1].Value = "0";
+            dGVmatrizA[1, 1].Value = "2";
+            dGVmatrizA[2, 1].Value = "-5";
+            dGVmatrizA[0, 2].Value = "-2";
+            dGVmatrizA[1, 2].Value = "1";
+            dGVmatrizA[2, 2].Value = "4";
         }
         private void lblMatrizInveraAT_Click(object sender, EventArgs e)
         {

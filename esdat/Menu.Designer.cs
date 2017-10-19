@@ -49,6 +49,10 @@
             this.unidad4PilasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.unidad5ColasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.unidad6ArbolesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.recorridoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exploradorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.conDatosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.imagenesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.acercaDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btSalir = new System.Windows.Forms.Button();
@@ -215,9 +219,40 @@
             // 
             // unidad6ArbolesToolStripMenuItem
             // 
+            this.unidad6ArbolesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.recorridoToolStripMenuItem,
+            this.exploradorToolStripMenuItem,
+            this.conDatosToolStripMenuItem,
+            this.imagenesToolStripMenuItem});
             this.unidad6ArbolesToolStripMenuItem.Name = "unidad6ArbolesToolStripMenuItem";
             this.unidad6ArbolesToolStripMenuItem.Size = new System.Drawing.Size(112, 20);
             this.unidad6ArbolesToolStripMenuItem.Text = "Unidad 6: Arboles";
+            // 
+            // recorridoToolStripMenuItem
+            // 
+            this.recorridoToolStripMenuItem.Name = "recorridoToolStripMenuItem";
+            this.recorridoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.recorridoToolStripMenuItem.Text = "Recorrido";
+            // 
+            // exploradorToolStripMenuItem
+            // 
+            this.exploradorToolStripMenuItem.Name = "exploradorToolStripMenuItem";
+            this.exploradorToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.exploradorToolStripMenuItem.Text = "Explorador";
+            // 
+            // conDatosToolStripMenuItem
+            // 
+            this.conDatosToolStripMenuItem.Name = "conDatosToolStripMenuItem";
+            this.conDatosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.conDatosToolStripMenuItem.Text = "Con Datos";
+            this.conDatosToolStripMenuItem.Click += new System.EventHandler(this.conDatosToolStripMenuItem_Click);
+            // 
+            // imagenesToolStripMenuItem
+            // 
+            this.imagenesToolStripMenuItem.Name = "imagenesToolStripMenuItem";
+            this.imagenesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.imagenesToolStripMenuItem.Text = "Imagenes";
+            this.imagenesToolStripMenuItem.Click += new System.EventHandler(this.imagenesToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
@@ -254,6 +289,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Menu";
             this.Text = "Memú: Estructura de Datos";
+            this.Load += new System.EventHandler(this.Menu_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -287,6 +323,10 @@
         private System.Windows.Forms.ToolStripMenuItem inversaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem transpuestaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cuadradoMagicoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem imagenesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem recorridoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exploradorToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem conDatosToolStripMenuItem;
     }
 }
 

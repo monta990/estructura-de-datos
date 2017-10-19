@@ -40,6 +40,9 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.6.9.9\lib\net45\MySql.Data.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -129,6 +132,18 @@
     <Compile Include="FrmTranspuesta.Designer.cs">
       <DependentUpon>FrmTranspuesta.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmTreeDatos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTreeDatos.Designer.cs">
+      <DependentUpon>FrmTreeDatos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTreeImagen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTreeImagen.Designer.cs">
+      <DependentUpon>FrmTreeImagen.cs</DependentUpon>
+    </Compile>
     <Compile Include="MCD.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -214,6 +229,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmTranspuesta.resx">
       <DependentUpon>FrmTranspuesta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTreeDatos.resx">
+      <DependentUpon>FrmTreeDatos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTreeImagen.resx">
+      <DependentUpon>FrmTreeImagen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MCD.resx">
       <DependentUpon>MCD.cs</DependentUpon>

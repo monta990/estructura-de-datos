@@ -138,6 +138,12 @@
     <Compile Include="FrmTreeDatos.Designer.cs">
       <DependentUpon>FrmTreeDatos.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmTreeExplorer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTreeExplorer.Designer.cs">
+      <DependentUpon>FrmTreeExplorer.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmTreeImagen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -232,6 +238,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmTreeDatos.resx">
       <DependentUpon>FrmTreeDatos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTreeExplorer.resx">
+      <DependentUpon>FrmTreeExplorer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmTreeImagen.resx">
       <DependentUpon>FrmTreeImagen.cs</DependentUpon>

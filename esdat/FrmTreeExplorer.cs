@@ -45,6 +45,11 @@ namespace esdat
                 MessageBox.Show("Directorio no existe");
             }
         }
+        /// <summary>
+        /// Obtención de directorios
+        /// </summary>
+        /// <param name="subDirs">Subdirectorios</param>
+        /// <param name="nodopadre">Nodo padre</param>
         private void GetDirectories(DirectoryInfo []subDirs, TreeNode nodopadre)
         {
             TreeNode nodohijo;

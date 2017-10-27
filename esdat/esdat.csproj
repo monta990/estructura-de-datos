@@ -150,6 +150,12 @@
     <Compile Include="FrmTreeImagen.Designer.cs">
       <DependentUpon>FrmTreeImagen.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmTreeRecorrido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTreeRecorrido.Designer.cs">
+      <DependentUpon>FrmTreeRecorrido.cs</DependentUpon>
+    </Compile>
     <Compile Include="MCD.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -244,6 +250,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmTreeImagen.resx">
       <DependentUpon>FrmTreeImagen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTreeRecorrido.resx">
+      <DependentUpon>FrmTreeRecorrido.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MCD.resx">
       <DependentUpon>MCD.cs</DependentUpon>

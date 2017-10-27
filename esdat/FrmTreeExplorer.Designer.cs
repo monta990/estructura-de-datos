@@ -105,7 +105,7 @@
             this.Controls.Add(this.btnCargar);
             this.Controls.Add(this.tVfolder);
             this.Name = "FrmTreeExplorer";
-            this.Text = "FrmTreeExplorer";
+            this.Text = "Explorador con Arboles";
             this.Load += new System.EventHandler(this.FrmTreeExplorer_Load);
             this.ResumeLayout(false);
 

@@ -101,5 +101,10 @@ namespace esdat
         {
             new FrmTreeDatos().ShowDialog();
         }
+
+        private void recorridoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new FrmTreeRecorrido().ShowDialog();
+        }
     }
 }

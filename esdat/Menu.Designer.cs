@@ -233,6 +233,7 @@
             this.recorridoToolStripMenuItem.Name = "recorridoToolStripMenuItem";
             this.recorridoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.recorridoToolStripMenuItem.Text = "Recorrido";
+            this.recorridoToolStripMenuItem.Click += new System.EventHandler(this.recorridoToolStripMenuItem_Click);
             // 
             // exploradorToolStripMenuItem
             // 

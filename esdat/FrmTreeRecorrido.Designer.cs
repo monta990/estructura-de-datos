@@ -173,6 +173,7 @@
             this.btnRecorrido.TabIndex = 19;
             this.btnRecorrido.Text = "Recorrido";
             this.btnRecorrido.UseVisualStyleBackColor = true;
+            this.btnRecorrido.Click += new System.EventHandler(this.btnRecorrido_Click);
             // 
             // btnAgregarHijo
             // 

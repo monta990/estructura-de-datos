@@ -13,6 +13,7 @@ namespace esdat
     public partial class FrmTreeRecorrido : Form
     {
         private bool control = false;
+        private string Rocorridos;
         private List<String> Lista = new List<String>();
         public FrmTreeRecorrido()
         {
@@ -122,6 +123,25 @@ namespace esdat
                 }
             }
         }
+        /// <summary>
+        /// Recorido de treeview
+        /// </summary>
+        /// <param name="collection"></param>
+        private void Recorrido(TreeNodeCollection collection)
+        {
+            foreach (TreeNode item in collection)
+            {
+                if (item.Nodes.Count == 0)
+                {
+                    Rocorridos += "\n Hijo: " + item.Text;
+                }
+                else
+                {
+                    Rocorridos += "\n Padre: " + item.Text;
+                    Recorrido(item.Nodes);
+                }
+            }
+        }
         private void FrmTreeRecorrido_Load(object sender, EventArgs e)
         {
             Ejemplo();
@@ -208,6 +228,12 @@ namespace esdat
         private void tBhijo_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnRecorrido_Click(object sender, EventArgs e)
+        {
+            Recorrido(tVfolder.Nodes);
+            MessageBox.Show(Rocorridos);
         }
     }
 }

@@ -120,6 +120,12 @@
     <Compile Include="FrmPruebaFibonacci.Designer.cs">
       <DependentUpon>FrmPruebaFibonacci.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmStackGen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmStackGen.Designer.cs">
+      <DependentUpon>FrmStackGen.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmSumaMatrices.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -235,6 +241,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPruebaFibonacci.resx">
       <DependentUpon>FrmPruebaFibonacci.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmStackGen.resx">
+      <DependentUpon>FrmStackGen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmSumaMatrices.resx">
       <DependentUpon>FrmSumaMatrices.cs</DependentUpon>

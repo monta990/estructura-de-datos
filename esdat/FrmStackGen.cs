@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
@@ -81,6 +82,28 @@ namespace esdat
                 Imprimirpila();
             }
             
+        }
+        public Stack Reverse(Stack<string> input)
+        {
+            //Declare another stack to store the values from the passed stack
+            dGVpila.Rows.Clear();
+            Stack temp = new Stack();
+            Stack <string>desor = input;
+            //While the passed stack isn't empty, pop elements from the passed stack onto the temp stack
+            while (input.Count != 0)
+                temp.Push(desor.Pop());
+            
+            foreach (string item in temp)
+            {
+                dGVpila.Rows.Add(item);
+            }
+            return temp;
+        }
+        private void btnReversa_Click(object sender, EventArgs e)
+        {
+
+            Reverse(pilastring);
+            //Imprimirpila();
         }
     }
 }

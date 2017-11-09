@@ -148,6 +148,7 @@
             this.btnReversa.TabIndex = 9;
             this.btnReversa.Text = "Reversa()";
             this.btnReversa.UseVisualStyleBackColor = true;
+            this.btnReversa.Click += new System.EventHandler(this.btnReversa_Click);
             // 
             // lblnumelementos
             // 

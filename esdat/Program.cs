@@ -16,7 +16,7 @@ namespace esdat
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmStackGen());
+            Application.Run(new FrmPosfijas());
         }
     }
 }

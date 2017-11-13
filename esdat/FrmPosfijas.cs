@@ -29,7 +29,6 @@ namespace esdat
             {
                 dGVposfija.Rows.Add(item.ToString());
             }
-            //tbExpresion.Text = pilaint.Count.ToString();
         }
         private void lblInfoResultado_Click(object sender, EventArgs e)
         {
@@ -132,6 +131,7 @@ namespace esdat
             }
             if (truena == true)
             {
+                lblResultado.Text = "";
                 MessageBox.Show("Error en la expresión se termino con un operando", "Expresión incorrecta", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
@@ -143,6 +143,7 @@ namespace esdat
                 }
                 else
                 {
+                    lblResultado.Text = "";
                     MessageBox.Show("Error en la expresión", "Expresión incorrecta", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
@@ -163,6 +164,109 @@ namespace esdat
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnReinicar_Click(object sender, EventArgs e)
+        {
+            Limpiar();
+        }
+
+        private void btnEvaluar_Click(object sender, EventArgs e)
+        {
+            pilaint.Clear();
+            dGVposfija.Rows.Clear();
+            string[] expresion = tbExpresion.Text.Split(' ');
+            for (int i = 0; i < expresion.Length; i++)
+            {
+                try
+                {
+                    int operando = int.Parse(expresion[i]);
+                    pilaint.Push(operando);
+                }
+                catch (Exception deter)
+                {
+                    switch (expresion[i])
+                    {
+                        case "+":
+                            if (pilaint.Count >= 2)
+                            {
+                                op1 = pilaint.Pop();
+                                op2 = pilaint.Pop();
+                                int suma = op2 + op1;
+                                pilaint.Push(suma);
+                            }
+                            else
+                            {
+                                truena = true;
+                            }
+                            break;
+                        case "-":
+                            if (pilaint.Count >= 2)
+                            {
+                                op1 = pilaint.Pop();
+                                op2 = pilaint.Pop();
+                                int resta = op2 - op1;
+                                pilaint.Push(resta);
+                            }
+                            else
+                            {
+                                truena = true;
+                            }
+                            break;
+                        case "*":
+                            if (pilaint.Count == 2)
+                            {
+                                op1 = pilaint.Pop();
+                                op2 = pilaint.Pop();
+                                int multi = op2 * op1;
+                                pilaint.Push(multi);
+                            }
+                            else
+                            {
+                                truena = true;
+                            }
+                            break;
+                        case "/":
+
+                            if (pilaint.Count == 2)
+                            {
+                                op1 = pilaint.Pop();
+                                op2 = pilaint.Pop();
+                                int dividir = op2 / op1;
+                                pilaint.Push(dividir);
+                            }
+                            else
+                            {
+                                truena = true;
+                            }
+                            break;
+                        default:
+                            MessageBox.Show("No fue operando ni operarador, caracter incorrecto", "Caracter no valido", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            break;
+                    }
+                }
+                Imprimirpila();
+                if (truena) //salir del for en caso de fallo
+                    break;
+            }
+            if (truena == true)
+            {
+                lblResultado.Text = "";
+                MessageBox.Show("Error en la expresión se termino con un operando", "Expresión incorrecta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                if (pilaint.Count == 1)
+                {
+                    MessageBox.Show("El resultado es: " + pilaint.Peek(), "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    lblResultado.Text = pilaint.Peek().ToString();
+                }
+                else
+                {
+                    lblResultado.Text = "";
+                    MessageBox.Show("Error en la expresión", "Expresión incorrecta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
 
         private void dGVposfija_CellContentClick(object sender, DataGridViewCellEventArgs e)

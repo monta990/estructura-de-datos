@@ -73,7 +73,7 @@
             // 
             this.lblTope.AutoSize = true;
             this.lblTope.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTope.Location = new System.Drawing.Point(13, 81);
+            this.lblTope.Location = new System.Drawing.Point(23, 106);
             this.lblTope.Name = "lblTope";
             this.lblTope.Size = new System.Drawing.Size(67, 18);
             this.lblTope.TabIndex = 2;
@@ -133,6 +133,7 @@
             this.btnEvaluar.TabIndex = 4;
             this.btnEvaluar.Text = "Evaluar";
             this.btnEvaluar.UseVisualStyleBackColor = true;
+            this.btnEvaluar.Click += new System.EventHandler(this.btnEvaluar_Click);
             // 
             // btmPasoaPaso
             // 
@@ -154,12 +155,13 @@
             this.btnReinicar.TabIndex = 6;
             this.btnReinicar.Text = "Reiniciar";
             this.btnReinicar.UseVisualStyleBackColor = true;
+            this.btnReinicar.Click += new System.EventHandler(this.btnReinicar_Click);
             // 
             // lblInfoResultado
             // 
             this.lblInfoResultado.AutoSize = true;
             this.lblInfoResultado.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInfoResultado.Location = new System.Drawing.Point(364, 229);
+            this.lblInfoResultado.Location = new System.Drawing.Point(364, 205);
             this.lblInfoResultado.Name = "lblInfoResultado";
             this.lblInfoResultado.Size = new System.Drawing.Size(89, 18);
             this.lblInfoResultado.TabIndex = 7;
@@ -170,7 +172,7 @@
             // 
             this.lblResultado.AutoSize = true;
             this.lblResultado.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblResultado.Location = new System.Drawing.Point(364, 281);
+            this.lblResultado.Location = new System.Drawing.Point(453, 205);
             this.lblResultado.Name = "lblResultado";
             this.lblResultado.Size = new System.Drawing.Size(0, 18);
             this.lblResultado.TabIndex = 8;
@@ -178,7 +180,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(578, 81);
+            this.pictureBox1.Location = new System.Drawing.Point(553, 81);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(665, 285);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -189,7 +191,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(574, 13);
+            this.label1.Location = new System.Drawing.Point(549, 13);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(353, 20);
             this.label1.TabIndex = 10;
@@ -232,7 +234,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1266, 447);
+            this.ClientSize = new System.Drawing.Size(1228, 447);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnEjemplo2);
             this.Controls.Add(this.btnEjemplo1);
@@ -248,7 +250,7 @@
             this.Controls.Add(this.tbExpresion);
             this.Controls.Add(this.lbExpresion);
             this.Name = "FrmPosfijas";
-            this.Text = "FrmPosfijas";
+            this.Text = "Operaciones posfijas";
             ((System.ComponentModel.ISupportInitialize)(this.dGVposfija)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

@@ -1,6 +1,6 @@
 ﻿namespace esdat
 {
-    partial class Menu
+    partial class FrmMenu
     {
         /// <summary>
         /// Required designer variable.
@@ -47,6 +47,8 @@
             this.memoramaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.unidad3ListasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.unidad4PilasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pilaGenericoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.operacionPosfijaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.unidad5ColasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.unidad6ArbolesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.recorridoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -114,35 +116,35 @@
             // fibonnachiToolStripMenuItem
             // 
             this.fibonnachiToolStripMenuItem.Name = "fibonnachiToolStripMenuItem";
-            this.fibonnachiToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
+            this.fibonnachiToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
             this.fibonnachiToolStripMenuItem.Text = "Fibonacci";
             this.fibonnachiToolStripMenuItem.Click += new System.EventHandler(this.fibonnachiToolStripMenuItem_Click);
             // 
             // mCDToolStripMenuItem
             // 
             this.mCDToolStripMenuItem.Name = "mCDToolStripMenuItem";
-            this.mCDToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
-            this.mCDToolStripMenuItem.Text = "MCD";
+            this.mCDToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
+            this.mCDToolStripMenuItem.Text = "Maximo Común Divisor";
             this.mCDToolStripMenuItem.Click += new System.EventHandler(this.mCDToolStripMenuItem_Click);
             // 
             // busquedaBinariaToolStripMenuItem
             // 
             this.busquedaBinariaToolStripMenuItem.Name = "busquedaBinariaToolStripMenuItem";
-            this.busquedaBinariaToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
+            this.busquedaBinariaToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
             this.busquedaBinariaToolStripMenuItem.Text = "Busqueda Binaria";
             this.busquedaBinariaToolStripMenuItem.Click += new System.EventHandler(this.busquedaBinariaToolStripMenuItem_Click);
             // 
             // pruebaDeFibonnachiToolStripMenuItem
             // 
             this.pruebaDeFibonnachiToolStripMenuItem.Name = "pruebaDeFibonnachiToolStripMenuItem";
-            this.pruebaDeFibonnachiToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
+            this.pruebaDeFibonnachiToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
             this.pruebaDeFibonnachiToolStripMenuItem.Text = "Prueba de Fibonacci";
             this.pruebaDeFibonnachiToolStripMenuItem.Click += new System.EventHandler(this.pruebaDeFibonnachiToolStripMenuItem_Click);
             // 
             // fractalDeHilbertToolStripMenuItem
             // 
             this.fractalDeHilbertToolStripMenuItem.Name = "fractalDeHilbertToolStripMenuItem";
-            this.fractalDeHilbertToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
+            this.fractalDeHilbertToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
             this.fractalDeHilbertToolStripMenuItem.Text = "Fractal de Hilbert";
             this.fractalDeHilbertToolStripMenuItem.Click += new System.EventHandler(this.fractalDeHilbertToolStripMenuItem_Click);
             // 
@@ -207,9 +209,26 @@
             // 
             // unidad4PilasToolStripMenuItem
             // 
+            this.unidad4PilasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.pilaGenericoToolStripMenuItem,
+            this.operacionPosfijaToolStripMenuItem});
             this.unidad4PilasToolStripMenuItem.Name = "unidad4PilasToolStripMenuItem";
             this.unidad4PilasToolStripMenuItem.Size = new System.Drawing.Size(96, 20);
             this.unidad4PilasToolStripMenuItem.Text = "Unidad 4: Pilas";
+            // 
+            // pilaGenericoToolStripMenuItem
+            // 
+            this.pilaGenericoToolStripMenuItem.Name = "pilaGenericoToolStripMenuItem";
+            this.pilaGenericoToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
+            this.pilaGenericoToolStripMenuItem.Text = "Pila Generica";
+            this.pilaGenericoToolStripMenuItem.Click += new System.EventHandler(this.pilaGenericoToolStripMenuItem_Click);
+            // 
+            // operacionPosfijaToolStripMenuItem
+            // 
+            this.operacionPosfijaToolStripMenuItem.Name = "operacionPosfijaToolStripMenuItem";
+            this.operacionPosfijaToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
+            this.operacionPosfijaToolStripMenuItem.Text = "Operacion posfija";
+            this.operacionPosfijaToolStripMenuItem.Click += new System.EventHandler(this.operacionPosfijaToolStripMenuItem_Click);
             // 
             // unidad5ColasToolStripMenuItem
             // 
@@ -231,27 +250,27 @@
             // recorridoToolStripMenuItem
             // 
             this.recorridoToolStripMenuItem.Name = "recorridoToolStripMenuItem";
-            this.recorridoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.recorridoToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.recorridoToolStripMenuItem.Text = "Recorrido";
             this.recorridoToolStripMenuItem.Click += new System.EventHandler(this.recorridoToolStripMenuItem_Click);
             // 
             // exploradorToolStripMenuItem
             // 
             this.exploradorToolStripMenuItem.Name = "exploradorToolStripMenuItem";
-            this.exploradorToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.exploradorToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.exploradorToolStripMenuItem.Text = "Explorador";
             // 
             // conDatosToolStripMenuItem
             // 
             this.conDatosToolStripMenuItem.Name = "conDatosToolStripMenuItem";
-            this.conDatosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.conDatosToolStripMenuItem.Text = "Con Datos";
+            this.conDatosToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
+            this.conDatosToolStripMenuItem.Text = "Con Datos (MySQL)";
             this.conDatosToolStripMenuItem.Click += new System.EventHandler(this.conDatosToolStripMenuItem_Click);
             // 
             // imagenesToolStripMenuItem
             // 
             this.imagenesToolStripMenuItem.Name = "imagenesToolStripMenuItem";
-            this.imagenesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.imagenesToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.imagenesToolStripMenuItem.Text = "Imagenes";
             this.imagenesToolStripMenuItem.Click += new System.EventHandler(this.imagenesToolStripMenuItem_Click);
             // 
@@ -280,7 +299,7 @@
             this.btSalir.UseVisualStyleBackColor = true;
             this.btSalir.Click += new System.EventHandler(this.btSalir_Click);
             // 
-            // Menu
+            // FrmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -288,7 +307,7 @@
             this.Controls.Add(this.btSalir);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "Menu";
+            this.Name = "FrmMenu";
             this.Text = "Memú: Estructura de Datos";
             this.Load += new System.EventHandler(this.Menu_Load);
             this.menuStrip1.ResumeLayout(false);
@@ -328,6 +347,8 @@
         private System.Windows.Forms.ToolStripMenuItem recorridoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exploradorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem conDatosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pilaGenericoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem operacionPosfijaToolStripMenuItem;
     }
 }
 

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace esdat
 {
-    public partial class Menu : Form
+    public partial class FrmMenu : Form
     {
-        public Menu()
+        public FrmMenu()
         {
             InitializeComponent();
         }
@@ -44,12 +44,12 @@ namespace esdat
 
         private void mCDToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            new MCD().ShowDialog();
+            new FrmMaximoComunDivisor().ShowDialog();
         }
 
         private void busquedaBinariaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            new BusquedaBinaria().ShowDialog();
+            new FrmBusquedaBinaria().ShowDialog();
         }
 
         private void fractalDeHilbertToolStripMenuItem_Click(object sender, EventArgs e)
@@ -64,7 +64,7 @@ namespace esdat
 
         private void memoramaToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            new SelectorMemorama().ShowDialog();
+            new FrmMemoramaSelector().ShowDialog();
         }
 
         private void matrizToolStripMenuItem_Click(object sender, EventArgs e)
@@ -105,6 +105,16 @@ namespace esdat
         private void recorridoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             new FrmTreeRecorrido().ShowDialog();
+        }
+
+        private void operacionPosfijaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new FrmPosfijas().ShowDialog();
+        }
+
+        private void pilaGenericoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new FrmStackGen().ShowDialog();
         }
     }
 }

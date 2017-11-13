@@ -1,6 +1,6 @@
 ﻿namespace esdat
 {
-    partial class SelectorMemorama
+    partial class FrmMemoramaSelector
     {
         /// <summary>
         /// Required designer variable.

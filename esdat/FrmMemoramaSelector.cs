@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace esdat
 {
-    public partial class SelectorMemorama : Form
+    public partial class FrmMemoramaSelector : Form
     {
         private int dificultad;
         private string nombre;
-        public SelectorMemorama()
+        public FrmMemoramaSelector()
         {
             InitializeComponent();
         }

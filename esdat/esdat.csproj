@@ -65,18 +65,18 @@
     <Compile Include="AboutBox1.Designer.cs">
       <DependentUpon>AboutBox1.cs</DependentUpon>
     </Compile>
-    <Compile Include="BusquedaBinaria.cs">
+    <Compile Include="FrmBusquedaBinaria.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BusquedaBinaria.Designer.cs">
-      <DependentUpon>BusquedaBinaria.cs</DependentUpon>
+    <Compile Include="FrmBusquedaBinaria.Designer.cs">
+      <DependentUpon>FrmBusquedaBinaria.cs</DependentUpon>
     </Compile>
     <Compile Include="ComplexNumber.cs" />
-    <Compile Include="fibonacci.cs">
+    <Compile Include="FrmFibonacci.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fibonacci.Designer.cs">
-      <DependentUpon>fibonacci.cs</DependentUpon>
+    <Compile Include="FrmFibonacci.Designer.cs">
+      <DependentUpon>FrmFibonacci.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmCuadradoMagico.cs">
       <SubType>Form</SubType>
@@ -168,11 +168,11 @@
     <Compile Include="FrmTreeRecorrido.Designer.cs">
       <DependentUpon>FrmTreeRecorrido.cs</DependentUpon>
     </Compile>
-    <Compile Include="MCD.cs">
+    <Compile Include="FrmMaximoComunDivisor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MCD.Designer.cs">
-      <DependentUpon>MCD.cs</DependentUpon>
+    <Compile Include="FrmMaximoComunDivisor.Designer.cs">
+      <DependentUpon>FrmMaximoComunDivisor.cs</DependentUpon>
     </Compile>
     <Compile Include="MemoramaNina.cs">
       <SubType>Form</SubType>
@@ -186,11 +186,11 @@
     <Compile Include="MemoramaNino.Designer.cs">
       <DependentUpon>MemoramaNino.cs</DependentUpon>
     </Compile>
-    <Compile Include="Menu.cs">
+    <Compile Include="FrmMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Menu.Designer.cs">
-      <DependentUpon>Menu.cs</DependentUpon>
+    <Compile Include="FrmMenu.Designer.cs">
+      <DependentUpon>FrmMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="Practica1.cs">
       <SubType>Form</SubType>
@@ -200,11 +200,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SelectorMemorama.cs">
+    <Compile Include="FrmMemoramaSelector.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SelectorMemorama.Designer.cs">
-      <DependentUpon>SelectorMemorama.cs</DependentUpon>
+    <Compile Include="FrmMemoramaSelector.Designer.cs">
+      <DependentUpon>FrmMemoramaSelector.cs</DependentUpon>
     </Compile>
     <Compile Include="TipoDatos.cs">
       <SubType>Form</SubType>
@@ -221,11 +221,11 @@
     <EmbeddedResource Include="AboutBox1.resx">
       <DependentUpon>AboutBox1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BusquedaBinaria.resx">
-      <DependentUpon>BusquedaBinaria.cs</DependentUpon>
+    <EmbeddedResource Include="FrmBusquedaBinaria.resx">
+      <DependentUpon>FrmBusquedaBinaria.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fibonacci.resx">
-      <DependentUpon>fibonacci.cs</DependentUpon>
+    <EmbeddedResource Include="FrmFibonacci.resx">
+      <DependentUpon>FrmFibonacci.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmCuadradoMagico.resx">
       <DependentUpon>FrmCuadradoMagico.cs</DependentUpon>
@@ -272,8 +272,8 @@
     <EmbeddedResource Include="FrmTreeRecorrido.resx">
       <DependentUpon>FrmTreeRecorrido.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MCD.resx">
-      <DependentUpon>MCD.cs</DependentUpon>
+    <EmbeddedResource Include="FrmMaximoComunDivisor.resx">
+      <DependentUpon>FrmMaximoComunDivisor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MemoramaNina.resx">
       <DependentUpon>MemoramaNina.cs</DependentUpon>
@@ -281,8 +281,8 @@
     <EmbeddedResource Include="MemoramaNino.resx">
       <DependentUpon>MemoramaNino.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Menu.resx">
-      <DependentUpon>Menu.cs</DependentUpon>
+    <EmbeddedResource Include="FrmMenu.resx">
+      <DependentUpon>FrmMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Practica1.resx">
       <DependentUpon>Practica1.cs</DependentUpon>
@@ -297,8 +297,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="SelectorMemorama.resx">
-      <DependentUpon>SelectorMemorama.cs</DependentUpon>
+    <EmbeddedResource Include="FrmMemoramaSelector.resx">
+      <DependentUpon>FrmMemoramaSelector.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TipoDatos.resx">
       <DependentUpon>TipoDatos.cs</DependentUpon>

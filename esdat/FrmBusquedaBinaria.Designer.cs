@@ -1,6 +1,6 @@
 ﻿namespace esdat
 {
-    partial class BusquedaBinaria
+    partial class FrmBusquedaBinaria
     {
         /// <summary>
         /// Required designer variable.

@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace esdat
 {
-    public partial class BusquedaBinaria : Form
+    public partial class FrmBusquedaBinaria : Form
     {
         private int[] valores;
-        public BusquedaBinaria()
+        public FrmBusquedaBinaria()
         {
             InitializeComponent();
         }

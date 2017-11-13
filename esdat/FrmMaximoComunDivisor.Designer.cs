@@ -1,6 +1,6 @@
 ﻿namespace esdat
 {
-    partial class MCD
+    partial class FrmMaximoComunDivisor
     {
         /// <summary>
         /// Required designer variable.

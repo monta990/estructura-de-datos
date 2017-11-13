@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace esdat
 {
-    public partial class MCD : Form
+    public partial class FrmMaximoComunDivisor : Form
     {
-        public MCD()
+        public FrmMaximoComunDivisor()
         {
             InitializeComponent();
         }

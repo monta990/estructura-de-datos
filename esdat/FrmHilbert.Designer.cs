@@ -36,6 +36,7 @@
             this.btGuardar = new System.Windows.Forms.Button();
             this.btSalir = new System.Windows.Forms.Button();
             this.cbDepth = new System.Windows.Forms.ComboBox();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.picCanvas)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -126,12 +127,24 @@
             this.cbDepth.Size = new System.Drawing.Size(95, 21);
             this.cbDepth.TabIndex = 13;
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(12, 251);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(84, 13);
+            this.linkLabel1.TabIndex = 14;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Mas información";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
             // FrmHilbert
             // 
             this.AcceptButton = this.btnGo;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(693, 467);
+            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.cbDepth);
             this.Controls.Add(this.btSalir);
             this.Controls.Add(this.btGuardar);
@@ -163,6 +176,7 @@
         private System.Windows.Forms.Button btGuardar;
         private System.Windows.Forms.Button btSalir;
         private System.Windows.Forms.ComboBox cbDepth;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }
 

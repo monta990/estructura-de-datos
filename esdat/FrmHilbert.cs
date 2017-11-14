@@ -124,6 +124,11 @@ namespace esdat
             cbDepth.Text = cbDepth.Items[3].ToString(); //empezando con 4
         }
 
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://es.wikipedia.org/wiki/Curva_de_Hilbert");
+        }
+
         // Draw the line (LastX, LastY)-(LastX + dx, LastY + dy) and
         // update LastX = LastX + dx, LastY = LastY + dy.
         private void DrawRelative(Graphics gr, float dx, float dy)

@@ -83,8 +83,8 @@
             this.tiposDeDatosAbstractosToolStripMenuItem,
             this.recursividadToolStripMenuItem});
             this.unidad1ConseptosBásicosToolStripMenuItem.Name = "unidad1ConseptosBásicosToolStripMenuItem";
-            this.unidad1ConseptosBásicosToolStripMenuItem.Size = new System.Drawing.Size(170, 20);
-            this.unidad1ConseptosBásicosToolStripMenuItem.Text = "Unidad 1: Conseptos Básicos";
+            this.unidad1ConseptosBásicosToolStripMenuItem.Size = new System.Drawing.Size(171, 20);
+            this.unidad1ConseptosBásicosToolStripMenuItem.Text = "Unidad 1: Conceptos Básicos";
             // 
             // tiposDeDatosAbstractosToolStripMenuItem
             // 

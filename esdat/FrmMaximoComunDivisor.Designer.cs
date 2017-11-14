@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btLimpiar = new System.Windows.Forms.Button();
+            this.btSalir = new System.Windows.Forms.Button();
             this.btCalcular = new System.Windows.Forms.Button();
             this.lbMCDresultado = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -37,8 +39,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btSalir = new System.Windows.Forms.Button();
-            this.btLimpiar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -60,6 +60,26 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ingrese 2 numeros enteros";
+            // 
+            // btLimpiar
+            // 
+            this.btLimpiar.Location = new System.Drawing.Point(10, 163);
+            this.btLimpiar.Name = "btLimpiar";
+            this.btLimpiar.Size = new System.Drawing.Size(75, 23);
+            this.btLimpiar.TabIndex = 8;
+            this.btLimpiar.Text = "&Limpiar";
+            this.btLimpiar.UseVisualStyleBackColor = true;
+            this.btLimpiar.Click += new System.EventHandler(this.btLimpiar_Click);
+            // 
+            // btSalir
+            // 
+            this.btSalir.Location = new System.Drawing.Point(135, 163);
+            this.btSalir.Name = "btSalir";
+            this.btSalir.Size = new System.Drawing.Size(75, 23);
+            this.btSalir.TabIndex = 7;
+            this.btSalir.Text = "&Salir";
+            this.btSalir.UseVisualStyleBackColor = true;
+            this.btSalir.Click += new System.EventHandler(this.btSalir_Click);
             // 
             // btCalcular
             // 
@@ -131,34 +151,14 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // btSalir
-            // 
-            this.btSalir.Location = new System.Drawing.Point(135, 163);
-            this.btSalir.Name = "btSalir";
-            this.btSalir.Size = new System.Drawing.Size(75, 23);
-            this.btSalir.TabIndex = 7;
-            this.btSalir.Text = "&Salir";
-            this.btSalir.UseVisualStyleBackColor = true;
-            this.btSalir.Click += new System.EventHandler(this.btSalir_Click);
-            // 
-            // btLimpiar
-            // 
-            this.btLimpiar.Location = new System.Drawing.Point(10, 163);
-            this.btLimpiar.Name = "btLimpiar";
-            this.btLimpiar.Size = new System.Drawing.Size(75, 23);
-            this.btLimpiar.TabIndex = 8;
-            this.btLimpiar.Text = "&Limpiar";
-            this.btLimpiar.UseVisualStyleBackColor = true;
-            this.btLimpiar.Click += new System.EventHandler(this.btLimpiar_Click);
-            // 
-            // MCD
+            // FrmMaximoComunDivisor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(713, 359);
+            this.ClientSize = new System.Drawing.Size(722, 359);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox1);
-            this.Name = "MCD";
+            this.Name = "FrmMaximoComunDivisor";
             this.Text = "Maximo Común Divisor";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

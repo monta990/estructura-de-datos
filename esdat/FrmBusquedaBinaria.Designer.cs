@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmBusquedaBinaria));
             this.dGViewElementos = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tBelementos = new System.Windows.Forms.TextBox();
@@ -40,7 +41,9 @@
             this.btBuscar = new System.Windows.Forms.Button();
             this.btSalir = new System.Windows.Forms.Button();
             this.btLimpiar = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dGViewElementos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // dGViewElementos
@@ -52,10 +55,10 @@
             this.dGViewElementos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dGViewElementos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1});
-            this.dGViewElementos.Location = new System.Drawing.Point(5, 12);
+            this.dGViewElementos.Location = new System.Drawing.Point(12, 16);
             this.dGViewElementos.Name = "dGViewElementos";
             this.dGViewElementos.ReadOnly = true;
-            this.dGViewElementos.Size = new System.Drawing.Size(200, 233);
+            this.dGViewElementos.Size = new System.Drawing.Size(200, 380);
             this.dGViewElementos.TabIndex = 0;
             // 
             // Column1
@@ -93,7 +96,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(231, 155);
+            this.label3.Location = new System.Drawing.Point(231, 212);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(43, 13);
             this.label3.TabIndex = 4;
@@ -108,7 +111,7 @@
             // 
             // tBbuscar
             // 
-            this.tBbuscar.Location = new System.Drawing.Point(347, 152);
+            this.tBbuscar.Location = new System.Drawing.Point(347, 209);
             this.tBbuscar.Name = "tBbuscar";
             this.tBbuscar.Size = new System.Drawing.Size(151, 20);
             this.tBbuscar.TabIndex = 6;
@@ -125,7 +128,7 @@
             // 
             // btBuscar
             // 
-            this.btBuscar.Location = new System.Drawing.Point(516, 150);
+            this.btBuscar.Location = new System.Drawing.Point(516, 207);
             this.btBuscar.Name = "btBuscar";
             this.btBuscar.Size = new System.Drawing.Size(75, 23);
             this.btBuscar.TabIndex = 8;
@@ -135,7 +138,7 @@
             // 
             // btSalir
             // 
-            this.btSalir.Location = new System.Drawing.Point(516, 223);
+            this.btSalir.Location = new System.Drawing.Point(516, 371);
             this.btSalir.Name = "btSalir";
             this.btSalir.Size = new System.Drawing.Size(75, 23);
             this.btSalir.TabIndex = 9;
@@ -145,7 +148,7 @@
             // 
             // btLimpiar
             // 
-            this.btLimpiar.Location = new System.Drawing.Point(234, 223);
+            this.btLimpiar.Location = new System.Drawing.Point(234, 371);
             this.btLimpiar.Name = "btLimpiar";
             this.btLimpiar.Size = new System.Drawing.Size(75, 23);
             this.btLimpiar.TabIndex = 10;
@@ -153,11 +156,22 @@
             this.btLimpiar.UseVisualStyleBackColor = true;
             this.btLimpiar.Click += new System.EventHandler(this.btLimpiar_Click);
             // 
-            // BusquedaBinaria
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(613, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(340, 384);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 11;
+            this.pictureBox1.TabStop = false;
+            // 
+            // FrmBusquedaBinaria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(605, 258);
+            this.ClientSize = new System.Drawing.Size(965, 406);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btLimpiar);
             this.Controls.Add(this.btSalir);
             this.Controls.Add(this.btBuscar);
@@ -169,10 +183,10 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tBelementos);
             this.Controls.Add(this.dGViewElementos);
-            this.Name = "BusquedaBinaria";
+            this.Name = "FrmBusquedaBinaria";
             this.Text = "Busqueda Binaria";
-            this.Load += new System.EventHandler(this.BusquedaBinaria_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dGViewElementos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -192,5 +206,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.Button btSalir;
         private System.Windows.Forms.Button btLimpiar;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

@@ -114,7 +114,7 @@
             this.Controls.Add(this.Generar);
             this.Controls.Add(this.gBdatos);
             this.Name = "FrmGenTranpuesta";
-            this.Text = "FrmGenTranpuesta";
+            this.Text = "Ingreso los datos necesarios";
             this.gBdatos.ResumeLayout(false);
             this.gBdatos.PerformLayout();
             this.ResumeLayout(false);

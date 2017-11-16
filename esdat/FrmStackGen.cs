@@ -19,6 +19,43 @@ namespace esdat
             InitializeComponent();
         }
         /// <summary>
+        /// Push a la pila
+        /// </summary>
+        private void Push()
+        {
+            if (int.TryParse(tBelemento.Text, out int elemento))
+            {
+                pilastring.Push(tBelemento.Text);
+                Imprimirpila();
+            }
+            else
+            {
+                MessageBox.Show("No es numero entero el que se esta ingresando","No es entero", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        /// <summary>
+        /// Pop a la pila
+        /// </summary>
+        private void Pop()
+        {
+            if (pilastring.Count == 0)
+            {
+                MessageBox.Show("La pila esta vacia", "Pila vacía",MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                pilastring.Pop();
+                Imprimirpila();
+            }
+        }
+        /// <summary>
+        /// Pick a la pila
+        /// </summary>
+        private void Peek()
+        {
+            pilastring.Peek();
+        }
+        /// <summary>
         /// Imprimir pila
         /// </summary>
         private void Imprimirpila()
@@ -37,8 +74,7 @@ namespace esdat
 
         private void btnPush_Click(object sender, EventArgs e)
         {
-            pilastring.Push(tBelemento.Text);
-            Imprimirpila();
+            Push();
         }
 
         private void tBelemento_TextChanged(object sender, EventArgs e)
@@ -49,20 +85,12 @@ namespace esdat
 
         private void btnPop_Click(object sender, EventArgs e)
         {
-            if (pilastring.Count == 0)
-            {
-                MessageBox.Show("Pila vacía");
-            }
-            else
-            {
-                pilastring.Pop();
-                Imprimirpila();
-            }
+            Pop();
         }
 
         private void btnPeek_Click(object sender, EventArgs e)
         {
-
+            Peek();
         }
 
         private void FrmStackGen_Load(object sender, EventArgs e)
@@ -83,27 +111,31 @@ namespace esdat
             }
             
         }
-        public Stack Reverse(Stack<string> input)
+        /// <summary>
+        /// Pila a revertir
+        /// </summary>
+        /// <param name="input">Imgresa la pila a revertir de tipo string</param>
+        public void Reverse(Stack<string> input)
         {
-            //Declare another stack to store the values from the passed stack
             dGVpila.Rows.Clear();
-            Stack temp = new Stack();
-            Stack <string>desor = input;
-            //While the passed stack isn't empty, pop elements from the passed stack onto the temp stack
+            //pila temporal
+            Stack<string> temp = new Stack<string>();
+            //ingresar los elementos a la pila temp y hacer un pop a la imput hasta cero
             while (input.Count != 0)
-                temp.Push(desor.Pop());
-            
+                temp.Push(input.Pop());
+            //agregarlos a dgv
             foreach (string item in temp)
             {
                 dGVpila.Rows.Add(item);
             }
-            return temp;
+            //limpiar pila original
+            pilastring.Clear();
+            //mover temporal a pila original
+            pilastring = temp;
         }
         private void btnReversa_Click(object sender, EventArgs e)
         {
-
             Reverse(pilastring);
-            //Imprimirpila();
         }
     }
 }

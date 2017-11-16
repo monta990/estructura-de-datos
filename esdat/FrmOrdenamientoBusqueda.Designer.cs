@@ -469,7 +469,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1176, 472);
+            this.ClientSize = new System.Drawing.Size(798, 472);
             this.Controls.Add(this.lblEndQuickSort);
             this.Controls.Add(this.lblStartQuickSort);
             this.Controls.Add(this.lblEndShell);

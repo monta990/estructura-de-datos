@@ -41,7 +41,14 @@ namespace esdat
         }
         private void btCalcular_Click(object sender, EventArgs e)
         {
-            lbMCDresultado.Text=MCDmetodo(int.Parse(tBentero1.Text),int.Parse(tBentero2.Text)).ToString();
+            if (int.TryParse(tBentero1.Text, out int ent1)&& int.TryParse(tBentero2.Text, out int ent2))
+            {
+                lbMCDresultado.Text = MCDmetodo(int.Parse(tBentero1.Text), int.Parse(tBentero2.Text)).ToString();
+            }
+            else
+            {
+                MessageBox.Show("Solo numeros entero para elemento 1 y 2", "Solo enteros", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btLimpiar_Click(object sender, EventArgs e)

@@ -146,7 +146,7 @@
             this.btnReversa.Name = "btnReversa";
             this.btnReversa.Size = new System.Drawing.Size(191, 23);
             this.btnReversa.TabIndex = 9;
-            this.btnReversa.Text = "Reversa()";
+            this.btnReversa.Text = "Reverse()";
             this.btnReversa.UseVisualStyleBackColor = true;
             this.btnReversa.Click += new System.EventHandler(this.btnReversa_Click);
             // 
@@ -197,7 +197,7 @@
             this.Controls.Add(this.lblElemento);
             this.Controls.Add(this.dGVpila);
             this.Name = "FrmStackGen";
-            this.Text = "FrmStackGen";
+            this.Text = "Manejo de Pila Generica";
             this.Load += new System.EventHandler(this.FrmStackGen_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dGVpila)).EndInit();
             this.ResumeLayout(false);

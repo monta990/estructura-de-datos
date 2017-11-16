@@ -40,8 +40,8 @@
             this.btnSalir = new System.Windows.Forms.Button();
             this.pBsumarmatriz = new System.Windows.Forms.PictureBox();
             this.gBopciones = new System.Windows.Forms.GroupBox();
-            this.lblSuma = new System.Windows.Forms.Label();
             this.btnEjemplo = new System.Windows.Forms.Button();
+            this.lblSuma = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dGVmatriz1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dGVmatriz2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dGVresultado)).BeginInit();
@@ -59,6 +59,7 @@
             this.dGVmatriz1.Name = "dGVmatriz1";
             this.dGVmatriz1.Size = new System.Drawing.Size(240, 150);
             this.dGVmatriz1.TabIndex = 0;
+            this.dGVmatriz1.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGVmatriz1_CellValueChanged);
             // 
             // dGVmatriz2
             // 
@@ -178,16 +179,6 @@
             this.gBopciones.TabStop = false;
             this.gBopciones.Text = "Opciones";
             // 
-            // lblSuma
-            // 
-            this.lblSuma.AutoSize = true;
-            this.lblSuma.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSuma.Location = new System.Drawing.Point(310, 214);
-            this.lblSuma.Name = "lblSuma";
-            this.lblSuma.Size = new System.Drawing.Size(252, 16);
-            this.lblSuma.TabIndex = 12;
-            this.lblSuma.Text = "Como resolver la suma de matrices";
-            // 
             // btnEjemplo
             // 
             this.btnEjemplo.Location = new System.Drawing.Point(6, 73);
@@ -197,6 +188,16 @@
             this.btnEjemplo.Text = "Ejemplo";
             this.btnEjemplo.UseVisualStyleBackColor = true;
             this.btnEjemplo.Click += new System.EventHandler(this.btnEjemplo_Click);
+            // 
+            // lblSuma
+            // 
+            this.lblSuma.AutoSize = true;
+            this.lblSuma.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSuma.Location = new System.Drawing.Point(310, 214);
+            this.lblSuma.Name = "lblSuma";
+            this.lblSuma.Size = new System.Drawing.Size(252, 16);
+            this.lblSuma.TabIndex = 12;
+            this.lblSuma.Text = "Como resolver la suma de matrices";
             // 
             // FrmSumaMatrices
             // 

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 namespace esdat
 {
@@ -14,6 +15,7 @@ namespace esdat
     {
         private int columnas, renglones;
         private Random R = new Random();
+        private Regex validar = new Regex();
         /// <summary>
         /// Suma de matrices
         /// </summary>
@@ -116,6 +118,11 @@ namespace esdat
         private void btnEjemplo_Click(object sender, EventArgs e)
         {
             Ejemplo();
+        }
+
+        private void dGVmatriz1_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
 
         private void FrmSumaMatrices_Load(object sender, EventArgs e)

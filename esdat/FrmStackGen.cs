@@ -73,7 +73,7 @@ namespace esdat
             }
             else
             {
-                pilastring.Pop();
+                MessageBox.Show("El elemeto extraido es: "+ pilastring.Pop().ToString(), "Elemento extraido", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Imprimirpila();
                 Limpiar();
             }

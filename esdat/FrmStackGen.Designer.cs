@@ -87,7 +87,7 @@
             this.tBelemento.Location = new System.Drawing.Point(256, 13);
             this.tBelemento.Name = "tBelemento";
             this.tBelemento.Size = new System.Drawing.Size(119, 20);
-            this.tBelemento.TabIndex = 2;
+            this.tBelemento.TabIndex = 1;
             this.tBelemento.TextChanged += new System.EventHandler(this.tBelemento_TextChanged);
             // 
             // btnPush
@@ -95,7 +95,7 @@
             this.btnPush.Location = new System.Drawing.Point(397, 13);
             this.btnPush.Name = "btnPush";
             this.btnPush.Size = new System.Drawing.Size(191, 23);
-            this.btnPush.TabIndex = 3;
+            this.btnPush.TabIndex = 2;
             this.btnPush.Text = "Push()";
             this.btnPush.UseVisualStyleBackColor = true;
             this.btnPush.Click += new System.EventHandler(this.btnPush_Click);
@@ -105,7 +105,7 @@
             this.btnPop.Location = new System.Drawing.Point(397, 62);
             this.btnPop.Name = "btnPop";
             this.btnPop.Size = new System.Drawing.Size(191, 23);
-            this.btnPop.TabIndex = 4;
+            this.btnPop.TabIndex = 3;
             this.btnPop.Text = "Pop()";
             this.btnPop.UseVisualStyleBackColor = true;
             this.btnPop.Click += new System.EventHandler(this.btnPop_Click);
@@ -115,7 +115,7 @@
             this.btnPeek.Location = new System.Drawing.Point(397, 111);
             this.btnPeek.Name = "btnPeek";
             this.btnPeek.Size = new System.Drawing.Size(191, 23);
-            this.btnPeek.TabIndex = 5;
+            this.btnPeek.TabIndex = 4;
             this.btnPeek.Text = "Peek()";
             this.btnPeek.UseVisualStyleBackColor = true;
             this.btnPeek.Click += new System.EventHandler(this.btnPeek_Click);
@@ -125,7 +125,7 @@
             this.btnClear.Location = new System.Drawing.Point(397, 157);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(191, 23);
-            this.btnClear.TabIndex = 6;
+            this.btnClear.TabIndex = 5;
             this.btnClear.Text = "Clear()";
             this.btnClear.UseVisualStyleBackColor = true;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
@@ -135,7 +135,7 @@
             this.btnContains.Location = new System.Drawing.Point(397, 203);
             this.btnContains.Name = "btnContains";
             this.btnContains.Size = new System.Drawing.Size(191, 23);
-            this.btnContains.TabIndex = 7;
+            this.btnContains.TabIndex = 6;
             this.btnContains.Text = "Contains()";
             this.btnContains.UseVisualStyleBackColor = true;
             this.btnContains.Click += new System.EventHandler(this.btnContains_Click);
@@ -145,7 +145,7 @@
             this.btnElementAT.Location = new System.Drawing.Point(397, 248);
             this.btnElementAT.Name = "btnElementAT";
             this.btnElementAT.Size = new System.Drawing.Size(191, 23);
-            this.btnElementAT.TabIndex = 8;
+            this.btnElementAT.TabIndex = 7;
             this.btnElementAT.Text = "ElementAt()";
             this.btnElementAT.UseVisualStyleBackColor = true;
             this.btnElementAT.Click += new System.EventHandler(this.btnElementAT_Click);
@@ -155,7 +155,7 @@
             this.btnReversa.Location = new System.Drawing.Point(397, 291);
             this.btnReversa.Name = "btnReversa";
             this.btnReversa.Size = new System.Drawing.Size(191, 23);
-            this.btnReversa.TabIndex = 9;
+            this.btnReversa.TabIndex = 8;
             this.btnReversa.Text = "Reverse()";
             this.btnReversa.UseVisualStyleBackColor = true;
             this.btnReversa.Click += new System.EventHandler(this.btnReversa_Click);
@@ -183,7 +183,7 @@
             this.btnSalir.Location = new System.Drawing.Point(397, 429);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(191, 23);
-            this.btnSalir.TabIndex = 12;
+            this.btnSalir.TabIndex = 20;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);

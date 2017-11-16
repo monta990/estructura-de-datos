@@ -59,7 +59,7 @@
             this.dGVmatriz1.Name = "dGVmatriz1";
             this.dGVmatriz1.Size = new System.Drawing.Size(240, 150);
             this.dGVmatriz1.TabIndex = 0;
-            this.dGVmatriz1.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGVmatriz1_CellValueChanged);
+            this.dGVmatriz1.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGVmatriz1_CellEndEdit);
             // 
             // dGVmatriz2
             // 
@@ -71,6 +71,7 @@
             this.dGVmatriz2.Name = "dGVmatriz2";
             this.dGVmatriz2.Size = new System.Drawing.Size(240, 150);
             this.dGVmatriz2.TabIndex = 1;
+            this.dGVmatriz2.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGVmatriz2_CellEndEdit);
             // 
             // dGVresultado
             // 

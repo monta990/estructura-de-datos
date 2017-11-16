@@ -15,7 +15,7 @@ namespace esdat
     {
         private int columnas, renglones;
         private Random R = new Random();
-        private Regex validar = new Regex();
+        private Regex validar = new Regex(@"^[0-9]+$");
         /// <summary>
         /// Suma de matrices
         /// </summary>
@@ -120,13 +120,37 @@ namespace esdat
             Ejemplo();
         }
 
-        private void dGVmatriz1_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        private void dGVmatriz1_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
+            if (validar.IsMatch(dGVmatriz1.CurrentCell.Value.ToString()))
+            {
+                //valido
+            }
+            else
+            {
+                MessageBox.Show("Solo numeros por favor", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
 
+        private void dGVmatriz2_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            if (validar.IsMatch(dGVmatriz2.CurrentCell.Value.ToString()))
+            {
+                //valido
+            }
+            else
+            {
+                MessageBox.Show("Solo numeros por favor", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                int colum = dGVmatriz2.CurrentCell.ColumnIndex;
+                int row = dGVmatriz2.CurrentCell.RowIndex;
+                dGVmatriz2.CurrentCell = dGVmatriz2.Rows[row].Cells[colum];
+            }
         }
 
         private void FrmSumaMatrices_Load(object sender, EventArgs e)
         {
+            dGVmatriz1.MultiSelect = false;
+            dGVmatriz2.MultiSelect = false;
             Generar();
         }
     }

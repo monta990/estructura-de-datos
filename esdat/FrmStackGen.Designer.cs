@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmStackGen));
             this.dGVpila = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblElemento = new System.Windows.Forms.Label();
@@ -42,7 +43,14 @@
             this.lblnumelementos = new System.Windows.Forms.Label();
             this.lblnumeros = new System.Windows.Forms.Label();
             this.btnSalir = new System.Windows.Forms.Button();
+            this.picPush = new System.Windows.Forms.PictureBox();
+            this.picPop = new System.Windows.Forms.PictureBox();
+            this.lblPush = new System.Windows.Forms.Label();
+            this.lblPop = new System.Windows.Forms.Label();
+            this.llblInfo = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dGVpila)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picPush)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picPop)).BeginInit();
             this.SuspendLayout();
             // 
             // dGVpila
@@ -68,7 +76,7 @@
             // lblElemento
             // 
             this.lblElemento.AutoSize = true;
-            this.lblElemento.Location = new System.Drawing.Point(208, 16);
+            this.lblElemento.Location = new System.Drawing.Point(199, 16);
             this.lblElemento.Name = "lblElemento";
             this.lblElemento.Size = new System.Drawing.Size(51, 13);
             this.lblElemento.TabIndex = 1;
@@ -76,7 +84,7 @@
             // 
             // tBelemento
             // 
-            this.tBelemento.Location = new System.Drawing.Point(265, 13);
+            this.tBelemento.Location = new System.Drawing.Point(256, 13);
             this.tBelemento.Name = "tBelemento";
             this.tBelemento.Size = new System.Drawing.Size(119, 20);
             this.tBelemento.TabIndex = 2;
@@ -84,7 +92,7 @@
             // 
             // btnPush
             // 
-            this.btnPush.Location = new System.Drawing.Point(406, 13);
+            this.btnPush.Location = new System.Drawing.Point(397, 13);
             this.btnPush.Name = "btnPush";
             this.btnPush.Size = new System.Drawing.Size(191, 23);
             this.btnPush.TabIndex = 3;
@@ -94,7 +102,7 @@
             // 
             // btnPop
             // 
-            this.btnPop.Location = new System.Drawing.Point(406, 62);
+            this.btnPop.Location = new System.Drawing.Point(397, 62);
             this.btnPop.Name = "btnPop";
             this.btnPop.Size = new System.Drawing.Size(191, 23);
             this.btnPop.TabIndex = 4;
@@ -104,7 +112,7 @@
             // 
             // btnPeek
             // 
-            this.btnPeek.Location = new System.Drawing.Point(406, 111);
+            this.btnPeek.Location = new System.Drawing.Point(397, 111);
             this.btnPeek.Name = "btnPeek";
             this.btnPeek.Size = new System.Drawing.Size(191, 23);
             this.btnPeek.TabIndex = 5;
@@ -114,7 +122,7 @@
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(406, 157);
+            this.btnClear.Location = new System.Drawing.Point(397, 157);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(191, 23);
             this.btnClear.TabIndex = 6;
@@ -124,25 +132,27 @@
             // 
             // btnContains
             // 
-            this.btnContains.Location = new System.Drawing.Point(406, 203);
+            this.btnContains.Location = new System.Drawing.Point(397, 203);
             this.btnContains.Name = "btnContains";
             this.btnContains.Size = new System.Drawing.Size(191, 23);
             this.btnContains.TabIndex = 7;
             this.btnContains.Text = "Contains()";
             this.btnContains.UseVisualStyleBackColor = true;
+            this.btnContains.Click += new System.EventHandler(this.btnContains_Click);
             // 
             // btnElementAT
             // 
-            this.btnElementAT.Location = new System.Drawing.Point(406, 248);
+            this.btnElementAT.Location = new System.Drawing.Point(397, 248);
             this.btnElementAT.Name = "btnElementAT";
             this.btnElementAT.Size = new System.Drawing.Size(191, 23);
             this.btnElementAT.TabIndex = 8;
             this.btnElementAT.Text = "ElementAt()";
             this.btnElementAT.UseVisualStyleBackColor = true;
+            this.btnElementAT.Click += new System.EventHandler(this.btnElementAT_Click);
             // 
             // btnReversa
             // 
-            this.btnReversa.Location = new System.Drawing.Point(406, 291);
+            this.btnReversa.Location = new System.Drawing.Point(397, 291);
             this.btnReversa.Name = "btnReversa";
             this.btnReversa.Size = new System.Drawing.Size(191, 23);
             this.btnReversa.TabIndex = 9;
@@ -153,7 +163,7 @@
             // lblnumelementos
             // 
             this.lblnumelementos.AutoSize = true;
-            this.lblnumelementos.Location = new System.Drawing.Point(208, 296);
+            this.lblnumelementos.Location = new System.Drawing.Point(199, 296);
             this.lblnumelementos.Name = "lblnumelementos";
             this.lblnumelementos.Size = new System.Drawing.Size(113, 13);
             this.lblnumelementos.TabIndex = 10;
@@ -162,7 +172,7 @@
             // lblnumeros
             // 
             this.lblnumeros.AutoSize = true;
-            this.lblnumeros.Location = new System.Drawing.Point(327, 296);
+            this.lblnumeros.Location = new System.Drawing.Point(318, 296);
             this.lblnumeros.Name = "lblnumeros";
             this.lblnumeros.Size = new System.Drawing.Size(13, 13);
             this.lblnumeros.TabIndex = 11;
@@ -170,7 +180,7 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(406, 429);
+            this.btnSalir.Location = new System.Drawing.Point(397, 429);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(191, 23);
             this.btnSalir.TabIndex = 12;
@@ -178,11 +188,65 @@
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
+            // picPush
+            // 
+            this.picPush.Image = ((System.Drawing.Image)(resources.GetObject("picPush.Image")));
+            this.picPush.Location = new System.Drawing.Point(600, 31);
+            this.picPush.Name = "picPush";
+            this.picPush.Size = new System.Drawing.Size(319, 392);
+            this.picPush.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.picPush.TabIndex = 13;
+            this.picPush.TabStop = false;
+            // 
+            // picPop
+            // 
+            this.picPop.Image = ((System.Drawing.Image)(resources.GetObject("picPop.Image")));
+            this.picPop.Location = new System.Drawing.Point(926, 34);
+            this.picPop.Name = "picPop";
+            this.picPop.Size = new System.Drawing.Size(327, 385);
+            this.picPop.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.picPop.TabIndex = 14;
+            this.picPop.TabStop = false;
+            // 
+            // lblPush
+            // 
+            this.lblPush.AutoSize = true;
+            this.lblPush.Location = new System.Drawing.Point(600, 15);
+            this.lblPush.Name = "lblPush";
+            this.lblPush.Size = new System.Drawing.Size(86, 13);
+            this.lblPush.TabIndex = 15;
+            this.lblPush.Text = "Ejemplo de Push";
+            // 
+            // lblPop
+            // 
+            this.lblPop.AutoSize = true;
+            this.lblPop.Location = new System.Drawing.Point(923, 13);
+            this.lblPop.Name = "lblPop";
+            this.lblPop.Size = new System.Drawing.Size(81, 13);
+            this.lblPop.TabIndex = 16;
+            this.lblPop.Text = "Ejemplo de Pop";
+            // 
+            // llblInfo
+            // 
+            this.llblInfo.AutoSize = true;
+            this.llblInfo.Location = new System.Drawing.Point(600, 438);
+            this.llblInfo.Name = "llblInfo";
+            this.llblInfo.Size = new System.Drawing.Size(96, 13);
+            this.llblInfo.TabIndex = 17;
+            this.llblInfo.TabStop = true;
+            this.llblInfo.Text = "Mas información....";
+            this.llblInfo.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llblInfo_LinkClicked);
+            // 
             // FrmStackGen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(630, 472);
+            this.ClientSize = new System.Drawing.Size(1259, 472);
+            this.Controls.Add(this.llblInfo);
+            this.Controls.Add(this.lblPop);
+            this.Controls.Add(this.lblPush);
+            this.Controls.Add(this.picPop);
+            this.Controls.Add(this.picPush);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.lblnumeros);
             this.Controls.Add(this.lblnumelementos);
@@ -200,6 +264,8 @@
             this.Text = "Manejo de Pila Generica";
             this.Load += new System.EventHandler(this.FrmStackGen_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dGVpila)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picPush)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picPop)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -221,5 +287,10 @@
         private System.Windows.Forms.Label lblnumelementos;
         private System.Windows.Forms.Label lblnumeros;
         private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.PictureBox picPush;
+        private System.Windows.Forms.PictureBox picPop;
+        private System.Windows.Forms.Label lblPush;
+        private System.Windows.Forms.Label lblPop;
+        private System.Windows.Forms.LinkLabel llblInfo;
     }
 }

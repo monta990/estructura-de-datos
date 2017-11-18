@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Text.RegularExpressions;
 namespace esdat
 {
     public partial class FrmInversa : Form
@@ -19,6 +19,7 @@ namespace esdat
         }
         private Random R = new Random();
         private DataGridView Data;
+        private Regex validar = new Regex(@"^[0-9]+$");
         /// <summary>
         /// Limpiar datagridview
         /// </summary>
@@ -108,6 +109,18 @@ namespace esdat
         private void btnEjemplo_Click(object sender, EventArgs e)
         {
             Ejemplo();
+        }
+
+        private void dGVmatrizA_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            if (validar.IsMatch(dGVmatrizA.CurrentCell.Value.ToString()))
+            {
+                //valido
+            }
+            else
+            {
+                MessageBox.Show("Solo numeros por favor", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

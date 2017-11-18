@@ -180,12 +180,14 @@
             this.inversaToolStripMenuItem.Name = "inversaToolStripMenuItem";
             this.inversaToolStripMenuItem.Size = new System.Drawing.Size(217, 22);
             this.inversaToolStripMenuItem.Text = "Inversa";
+            this.inversaToolStripMenuItem.Click += new System.EventHandler(this.inversaToolStripMenuItem_Click);
             // 
             // transpuestaToolStripMenuItem
             // 
             this.transpuestaToolStripMenuItem.Name = "transpuestaToolStripMenuItem";
             this.transpuestaToolStripMenuItem.Size = new System.Drawing.Size(217, 22);
             this.transpuestaToolStripMenuItem.Text = "Transpuesta";
+            this.transpuestaToolStripMenuItem.Click += new System.EventHandler(this.transpuestaToolStripMenuItem_Click);
             // 
             // cuadradoMagicoToolStripMenuItem
             // 

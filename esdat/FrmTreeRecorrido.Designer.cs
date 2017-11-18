@@ -67,7 +67,7 @@
             // 
             // btnContraer
             // 
-            this.btnContraer.Location = new System.Drawing.Point(314, 157);
+            this.btnContraer.Location = new System.Drawing.Point(322, 157);
             this.btnContraer.Name = "btnContraer";
             this.btnContraer.Size = new System.Drawing.Size(75, 23);
             this.btnContraer.TabIndex = 9;
@@ -167,7 +167,7 @@
             // 
             // btnRecorrido
             // 
-            this.btnRecorrido.Location = new System.Drawing.Point(405, 157);
+            this.btnRecorrido.Location = new System.Drawing.Point(414, 157);
             this.btnRecorrido.Name = "btnRecorrido";
             this.btnRecorrido.Size = new System.Drawing.Size(75, 23);
             this.btnRecorrido.TabIndex = 19;

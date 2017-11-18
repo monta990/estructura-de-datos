@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 namespace esdat
 {
@@ -14,6 +15,7 @@ namespace esdat
     {
         private int columnas, renglones;
         private Random R = new Random();
+        private Regex validar = new Regex(@"^[0-9]+$");
         public FrmTranspuesta(int columnas, int renglones)
         {
             InitializeComponent();
@@ -75,6 +77,18 @@ namespace esdat
         private void btnTranspuesta_Click(object sender, EventArgs e)
         {
             Transpuesta();
+        }
+
+        private void dGVmatrizA_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            if (validar.IsMatch(dGVmatrizA.CurrentCell.Value.ToString()))
+            {
+                //valido
+            }
+            else
+            {
+                MessageBox.Show("Solo numeros por favor", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void FrmTranspuesta_Load(object sender, EventArgs e)

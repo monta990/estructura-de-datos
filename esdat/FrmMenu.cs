@@ -116,5 +116,15 @@ namespace esdat
         {
             new FrmStackGen().ShowDialog();
         }
+
+        private void inversaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new FrmInversa().ShowDialog();
+        }
+
+        private void transpuestaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new FrmGenTranpuesta().ShowDialog();
+        }
     }
 }

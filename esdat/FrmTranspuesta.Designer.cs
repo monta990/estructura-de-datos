@@ -61,6 +61,7 @@
             this.dGVmatrizA.Name = "dGVmatrizA";
             this.dGVmatrizA.Size = new System.Drawing.Size(469, 150);
             this.dGVmatrizA.TabIndex = 1;
+            this.dGVmatrizA.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGVmatrizA_CellEndEdit);
             // 
             // groupBox1
             // 

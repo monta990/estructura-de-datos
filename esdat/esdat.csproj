@@ -96,6 +96,12 @@
     <Compile Include="FrmGenTranpuesta.Designer.cs">
       <DependentUpon>FrmGenTranpuesta.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmHanoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmHanoi.Designer.cs">
+      <DependentUpon>FrmHanoi.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmHilbert.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -235,6 +241,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmGenTranpuesta.resx">
       <DependentUpon>FrmGenTranpuesta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmHanoi.resx">
+      <DependentUpon>FrmHanoi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmHilbert.resx">
       <DependentUpon>FrmHilbert.cs</DependentUpon>

@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace esdat
@@ -29,11 +30,11 @@ namespace esdat
             }
             #endregion
             #region Sobre carga de MouseMove de Discos
-            picBoxDisc1.MouseMove += picBoxDisc1_MouseDown;
-            picBoxDisc2.MouseMove += picBoxDisc2_MouseDown;
-            picBoxDisc3.MouseMove += picBoxDisc3_MouseDown;
-            picBoxDisc4.MouseMove += picBoxDisc4_MouseDown;
-            picBoxDisc5.MouseMove += picBoxDisc5_MouseDown;
+            picBoxDisc1.MouseDown += picBoxDisc1_MouseDown;
+            picBoxDisc2.MouseDown += picBoxDisc2_MouseDown;
+            picBoxDisc3.MouseDown += picBoxDisc3_MouseDown;
+            picBoxDisc4.MouseDown += picBoxDisc4_MouseDown;
+            picBoxDisc5.MouseDown += picBoxDisc5_MouseDown;
             #endregion
         }
         private void FrmHanoi_Load(object sender, EventArgs e)
@@ -49,11 +50,19 @@ namespace esdat
             picBoxDisc3.Top = panel1.Height - picBoxDisc3.Height - 2 * picBoxDisc3.Height - picBoxbase1.Height;
             picBoxDisc4.Top = panel1.Height - picBoxDisc4.Height - 3 * picBoxDisc4.Height - picBoxbase1.Height;
             picBoxDisc5.Top = panel1.Height - picBoxDisc5.Height - 4 * picBoxDisc5.Height - picBoxbase1.Height;
-            picBoxDisc1.BringToFront(); //dibujar a frente
+            picBoxDisc1.BringToFront(); //dibujar a frente de torre
             picBoxDisc2.BringToFront();
             picBoxDisc3.BringToFront();
             picBoxDisc4.BringToFront();
             picBoxDisc5.BringToFront();
+            pila1.Clear();
+            pila1.Push(picBoxDisc1);
+            pila1.Push(picBoxDisc2);
+            pila1.Push(picBoxDisc3);
+            pila1.Push(picBoxDisc4);
+            pila1.Push(picBoxDisc5);
+            pila2.Clear();
+            pila3.Clear();
             contador = 0;
             lblMovimientos.Text = contador.ToString();
             #endregion
@@ -62,6 +71,22 @@ namespace esdat
             //picBoxbarra3.Left = (panel3.Width / 2) - (picBoxbarra3.Width / 2);
         }
         #region Movimiento de discos
+        private bool Validador(Stack<PictureBox> Origen, Stack<PictureBox> Destino, PictureBox pictureBox)
+        {
+            if ((Destino.Count == 0 &&
+                pictureBox.Tag == Origen.Peek().Tag) || 
+                (Destino.Count != 0 &&
+                int.Parse(Destino.Peek().Tag.ToString()) > int.Parse(pictureBox.Tag.ToString()) &&
+                Origen.Peek().Tag.ToString() == pictureBox.Tag.ToString()))
+            {
+                Destino.Push(Origen.Pop());
+                pictureBox.Top = panel1.Height - picBoxbase1.Height - Destino.Count * pictureBox.Height;
+                lblMovimientos.Text = (++contador).ToString();
+                lblMovimientos.Update();
+            }
+            else return false;
+            return true;
+        }
         /// <summary>
         /// Mueve el disco y aumenta el contador en uno
         /// </summary>
@@ -77,31 +102,29 @@ namespace esdat
                         break;
                     case "panel2": pic.Parent = panel2;
                         break;
-                    case "panel3": pic.Parent = panel2;
+                    case "panel3": pic.Parent = panel3;
                         break;
                 }
             }
             pic.BringToFront(); //sobreposiciona el picturebox
-            //lblMovimientos.Text = contador++.ToString(); //agrega uno a contador y lo imprime
         }
         private bool SetPosition(PictureBox pic, string origen)
         {
-            //MessageBox.Show("Vienes de " + origen + "y vas a " + pic.Parent.Name);
-            if (origen == pic.Parent.Name)
-            {
-                return false;
-            }
+            if (origen == pic.Parent.Name) return false;
             switch (pic.Parent.Name) //panel de destino y al panel que va
             {
-                //la pila aun no esta cargada, usar un swich cargarla basado en el origen
-                case "panel1": //pila1.Push(pic)
-                    pic.Top = panel1.Height - picBoxbase1.Height - pila1.Count * pic.Height;
+                //la pila aun no esta cargada, usar un switch cargarla basado en el origen
+                case "panel1":
+                    if (origen == "panel2") return Validador(pila2, pila1, pic);
+                    if (origen == "panel3") return Validador(pila3, pila1, pic);
                     break;
-                case "panel2": //pila2.Push(pic)
-                    pic.Top = panel2.Height - picBoxbase2.Height - pila2.Count * pic.Height;
+                case "panel2":
+                    if (origen == "panel1") return Validador(pila1, pila2, pic);
+                    if (origen == "panel3") return Validador(pila3, pila2, pic);
                     break;
-                case "panel3": //pila3.Push(pic)
-                    pic.Top = panel3.Height - picBoxbase3.Height - pila3.Count * pic.Height;
+                case "panel3":
+                    if (origen == "panel1") return Validador(pila1, pila3, pic);
+                    if (origen == "panel2") return Validador(pila2, pila3, pic);
                     break;
             }
             return true;

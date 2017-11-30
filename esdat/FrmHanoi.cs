@@ -66,52 +66,113 @@ namespace esdat
             contador = 0;
             lblMovimientos.Text = contador.ToString();
             #endregion
-            //picBoxbarra1.Left = (panel1.Width / 2) - (picBoxbarra1.Width / 2);
-            //picBoxbarra2.Left = (panel2.Width / 2) - (picBoxbarra2.Width / 2);
-            //picBoxbarra3.Left = (panel3.Width / 2) - (picBoxbarra3.Width / 2);
+        }
+        /// <summary>
+        /// Autosolve
+        /// </summary>
+        private void Resolver(Stack<PictureBox> Pila1, Stack<PictureBox> Pila2, PictureBox pictureBox, Panel panel)
+        {
+                Validador(pila1, Pila2, pictureBox);
+                pictureBox.Parent = panel;
+                panel1.Update();
+                panel2.Update();
+                panel3.Update();
+                pictureBox.BringToFront();
+                pictureBox.Update();
+                Thread.Sleep(500); //espacio entre movimientos
+            //if (Validador(pila1, Pila2, pictureBox))
+            //{
+            //    pictureBox.Parent = panel;
+            //    panel1.Update();
+            //    panel2.Update();
+            //    panel3.Update();
+            //    pictureBox.BringToFront();
+            //    pictureBox.Update();
+            //    Thread.Sleep(500); //espacio entre movimientos
+            //}
         }
         #region Movimiento de discos
         private bool Validador(Stack<PictureBox> Origen, Stack<PictureBox> Destino, PictureBox pictureBox)
         {
-            if ((Destino.Count == 0 &&
-                pictureBox.Tag == Origen.Peek().Tag) || 
+            if (
+                (Destino.Count == 0 && pictureBox.Tag == Origen.Peek().Tag)
+
+                ||
+
                 (Destino.Count != 0 &&
                 int.Parse(Destino.Peek().Tag.ToString()) > int.Parse(pictureBox.Tag.ToString()) &&
-                Origen.Peek().Tag.ToString() == pictureBox.Tag.ToString()))
+                pictureBox.Tag.ToString() == Origen.Peek().Tag.ToString()
+                )
+                )
             {
                 Destino.Push(Origen.Pop());
-                pictureBox.Top = panel1.Height - picBoxbase1.Height - Destino.Count * pictureBox.Height;
+                pictureBox.Top = panel1.Height - pictureBox.Height - Destino.Count * pictureBox.Height;
                 lblMovimientos.Text = (++contador).ToString();
                 lblMovimientos.Update();
+                return true;
             }
             else return false;
+
+            //Destino.Push(Origen.Pop());
+            //pictureBox.Top = panel1.Height - picBoxbase1.Height - Destino.Count * pictureBox.Height;
+            //lblMovimientos.Text = (++contador).ToString();
+            //lblMovimientos.Update();
+            //return true;
+
+            //if ((Destino.Count == 0 && pictureBox.Tag == Origen.Peek().Tag))
+            //{
+            //    Destino.Push(Origen.Pop());
+            //    pictureBox.Top = panel1.Height - picBoxbase1.Height - Destino.Count * pictureBox.Height;
+            //    lblMovimientos.Text = (++contador).ToString();
+            //    lblMovimientos.Update();
+            //    return true;
+            //}
+            //else if (Destino.Count != 0 && int.Parse(Destino.Peek().Tag.ToString()) > int.Parse(pictureBox.Tag.ToString()) && pictureBox.Tag.ToString() == Origen.Peek().Tag.ToString())
+            //{
+            //    Destino.Push(Origen.Pop());
+            //    pictureBox.Top = panel1.Height - picBoxbase1.Height - Destino.Count * pictureBox.Height;
+            //    lblMovimientos.Text = (++contador).ToString();
+            //    lblMovimientos.Update();
+            //    return true;
+            //}
+            //else
+            //{
+            //    return false;
+            //}
+    //        if ((Destino.Count == 0 && pictureBox.Tag == Origen.Peek().Tag) || (Destino.Count != 0 && int.Parse(Destino.Peek().Tag.ToString())
+    //> int.Parse(pictureBox.Tag.ToString()) && Origen.Peek().Tag == pictureBox.Tag))
+    //        {
+    //            Destino.Push(Origen.Pop());
+    //            pictureBox.Top = panel1.Height - picBoxbase1.Height - Destino.Count * pictureBox.Height;
+    //            lblMovimientos.Text = (++contador).ToString();
+    //            lblMovimientos.Update();
+    //        }
+            //else return false;
             return true;
+
         }
         /// <summary>
         /// Mueve el disco y aumenta el contador en uno
         /// </summary>
         private void Mover(PictureBox pic)
         {
-            origen = pic.Parent.Name; //picturebox a controlar
+            origen = pic.Parent.Name.ToString(); //picturebox a controlar
             pic.DoDragDrop(pic, DragDropEffects.Move); //para mover
             if (!SetPosition(pic, origen))
             {
                 switch (origen)
                 {
-                    case "panel1": pic.Parent = panel1;
-                        break;
-                    case "panel2": pic.Parent = panel2;
-                        break;
-                    case "panel3": pic.Parent = panel3;
-                        break;
+                    case "panel1": pic.Parent = panel1; break;
+                    case "panel2": pic.Parent = panel2; break;
+                    case "panel3": pic.Parent = panel3; break;
                 }
             }
             pic.BringToFront(); //sobreposiciona el picturebox
         }
         private bool SetPosition(PictureBox pic, string origen)
         {
-            if (origen == pic.Parent.Name) return false;
-            switch (pic.Parent.Name) //panel de destino y al panel que va
+            //if (origen == pic.Parent.Name) return false;
+            switch (pic.Parent.Name.ToString()) //panel de destino y al panel que va
             {
                 //la pila aun no esta cargada, usar un switch cargarla basado en el origen
                 case "panel1":
@@ -150,5 +211,99 @@ namespace esdat
         private void btnSalir_Click(object sender, EventArgs e) => this.Close();
         private void linkLabelvideo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) => System.Diagnostics.Process.Start("https://es.wikipedia.org/wiki/Torres_de_Han%C3%B3i");
         private void btnReinicio_Click(object sender, EventArgs e) => FrmHanoi_Load(sender, e);
+        private void btnSolucion_Click(object sender, EventArgs e)
+        {
+            FrmHanoi_Load(sender, e);
+            //Resolver(pila1, pila2, picBoxDisc5, panel2);
+            //Resolver(pila1, pila3, picBoxDisc4, panel3);
+            //Resolver(pila2, pila3, picBoxDisc5, panel3);
+            //Resolver(pila1, pila2, picBoxDisc3, panel2);//4
+            //Resolver(pila3, pila1, picBoxDisc5, panel1);
+            //Resolver(pila3, pila2, picBoxDisc4, panel2);
+            //Resolver(pila1, pila2, picBoxDisc5, panel2);
+            //Resolver(pila1, pila3, picBoxDisc2, panel3);
+            //Resolver(pila2, pila1, picBoxDisc5, panel1);
+            //Resolver(pila1, pila3, picBoxDisc5, panel3);
+            //Resolver(pila2, pila1, picBoxDisc4, panel1);
+            //Resolver(pila3, pila1, picBoxDisc5, panel1);
+            //Resolver(pila2, pila3, picBoxDisc3, panel3);
+            //Resolver(pila1, pila2, picBoxDisc5, panel2);
+            //Resolver(pila1, pila3, picBoxDisc4, panel3);
+            //Resolver(pila2, pila3, picBoxDisc5, panel3);
+            //Resolver(pila3, pila1, picBoxDisc5, panel1);
+            //Resolver(pila3, pila2, picBoxDisc4, panel2);
+            //Resolver(pila1, pila2, picBoxDisc5, panel2);
+            //Resolver(pila2, pila1, picBoxDisc5, panel1);
+            //Resolver(pila1, pila3, picBoxDisc5, panel3);
+            //Resolver(pila2, pila1, picBoxDisc4, panel1);
+            //Resolver(pila3, pila1, picBoxDisc5, panel1);
+            //Resolver(pila3, pila2, picBoxDisc3, panel2);
+            //Resolver(pila1, pila3, picBoxDisc5, panel3);
+            //Resolver(pila1, pila2, picBoxDisc4, panel2);
+            //Resolver(pila3, pila1, picBoxDisc5, panel1);
+            //Resolver(pila2, pila3, picBoxDisc4, panel3);
+            //Resolver(pila1, pila3, picBoxDisc5, panel3);
+            //Resolver(pila2, pila1, picBoxDisc3, panel1);
+            //Resolver(pila3, pila2, picBoxDisc5, panel2);
+            //Resolver(pila3, pila1, picBoxDisc4, panel1);
+            //Resolver(pila2, pila1, picBoxDisc5, panel1);
+            //Resolver(pila3, pila2, picBoxDisc2, panel2);
+            //Resolver(pila1, pila2, picBoxDisc5, panel2);
+            //Resolver(pila1, pila3, picBoxDisc4, panel3);
+            //Resolver(pila2, pila3, picBoxDisc5, panel3);
+            //Resolver(pila1, pila2, picBoxDisc3, panel2);
+            //Resolver(pila3, pila1, picBoxDisc5, panel1);
+            //Resolver(pila3, pila2, picBoxDisc4, panel2);
+            //Resolver(pila3, pila1, 5, panel1);
+            //Resolver(pila1, pila2, 5, panel2);
+            //Resolver(pila1, pila3, 1, panel3);
+            //Resolver(pila2, pila3, 5, panel3);
+            //Resolver(pila2, pila1, 4, panel1);
+            //Resolver(pila3, pila1, 5, panel1);
+            //Resolver(pila2, pila3, 3, panel3);
+            //Resolver(pila1, pila3, 5, panel3);
+            //Resolver(pila1, pila2, 4, panel2);
+
+            //Resolver(pila3, pila2, 5, panel2);
+            //Resolver(pila3, pila1, 3, panel1);
+            //Resolver(pila2, pila3, D5, panel3);
+            //Resolver(pila2, pila1, D4, panel1);
+            //Resolver(pila3, pila1, D5, panel1);
+            //Resolver(pila2, pila3, D2, panel3);
+
+            //Resolver(pila1, pila3, picBoxDisc5, panel3);
+            //Resolver(pila1, pila2, picBoxDisc4, panel2);
+            //Resolver(pila3, pila2, picBoxDisc5, panel2);
+
+            //Resolver(pila1, pila3, picBoxDisc3, panel3);
+            //Resolver(pila2, pila1, picBoxDisc5, panel1);
+            //Resolver(pila2, pila3, picBoxDisc4, panel3);
+            //Resolver(pila1, pila3, picBoxDisc5, panel3);
+
+            Resolver(this.pila1, this.pila2, this.picBoxDisc5, this.panel2); //1
+            Resolver(this.pila2, this.pila3, this.picBoxDisc5, this.panel3);
+            Resolver(this.pila1, this.pila2, this.picBoxDisc5, this.panel2);
+            Resolver(this.pila1, this.pila3, this.picBoxDisc4, this.panel3); //2
+            Resolver(this.pila2, this.pila1, this.picBoxDisc5, this.panel1);
+            Resolver(this.pila1, this.pila3, this.picBoxDisc5, this.panel3);
+            Resolver(this.pila3, this.pila2, this.picBoxDisc4, this.panel2);
+            Resolver(this.pila3, this.pila2, this.picBoxDisc5, this.panel2);
+            //Resolver(this.pila1, this.pila2, this.picBoxDisc3, this.panel2);
+            //MessageBox.Show("Pila 3 antes de paso 3: " + pila3.Count.ToString());
+            //MessageBox.Show("Pila 2 antes de paso 3: " + pila2.Count.ToString());
+            //Resolver(this.pila2, this.pila3, this.picBoxDisc5, this.panel3); //3
+
+            //MessageBox.Show("Pila 2: " + pila2.Count.ToString());
+            //MessageBox.Show("Pila 3: " + pila3.Count.ToString());
+            //MessageBox.Show("Pila 1: " + pila1.Count.ToString());
+            //Resolver(this.pila1, this.pila2, this.picBoxDisc3, this.panel2); //4
+            //Resolver(pila3, pila1, picBoxDisc5, panel1); //5
+            //Resolver(pila3, pila2, picBoxDisc4, panel2); //6
+            //Resolver(pila1, pila2, picBoxDisc5, panel2); //7
+            //Resolver(pila1, pila3, picBoxDisc2, panel3); //8
+            //Resolver(pila2, pila1, picBoxDisc5, panel2); //9
+            //Resolver(pila2, pila3, picBoxDisc4, panel3); //10
+            //Resolver(pila1, pila3, picBoxDisc5, panel3); //11
+        }
     }
 }

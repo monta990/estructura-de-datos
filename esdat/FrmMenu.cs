@@ -126,5 +126,10 @@ namespace esdat
         {
             new FrmGenTranpuesta().ShowDialog();
         }
+
+        private void torreDeHanoiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new FrmTorres().ShowDialog();
+        }
     }
 }

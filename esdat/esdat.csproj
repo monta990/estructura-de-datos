@@ -218,6 +218,12 @@
     <Compile Include="TipoDatos.Designer.cs">
       <DependentUpon>TipoDatos.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmTorres.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTorres.designer.cs">
+      <DependentUpon>FrmTorres.cs</DependentUpon>
+    </Compile>
     <Compile Include="UCbSalir1.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -311,6 +317,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TipoDatos.resx">
       <DependentUpon>TipoDatos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTorres.resx">
+      <DependentUpon>FrmTorres.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UCbSalir1.resx">
       <DependentUpon>UCbSalir1.cs</DependentUpon>

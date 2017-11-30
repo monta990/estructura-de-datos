@@ -110,6 +110,8 @@ namespace esdat
             lblEndShell.Text = "Finalizo: ";
             lblIeracionBurbuja.Text = "0";
             lblIteracionInsert.Text = "0";
+            lblInteracionShell.Text = "0";
+            lblIteracionesQuickSort.Text = "0";
             dGVoriginal.Rows.Clear();
             dGVburbuja.Rows.Clear();
             dGVinsert.Rows.Clear();

@@ -58,6 +58,7 @@
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.acercaDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btSalir = new System.Windows.Forms.Button();
+            this.torreDeHanoiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -213,7 +214,8 @@
             // 
             this.unidad4PilasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.pilaGenericoToolStripMenuItem,
-            this.operacionPosfijaToolStripMenuItem});
+            this.operacionPosfijaToolStripMenuItem,
+            this.torreDeHanoiToolStripMenuItem});
             this.unidad4PilasToolStripMenuItem.Name = "unidad4PilasToolStripMenuItem";
             this.unidad4PilasToolStripMenuItem.Size = new System.Drawing.Size(96, 20);
             this.unidad4PilasToolStripMenuItem.Text = "Unidad 4: Pilas";
@@ -301,6 +303,13 @@
             this.btSalir.UseVisualStyleBackColor = true;
             this.btSalir.Click += new System.EventHandler(this.btSalir_Click);
             // 
+            // torreDeHanoiToolStripMenuItem
+            // 
+            this.torreDeHanoiToolStripMenuItem.Name = "torreDeHanoiToolStripMenuItem";
+            this.torreDeHanoiToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
+            this.torreDeHanoiToolStripMenuItem.Text = "Torre de Hanoi";
+            this.torreDeHanoiToolStripMenuItem.Click += new System.EventHandler(this.torreDeHanoiToolStripMenuItem_Click);
+            // 
             // FrmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -351,6 +360,7 @@
         private System.Windows.Forms.ToolStripMenuItem conDatosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pilaGenericoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem operacionPosfijaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem torreDeHanoiToolStripMenuItem;
     }
 }
 

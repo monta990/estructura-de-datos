@@ -123,7 +123,7 @@
             // 
             // picBoxDisc1
             // 
-            this.picBoxDisc1.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.picBoxDisc1.BackColor = System.Drawing.Color.Blue;
             this.picBoxDisc1.Location = new System.Drawing.Point(7, 348);
             this.picBoxDisc1.Name = "picBoxDisc1";
             this.picBoxDisc1.Size = new System.Drawing.Size(230, 22);
@@ -253,6 +253,7 @@
             this.btnSolucion.TabIndex = 8;
             this.btnSolucion.Text = "Solución";
             this.btnSolucion.UseVisualStyleBackColor = true;
+            this.btnSolucion.Click += new System.EventHandler(this.btnSolucion_Click);
             // 
             // btnSalir
             // 
@@ -353,7 +354,6 @@
         private System.Windows.Forms.PictureBox picBoxbarra3;
         private System.Windows.Forms.PictureBox picBoxDisc2;
         private System.Windows.Forms.PictureBox picBoxDisc1;
-        private System.Windows.Forms.PictureBox picBoxDisc5;
         private System.Windows.Forms.PictureBox picBoxDisc4;
         private System.Windows.Forms.PictureBox picBoxDisc3;
         private System.Windows.Forms.Label label1;
@@ -365,5 +365,6 @@
         private System.Windows.Forms.LinkLabel linkLabelvideo;
         private System.Windows.Forms.Label lblDecMovimientos;
         private System.Windows.Forms.Label lblMovimientos;
+        private System.Windows.Forms.PictureBox picBoxDisc5;
     }
 }

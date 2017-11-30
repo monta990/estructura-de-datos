@@ -1,14 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
-
 namespace esdat
 {
     public partial class FrmTreeDatos : Form
@@ -19,7 +11,6 @@ namespace esdat
         {
             InitializeComponent();
         }
-
         private void FrmTreeDatos_Load(object sender, EventArgs e)
         {
             tVdatos.Nodes.Add("Juegos");
@@ -44,7 +35,6 @@ namespace esdat
             mySqlConnection = new MySqlConnection(cadena);
             try
             {
-
                 string bd = "SELECT * FROM juegos";
                 MySqlCommand mySqlCommand = new MySqlCommand(); //comando
                 mySqlCommand.CommandText = bd; //comando a ejecutar
@@ -57,11 +47,13 @@ namespace esdat
                     tVdatos.Nodes[0].Nodes.Add(lector.GetString(0));
                 }
                 lector.Close();
-                mySqlConnection.Close();
             }
             catch (MySqlException error)
             {
-                MessageBox.Show("Server Down: " + error, "Check Server Status", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Servidor Caido","Verifique el estado de la conexión", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
                 mySqlConnection.Close();
             }
         }
@@ -71,7 +63,6 @@ namespace esdat
             mySqlConnection = new MySqlConnection(cadena);
             try
             {
-
                 string bd = "SELECT * FROM developers";
                 MySqlCommand mySqlCommand = new MySqlCommand(); //comando
                 mySqlCommand.CommandText = bd; //comando a ejecutar
@@ -84,11 +75,13 @@ namespace esdat
                     tVdatos.Nodes[1].Nodes.Add(lector.GetString(0)+" "+lector.GetString(1));
                 }
                 lector.Close();
-                mySqlConnection.Close();
             }
             catch (MySqlException error)
             {
-                MessageBox.Show("Server Down: " + error, "Check Server Status", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Servidor Caido", "Verifique el estado de la conexión", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
                 mySqlConnection.Close();
             }
         }
@@ -98,7 +91,6 @@ namespace esdat
             mySqlConnection = new MySqlConnection(cadena);
             try
             {
-
                 string bd = "SELECT * FROM players";
                 MySqlCommand mySqlCommand = new MySqlCommand(); //comando
                 mySqlCommand.CommandText = bd; //comando a ejecutar
@@ -111,11 +103,13 @@ namespace esdat
                     tVdatos.Nodes[2].Nodes.Add(lector.GetString(0) + " " + lector.GetString(1) + " " + lector.GetString(2));
                 }
                 lector.Close();
-                mySqlConnection.Close();
             }
             catch (MySqlException error)
             {
-                MessageBox.Show("Server Down: " + error, "Check Server Status", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Servidor Caido","Verifique el estado de la conexión", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
                 mySqlConnection.Close();
             }
         }
@@ -125,7 +119,6 @@ namespace esdat
             mySqlConnection = new MySqlConnection(cadena);
             try
             {
-
                 string bd = "SHOW TABLES FROM integradora";
                 MySqlCommand mySqlCommand = new MySqlCommand(); //comando
                 mySqlCommand.CommandText = bd; //comando a ejecutar
@@ -138,11 +131,13 @@ namespace esdat
                     tVdatos.Nodes[3].Nodes.Add(lector.GetString(0));
                 }
                 lector.Close();
-                mySqlConnection.Close();
             }
             catch (MySqlException error)
             {
-                MessageBox.Show("Server Down: " + error, "Check Server Status", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Servidor Caido", "Verifique el estado de la conexión", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
                 mySqlConnection.Close();
             }
         }
@@ -152,7 +147,6 @@ namespace esdat
             mySqlConnection = new MySqlConnection(cadena);
             try
             {
-
                 string bd = "SHOW DATABASES";
                 MySqlCommand mySqlCommand = new MySqlCommand(); //comando
                 mySqlCommand.CommandText = bd; //comando a ejecutar
@@ -165,18 +159,16 @@ namespace esdat
                     tVdatos.Nodes[4].Nodes.Add(lector.GetString(0));
                 }
                 lector.Close();
-                mySqlConnection.Close();
             }
             catch (MySqlException error)
             {
-                MessageBox.Show("Server Down: " + error, "Check Server Status", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Servidor Caido", "Verifique el estado de la conexión", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
                 mySqlConnection.Close();
             }
         }
-
-        private void btnSalir_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+        private void btnSalir_Click(object sender, EventArgs e) => this.Close();
     }
 }

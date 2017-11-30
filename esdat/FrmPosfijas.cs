@@ -30,13 +30,9 @@ namespace esdat
                 dGVposfija.Rows.Add(item.ToString());
             }
         }
-        private void lblInfoResultado_Click(object sender, EventArgs e)
-        {
-
-        }
         private void Limpiar()
         {
-            lblResultado.Text = "";
+            lblResultado.Text = "0";
             dGVposfija.Rows.Clear();
             tbExpresion.Clear();
             pilaint.Clear();
@@ -44,6 +40,7 @@ namespace esdat
 
         private void btmPasoaPaso_Click(object sender, EventArgs e)
         {
+            lblResultado.Text = "0";
             pilaint.Clear();
             dGVposfija.Rows.Clear();
             string[] expresion = tbExpresion.Text.Split(' ');

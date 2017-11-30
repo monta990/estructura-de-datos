@@ -166,7 +166,6 @@
             this.lblInfoResultado.Size = new System.Drawing.Size(89, 18);
             this.lblInfoResultado.TabIndex = 7;
             this.lblInfoResultado.Text = "Resultado:";
-            this.lblInfoResultado.Click += new System.EventHandler(this.lblInfoResultado_Click);
             // 
             // lblResultado
             // 

@@ -5,13 +5,13 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("esdat")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("Estructura de Datos")]
+[assembly: AssemblyDescription("Sistema desarrollado en la clase de Estructura de Datos")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("esdat")]
-[assembly: AssemblyCopyright("Copyright ©  2017")]
-[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCompany("Edwin Elias Alvarez")]
+[assembly: AssemblyProduct("Estructura de Datos")]
+[assembly: AssemblyCopyright("Edwin Elias Alvarez - Derechos de Autor © 2017")]
+[assembly: AssemblyTrademark("Edwin Elias Alvarez")]
 [assembly: AssemblyCulture("")]
 
 // Setting ComVisible to false makes the types in this assembly not visible

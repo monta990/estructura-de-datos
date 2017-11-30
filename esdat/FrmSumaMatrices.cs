@@ -92,12 +92,19 @@ namespace esdat
         /// </summary>
         private void Igual()
         {
-            for (int c = 0; c < columnas; c++)
+            try
             {
-                for (int r = 0; r < renglones; r++)
+                for (int c = 0; c < columnas; c++)
                 {
-                    dGVresultado[c, r].Value = int.Parse(dGVmatriz1[c, r].Value.ToString()) + int.Parse(dGVmatriz2[c, r].Value.ToString());
+                    for (int r = 0; r < renglones; r++)
+                    {
+                        dGVresultado[c, r].Value = int.Parse(dGVmatriz1[c, r].Value.ToString()) + int.Parse(dGVmatriz2[c, r].Value.ToString());
+                    }
                 }
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("Algun dato incorrecto en las tablas","Solo numeros",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
         }
         private void btnIgual_Click(object sender, EventArgs e)

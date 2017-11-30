@@ -5,13 +5,15 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 namespace esdat
 {
     public partial class FrmCuadradoMagico : Form
     {
+        private Random R = new Random();
+        private Regex validar = new Regex(@"^[0-9]+$");
         public FrmCuadradoMagico()
         {
             InitializeComponent();
@@ -97,27 +99,34 @@ namespace esdat
         /// </summary>
         private void Calcular()
         {
-            int[] suma = new int[10];
-            for (int i = 0, r = 3; i < 4; i++, r--) //todo en uno de una vez
+            try
             {
-                lbDiagonal1.Text = (suma[0] += int.Parse(dGVcuadradoMagico[i, i].Value.ToString())).ToString();
-                lbDiagonal2.Text = (suma[1] += int.Parse(dGVcuadradoMagico[i, r].Value.ToString())).ToString();
-                lbRenglon1.Text = (suma[2] += int.Parse(dGVcuadradoMagico[i, 0].Value.ToString())).ToString();
-                lbRenglon2.Text = (suma[3] += int.Parse(dGVcuadradoMagico[i, 1].Value.ToString())).ToString();
-                lbRenglon3.Text = (suma[4] += int.Parse(dGVcuadradoMagico[i, 2].Value.ToString())).ToString();
-                lbRenglon4.Text = (suma[5] += int.Parse(dGVcuadradoMagico[i, 3].Value.ToString())).ToString();
-                lbColumna1.Text = (suma[6] += int.Parse(dGVcuadradoMagico[0, r].Value.ToString())).ToString();
-                lbColumna2.Text = (suma[7] += int.Parse(dGVcuadradoMagico[1, r].Value.ToString())).ToString();
-                lbColumna3.Text = (suma[8] += int.Parse(dGVcuadradoMagico[2, r].Value.ToString())).ToString();
-                lbColumna4.Text = (suma[9] += int.Parse(dGVcuadradoMagico[3, r].Value.ToString())).ToString();
+                int[] suma = new int[10];
+                for (int i = 0, r = 3; i < 4; i++, r--) //todo en uno de una vez
+                {
+                    lbDiagonal1.Text = (suma[0] += int.Parse(dGVcuadradoMagico[i, i].Value.ToString())).ToString();
+                    lbDiagonal2.Text = (suma[1] += int.Parse(dGVcuadradoMagico[i, r].Value.ToString())).ToString();
+                    lbRenglon1.Text = (suma[2] += int.Parse(dGVcuadradoMagico[i, 0].Value.ToString())).ToString();
+                    lbRenglon2.Text = (suma[3] += int.Parse(dGVcuadradoMagico[i, 1].Value.ToString())).ToString();
+                    lbRenglon3.Text = (suma[4] += int.Parse(dGVcuadradoMagico[i, 2].Value.ToString())).ToString();
+                    lbRenglon4.Text = (suma[5] += int.Parse(dGVcuadradoMagico[i, 3].Value.ToString())).ToString();
+                    lbColumna1.Text = (suma[6] += int.Parse(dGVcuadradoMagico[0, r].Value.ToString())).ToString();
+                    lbColumna2.Text = (suma[7] += int.Parse(dGVcuadradoMagico[1, r].Value.ToString())).ToString();
+                    lbColumna3.Text = (suma[8] += int.Parse(dGVcuadradoMagico[2, r].Value.ToString())).ToString();
+                    lbColumna4.Text = (suma[9] += int.Parse(dGVcuadradoMagico[3, r].Value.ToString())).ToString();
+                }
+                if (suma[9] == suma[8] && suma[8] == suma[7] && suma[7] == suma[6] && suma[6] == suma[5] && suma[5] == suma[4] && suma[4] == suma[3] && suma[3] == suma[2] && suma[2] == suma[1])
+                {
+                    MessageBox.Show("Si es cuadrado magico", "Hay magia", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("No es cuadrado magico", "Sin magia", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-            if (suma[9] == suma[8] && suma[8] == suma[7] && suma[7] == suma[6] && suma[6] == suma[5] && suma[5] == suma[4] && suma[4] == suma[3] && suma[3] == suma[2] && suma[2] == suma[1])
+            catch (FormatException)
             {
-                MessageBox.Show("Si es cuadrado magico", "Hay magia", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
-                MessageBox.Show("No es cuadrado magico", "Sin magia", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Algun dato incorrecto en las tablas", "Solo numeros", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void FrmCuadradoMagico_Load(object sender, EventArgs e)
@@ -143,9 +152,19 @@ namespace esdat
             Validar();
 
         }
-        private void dGVcuadradoMagico_CellLeave(object sender, DataGridViewCellEventArgs e)
+        private void dGVcuadradoMagico_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
-            
+            if (validar.IsMatch(dGVcuadradoMagico.CurrentCell.Value.ToString()))
+            {
+                //valido
+            }
+            else
+            {
+                MessageBox.Show("Solo numeros por favor", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                int colum = dGVcuadradoMagico.CurrentCell.ColumnIndex;
+                int row = dGVcuadradoMagico.CurrentCell.RowIndex;
+                dGVcuadradoMagico.CurrentCell = dGVcuadradoMagico.Rows[row].Cells[colum];
+            }
         }
     }
 }

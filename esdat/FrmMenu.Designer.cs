@@ -49,6 +49,7 @@
             this.unidad4PilasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pilaGenericoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.operacionPosfijaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.torreDeHanoiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.unidad5ColasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.unidad6ArbolesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.recorridoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -58,7 +59,6 @@
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.acercaDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btSalir = new System.Windows.Forms.Button();
-            this.torreDeHanoiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -234,6 +234,13 @@
             this.operacionPosfijaToolStripMenuItem.Text = "Operacion posfija";
             this.operacionPosfijaToolStripMenuItem.Click += new System.EventHandler(this.operacionPosfijaToolStripMenuItem_Click);
             // 
+            // torreDeHanoiToolStripMenuItem
+            // 
+            this.torreDeHanoiToolStripMenuItem.Name = "torreDeHanoiToolStripMenuItem";
+            this.torreDeHanoiToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
+            this.torreDeHanoiToolStripMenuItem.Text = "Torre de Hanoi";
+            this.torreDeHanoiToolStripMenuItem.Click += new System.EventHandler(this.torreDeHanoiToolStripMenuItem_Click);
+            // 
             // unidad5ColasToolStripMenuItem
             // 
             this.unidad5ColasToolStripMenuItem.Name = "unidad5ColasToolStripMenuItem";
@@ -263,6 +270,7 @@
             this.exploradorToolStripMenuItem.Name = "exploradorToolStripMenuItem";
             this.exploradorToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.exploradorToolStripMenuItem.Text = "Explorador";
+            this.exploradorToolStripMenuItem.Click += new System.EventHandler(this.exploradorToolStripMenuItem_Click);
             // 
             // conDatosToolStripMenuItem
             // 
@@ -303,13 +311,6 @@
             this.btSalir.UseVisualStyleBackColor = true;
             this.btSalir.Click += new System.EventHandler(this.btSalir_Click);
             // 
-            // torreDeHanoiToolStripMenuItem
-            // 
-            this.torreDeHanoiToolStripMenuItem.Name = "torreDeHanoiToolStripMenuItem";
-            this.torreDeHanoiToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
-            this.torreDeHanoiToolStripMenuItem.Text = "Torre de Hanoi";
-            this.torreDeHanoiToolStripMenuItem.Click += new System.EventHandler(this.torreDeHanoiToolStripMenuItem_Click);
-            // 
             // FrmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -319,8 +320,8 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FrmMenu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Memú: Estructura de Datos";
-            this.Load += new System.EventHandler(this.Menu_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

@@ -1,6 +1,6 @@
 ﻿namespace esdat
 {
-    partial class FrmTorres
+    partial class FrmTorresHanoi
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmTorres));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmTorresHanoi));
             this.panel1 = new System.Windows.Forms.Panel();
             this.D5 = new System.Windows.Forms.PictureBox();
             this.PicBase1 = new System.Windows.Forms.PictureBox();

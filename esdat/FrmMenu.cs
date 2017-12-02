@@ -24,7 +24,7 @@ namespace esdat
         private void pilaGenericoToolStripMenuItem_Click(object sender, EventArgs e) => new FrmStackGen().ShowDialog();
         private void inversaToolStripMenuItem_Click(object sender, EventArgs e) => new FrmInversa().ShowDialog();
         private void transpuestaToolStripMenuItem_Click(object sender, EventArgs e) => new FrmGenTranpuesta().ShowDialog();
-        private void torreDeHanoiToolStripMenuItem_Click(object sender, EventArgs e) => new FrmTorres().ShowDialog();
+        private void torreDeHanoiToolStripMenuItem_Click(object sender, EventArgs e) => new FrmTorresHanoi().ShowDialog();
         private void exploradorToolStripMenuItem_Click(object sender, EventArgs e) => new FrmTreeExplorer().ShowDialog();
     }
 }

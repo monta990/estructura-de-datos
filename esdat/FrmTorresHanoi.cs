@@ -5,14 +5,14 @@ using System.Windows.Forms;
 using System.Threading;
 namespace esdat
 {
-    public partial class FrmTorres : Form
+    public partial class FrmTorresHanoi : Form
     {
         private int contador = 0;
         private string origen = "";
         private Stack<PictureBox> pila1 = new Stack<PictureBox>();
         private Stack<PictureBox> pila2 = new Stack<PictureBox>();
         private Stack<PictureBox> pila3 = new Stack<PictureBox>();
-        public FrmTorres()
+        public FrmTorresHanoi()
         {
             InitializeComponent();
             foreach (Panel item in this.Controls.OfType<Panel>()) // rrecorre los controles dentro de la clase panel

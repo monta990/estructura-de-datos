@@ -1,18 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-
 namespace esdat
 {
     public partial class FrmOrdenamientoBusqueda : Form
     {
-
         #region Declaraciones
         int[] arOriginal = new int[50000];
         int[] arBurbuja = new int[50000];
@@ -256,29 +247,10 @@ namespace esdat
                 QuickSort(i, ultimo);
             }
         }
-        public FrmOrdenamientoBusqueda()
-        {
-            InitializeComponent();
-        }
-
-        private void btnSalir_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-        
-        private void btnGenerar_Click(object sender, EventArgs e)
-        {
-            Generar();
-        }
-
-        private void btnLimpiar_Click(object sender, EventArgs e)
-        {
-            Limpiar();
-        }
-
-        private void btnCalcular_Click(object sender, EventArgs e)
-        {
-            Calcular();
-        }
+        public FrmOrdenamientoBusqueda() => InitializeComponent();
+        private void btnSalir_Click(object sender, EventArgs e) => this.Close();
+        private void btnGenerar_Click(object sender, EventArgs e) => Generar();
+        private void btnLimpiar_Click(object sender, EventArgs e) => Limpiar();
+        private void btnCalcular_Click(object sender, EventArgs e) => Calcular();
     }
 }

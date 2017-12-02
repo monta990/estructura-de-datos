@@ -1,14 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
-
 namespace esdat
 {
     public partial class FrmSumaMatrices : Form
@@ -107,43 +99,27 @@ namespace esdat
                 MessageBox.Show("Algun dato incorrecto en las tablas","Solo numeros",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
         }
-        private void btnIgual_Click(object sender, EventArgs e)
-        {
-            Igual();
-        }
-
-        private void btnRandom_Click(object sender, EventArgs e)
-        {
-            Generar();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
+        private void btnIgual_Click(object sender, EventArgs e) => Igual();
+        private void btnRandom_Click(object sender, EventArgs e) => Generar();
+        private void button1_Click(object sender, EventArgs e) => this.Close();
         private void btnEjemplo_Click(object sender, EventArgs e)
         {
             Ejemplo();
         }
-
         private void dGVmatriz1_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
             if (validar.IsMatch(dGVmatriz1.CurrentCell.Value.ToString()))
             {
-                //valido
             }
             else
             {
                 MessageBox.Show("Solo numeros por favor", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
         private void dGVmatriz2_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
             if (validar.IsMatch(dGVmatriz2.CurrentCell.Value.ToString()))
             {
-                //valido
             }
             else
             {
@@ -153,7 +129,6 @@ namespace esdat
                 dGVmatriz2.CurrentCell = dGVmatriz2.Rows[row].Cells[colum];
             }
         }
-
         private void FrmSumaMatrices_Load(object sender, EventArgs e)
         {
             dGVmatriz1.MultiSelect = false;

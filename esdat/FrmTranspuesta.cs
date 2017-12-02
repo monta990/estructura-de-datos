@@ -1,14 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
-
 namespace esdat
 {
     public partial class FrmTranspuesta : Form
@@ -69,16 +61,8 @@ namespace esdat
                 }
             }
         }
-        private void btnRandom_Click(object sender, EventArgs e)
-        {
-            Generar();
-        }
-
-        private void btnTranspuesta_Click(object sender, EventArgs e)
-        {
-            Transpuesta();
-        }
-
+        private void btnRandom_Click(object sender, EventArgs e) => Generar();
+        private void btnTranspuesta_Click(object sender, EventArgs e) => Transpuesta();
         private void dGVmatrizA_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
             if (validar.IsMatch(dGVmatrizA.CurrentCell.Value.ToString()))
@@ -90,10 +74,7 @@ namespace esdat
                 MessageBox.Show("Solo numeros por favor", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        private void FrmTranspuesta_Load(object sender, EventArgs e)
-        {
-            Generar();
-        }
+        private void btnSalir_Click(object sender, EventArgs e) => this.Close();
+        private void FrmTranspuesta_Load(object sender, EventArgs e) => Generar();
     }
 }

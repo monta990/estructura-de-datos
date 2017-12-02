@@ -117,4 +117,14 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="lblDescripción.Text" xml:space="preserve">
+    <value>El arbol de la izquierda,
+fue construido con las carpetetas
+y archivos de un directorio
+las raices son Carpetas y los
+Nodos son sus Archivos
+
+Con el fin de probar las propiedades
+Expandir y Contraer</value>
+  </data>
 </root>

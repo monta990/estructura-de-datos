@@ -1,22 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
-
 namespace esdat
 {
     public partial class FrmTreeExplorer : Form
     {
-        public FrmTreeExplorer()
-        {
-            InitializeComponent();
-        }
+        public FrmTreeExplorer() => InitializeComponent();
         /// <summary>
         /// Carga de directorio y archivos
         /// </summary>
@@ -72,35 +61,14 @@ namespace esdat
                 }
             }
         }
-        private void btnSalir_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void FrmTreeExplorer_Load(object sender, EventArgs e)
-        {
-
-        }
-
+        private void btnSalir_Click(object sender, EventArgs e) => this.Close();
         private void btnCargar_Click(object sender, EventArgs e)
         {
             btnLimpiar_Click(sender, e);
             Cargar();
         }
-
-        private void btnExpandir_Click(object sender, EventArgs e)
-        {
-            tVfolder.ExpandAll();
-        }
-
-        private void btnContraer_Click(object sender, EventArgs e)
-        {
-            tVfolder.CollapseAll();
-        }
-
-        private void btnLimpiar_Click(object sender, EventArgs e)
-        {
-            tVfolder.Nodes.Clear();
-        }
+        private void btnExpandir_Click(object sender, EventArgs e) => tVfolder.ExpandAll();
+        private void btnContraer_Click(object sender, EventArgs e) => tVfolder.CollapseAll();
+        private void btnLimpiar_Click(object sender, EventArgs e) => tVfolder.Nodes.Clear();
     }
 }

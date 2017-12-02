@@ -160,7 +160,6 @@
             this.Controls.Add(this.dGViewFibo);
             this.Name = "Fibonacci";
             this.Text = "Sucesión de Fibonacci";
-            this.Load += new System.EventHandler(this.Fibonacci_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dGViewFibo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

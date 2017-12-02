@@ -262,7 +262,6 @@
             this.Controls.Add(this.dGVpila);
             this.Name = "FrmStackGen";
             this.Text = "Manejo de Pila Generica";
-            this.Load += new System.EventHandler(this.FrmStackGen_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dGVpila)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPush)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPop)).EndInit();

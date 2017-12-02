@@ -7,10 +7,7 @@ namespace esdat
     {
         public static MySqlConnection mySqlConnection;
         public string cadena;
-        public FrmTreeDatos()
-        {
-            InitializeComponent();
-        }
+        public FrmTreeDatos() => InitializeComponent();
         private void FrmTreeDatos_Load(object sender, EventArgs e)
         {
             tVdatos.Nodes.Add("Juegos");

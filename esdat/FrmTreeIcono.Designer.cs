@@ -1,6 +1,6 @@
 ﻿namespace esdat
 {
-    partial class FrmTreeImagen
+    partial class FrmTreeIcono
     {
         /// <summary>
         /// Required designer variable.
@@ -44,13 +44,16 @@
             System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("Control_Escolar", 1, 0, new System.Windows.Forms.TreeNode[] {
             treeNode7,
             treeNode8});
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmTreeImagen));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmTreeIcono));
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.iLiTree = new System.Windows.Forms.ImageList(this.components);
+            this.lblDescripción = new System.Windows.Forms.Label();
+            this.btnSalir = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // treeView1
             // 
+            this.treeView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.treeView1.ImageIndex = 0;
             this.treeView1.ImageList = this.iLiTree;
             this.treeView1.Location = new System.Drawing.Point(22, 13);
@@ -100,7 +103,6 @@
             this.treeView1.SelectedImageIndex = 0;
             this.treeView1.Size = new System.Drawing.Size(198, 371);
             this.treeView1.TabIndex = 0;
-            this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
             this.treeView1.Click += new System.EventHandler(this.treeView1_Click);
             // 
             // iLiTree
@@ -112,15 +114,40 @@
             this.iLiTree.Images.SetKeyName(2, "tbselected.png");
             this.iLiTree.Images.SetKeyName(3, "tbunselect.png");
             // 
-            // FrmTreeImagen
+            // lblDescripción
+            // 
+            this.lblDescripción.AutoSize = true;
+            this.lblDescripción.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescripción.Location = new System.Drawing.Point(233, 13);
+            this.lblDescripción.Name = "lblDescripción";
+            this.lblDescripción.Size = new System.Drawing.Size(286, 80);
+            this.lblDescripción.TabIndex = 1;
+            this.lblDescripción.Text = "En el arbol de la izquierda,\r\nse puede observar como cada\r\nraiz y rama cuentan co" +
+    "n su propio\r\nicono y cambia al ser seleccionado";
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalir.Location = new System.Drawing.Point(444, 361);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(75, 23);
+            this.btnSalir.TabIndex = 2;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
+            // FrmTreeIcono
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(481, 409);
+            this.ClientSize = new System.Drawing.Size(531, 396);
+            this.Controls.Add(this.btnSalir);
+            this.Controls.Add(this.lblDescripción);
             this.Controls.Add(this.treeView1);
-            this.Name = "FrmTreeImagen";
-            this.Text = "FrmTreeImagen";
+            this.Name = "FrmTreeIcono";
+            this.Text = "Arbol con Icono";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -128,5 +155,7 @@
 
         private System.Windows.Forms.TreeView treeView1;
         private System.Windows.Forms.ImageList iLiTree;
+        private System.Windows.Forms.Label lblDescripción;
+        private System.Windows.Forms.Button btnSalir;
     }
 }

@@ -11,15 +11,12 @@ using System.Numerics;
 
 namespace esdat
 {
-    public partial class Practica1 : Form
+    public partial class FrmPractica1 : Form
     {
         private int column = 0; //valor de columna
         private int row = 0; //valor de renglon
         private int res; //variable para los trayparse
-        public Practica1()
-        {
-            InitializeComponent();
-        }
+        public FrmPractica1() => InitializeComponent();
         public void botones() //conntrol del estado de los botones
         {
             txtElemento.Enabled = true;
@@ -30,7 +27,7 @@ namespace esdat
             Initialize_dgvElementos();
             txtElemento.Focus();
         }
-        public Practica1(string dataType) //se obtine del el tipo de dato seleciconado en el form anterior
+        public FrmPractica1(string dataType) //se obtine del el tipo de dato seleciconado en el form anterior
         {
             InitializeComponent();
             txtElemento2.Hide();
@@ -57,7 +54,11 @@ namespace esdat
             #endregion
         }
 
-        private void btnCAPTURAR_Click(object sender, EventArgs e)
+        private void btnCAPTURAR_Click(object sender, EventArgs e) => Validaciones();
+        /// <summary>
+        /// Realiza la validación del tipo de dato
+        /// </summary>
+        private void Validaciones()
         {
             //inicio validaciones
             #region validaciones
@@ -167,45 +168,96 @@ namespace esdat
             }
             if (lblValor.Text == "(COMPLEX)")
             {
-                Complex c1 = Complex.FromPolarCoordinates(10, .524);
-                lbSeleccionado.Text = (c1.ToString()+"i");
+                if (txtElemento.Text == "")
+                {
+                    MessageBox.Show("El campo esta vacio", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    txtElemento.Focus();
+                }
+                else
+                {
+                    if (txtElemento.Text.Length >= 1) //se valida que sa un caracter
+                    {
+                        Complex c1 = Complex.FromPolarCoordinates(double.Parse(txtElemento.Text.ToString()), double.Parse(txtElemento2.Text.ToString()));
+                        lbSeleccionado.Text = (c1.ToString() + "i");
+                        capturar(); //captura si es valido :)
+                    }
+                    else
+                    {
+                        MessageBox.Show("Se debe capturar al menos un carcater", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        txtElemento.Focus();
+                    }
+                }
             }
             #endregion
             //fin validaciones
         }
-
         private void capturar() //se captura el dato ya validado
         {
-            #region Codigo de captura a dgvElementos
-            dgvElementos[column, row].Value = txtElemento.Text;
-            dgvElementos[column, row].Selected = false;
-            column++;
-            if (column == 3)
+            if (lblValor.Text == "(COMPLEX)")
             {
-                row++;
-                column = 0;
-            }
-            if (row == 3)
-            {
-                txtElemento.Enabled = false;
-                btnCapturar.Enabled = false;
+                #region Codigo de captura a dgvElementos
+                dgvElementos[column, row].Value = lbSeleccionado.Text;
+                dgvElementos[column, row].Selected = false;
+                column++;
+                if (column == 3)
+                {
+                    row++;
+                    column = 0;
+                }
+                if (row == 3)
+                {
+                    txtElemento.Enabled = false;
+                    btnCapturar.Enabled = false;
+                }
+                else
+                {
+                    dgvElementos.CurrentCell = dgvElementos[1, row]; //controla movimeinto en la tabla
+                    dgvElementos[1, row].Selected = false;
+                    dgvElementos[column, row].Selected = true;
+                }
+                if (row < 3)
+                {
+                    lbElementoIngresar.Text = "Elemento [" + row + "," + column + "]:";
+                }
+                txtElemento.Clear();
+                txtElemento.Focus();
+                #endregion
             }
             else
             {
-                dgvElementos.CurrentCell = dgvElementos[1, row]; //controla movimeinto en la tabla
-                dgvElementos[1, row].Selected = false; 
-                dgvElementos[column, row].Selected = true;
+                #region Codigo de captura a dgvElementos
+                dgvElementos[column, row].Value = txtElemento.Text;
+                dgvElementos[column, row].Selected = false;
+                column++;
+                if (column == 3)
+                {
+                    row++;
+                    column = 0;
+                }
+                if (row == 3)
+                {
+                    txtElemento.Enabled = false;
+                    btnCapturar.Enabled = false;
+                }
+                else
+                {
+                    dgvElementos.CurrentCell = dgvElementos[1, row]; //controla movimeinto en la tabla
+                    dgvElementos[1, row].Selected = false;
+                    dgvElementos[column, row].Selected = true;
+                }
+                if (row < 3)
+                {
+                    lbElementoIngresar.Text = "Elemento [" + row + "," + column + "]:";
+                }
+                txtElemento.Clear();
+                txtElemento.Focus();
+                #endregion
             }
-            if (row < 3)
-            {
-                lbElementoIngresar.Text = "Elemento [" + row + "," + column + "]:";
-            }
-            txtElemento.Clear();
-            txtElemento.Focus();
-            #endregion
         }
-
-        private void tbLimpiar_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Limpia el formulario
+        /// </summary>
+        private void Limpiar()
         {
             dgvElementos.Rows.Clear();
             txtElemento.Clear();
@@ -216,15 +268,8 @@ namespace esdat
             Initialize_dgvElementos();
             botones();
         }
-
-        private void btSalir_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void dgvElementos_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            lbSeleccionado.Text = "[" + e.RowIndex.ToString()+","+ e.ColumnIndex.ToString() + "]"; //a label sleccionado
-        }
+        private void tbLimpiar_Click(object sender, EventArgs e) => Limpiar();
+        private void btSalir_Click(object sender, EventArgs e) => this.Close();
+        private void dgvElementos_CellClick(object sender, DataGridViewCellEventArgs e) => lbSeleccionado.Text = "[" + e.RowIndex.ToString()+","+ e.ColumnIndex.ToString() + "]"; //a label sleccionado
     }
 }

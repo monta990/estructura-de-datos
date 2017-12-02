@@ -118,7 +118,7 @@
             // 
             // btGenerar
             // 
-            this.btGenerar.Location = new System.Drawing.Point(516, 37);
+            this.btGenerar.Location = new System.Drawing.Point(516, 34);
             this.btGenerar.Name = "btGenerar";
             this.btGenerar.Size = new System.Drawing.Size(75, 23);
             this.btGenerar.TabIndex = 7;
@@ -128,7 +128,7 @@
             // 
             // btBuscar
             // 
-            this.btBuscar.Location = new System.Drawing.Point(516, 207);
+            this.btBuscar.Location = new System.Drawing.Point(516, 209);
             this.btBuscar.Name = "btBuscar";
             this.btBuscar.Size = new System.Drawing.Size(75, 23);
             this.btBuscar.TabIndex = 8;

@@ -43,6 +43,7 @@
             this.tBhijo = new System.Windows.Forms.TextBox();
             this.btnRecorrido = new System.Windows.Forms.Button();
             this.btnAgregarHijo = new System.Windows.Forms.Button();
+            this.lblDescripción = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnSalir
@@ -57,9 +58,9 @@
             // 
             // btnLimpiar
             // 
-            this.btnLimpiar.Location = new System.Drawing.Point(323, 321);
+            this.btnLimpiar.Location = new System.Drawing.Point(221, 198);
             this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(166, 23);
+            this.btnLimpiar.Size = new System.Drawing.Size(268, 23);
             this.btnLimpiar.TabIndex = 10;
             this.btnLimpiar.Text = "Podar todo";
             this.btnLimpiar.UseVisualStyleBackColor = true;
@@ -163,7 +164,6 @@
             this.tBhijo.Name = "tBhijo";
             this.tBhijo.Size = new System.Drawing.Size(133, 20);
             this.tBhijo.TabIndex = 18;
-            this.tBhijo.TextChanged += new System.EventHandler(this.tBhijo_TextChanged);
             // 
             // btnRecorrido
             // 
@@ -185,11 +185,23 @@
             this.btnAgregarHijo.UseVisualStyleBackColor = true;
             this.btnAgregarHijo.Click += new System.EventHandler(this.btnAgregarHijo_Click);
             // 
+            // lblDescripción
+            // 
+            this.lblDescripción.AutoSize = true;
+            this.lblDescripción.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescripción.Location = new System.Drawing.Point(217, 224);
+            this.lblDescripción.Name = "lblDescripción";
+            this.lblDescripción.Size = new System.Drawing.Size(299, 120);
+            this.lblDescripción.TabIndex = 21;
+            this.lblDescripción.Text = "El arbol de la izquierda,\r\nes construido con los datos\r\ningresados para raiz y no" +
+    "do.\r\n\r\nCon el fin de probar las propiedades\r\nExpandir, Contraer y Eliminar";
+            // 
             // FrmTreeRecorrido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(501, 406);
+            this.ClientSize = new System.Drawing.Size(529, 406);
+            this.Controls.Add(this.lblDescripción);
             this.Controls.Add(this.btnAgregarHijo);
             this.Controls.Add(this.btnRecorrido);
             this.Controls.Add(this.tBhijo);
@@ -230,5 +242,6 @@
         private System.Windows.Forms.TextBox tBhijo;
         private System.Windows.Forms.Button btnRecorrido;
         private System.Windows.Forms.Button btnAgregarHijo;
+        private System.Windows.Forms.Label lblDescripción;
     }
 }

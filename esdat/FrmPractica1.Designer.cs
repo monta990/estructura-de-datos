@@ -1,6 +1,6 @@
 ﻿namespace esdat
 {
-    partial class Practica1
+    partial class FrmPractica1
     {
         /// <summary>
         /// Required designer variable.

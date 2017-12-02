@@ -17,7 +17,7 @@ namespace esdat
         private void metodosDeOrdenamientoToolStripMenuItem_Click(object sender, EventArgs e) => new FrmOrdenamientoBusqueda().ShowDialog();
         private void cuadradoMagicoToolStripMenuItem_Click(object sender, EventArgs e) => new FrmCuadradoMagico().ShowDialog();
         private void sumaToolStripMenuItem_Click(object sender, EventArgs e) => new FrmGenMatriz().ShowDialog();
-        private void imagenesToolStripMenuItem_Click(object sender, EventArgs e) => new FrmTreeImagen().ShowDialog();
+        private void imagenesToolStripMenuItem_Click(object sender, EventArgs e) => new FrmTreeIcono().ShowDialog();
         private void conDatosToolStripMenuItem_Click(object sender, EventArgs e) => new FrmTreeDatos().ShowDialog();
         private void recorridoToolStripMenuItem_Click(object sender, EventArgs e) => new FrmTreeRecorrido().ShowDialog();
         private void operacionPosfijaToolStripMenuItem_Click(object sender, EventArgs e) => new FrmPosfijas().ShowDialog();

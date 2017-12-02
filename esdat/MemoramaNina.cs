@@ -1,14 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Threading;
 using System.Windows.Forms;
-
 namespace esdat
 {
     public partial class MemoramaNina : Form
@@ -26,7 +20,6 @@ namespace esdat
         private string nombre; //nombre del juagador
         private PictureBox imagentemporal; //control de tarjeta volteada
         private int intentos; //contador de intentos
-
         private void Memorama_Load(object sender, EventArgs e)
         {
             restart();
@@ -136,108 +129,32 @@ namespace esdat
                 esperando = false; 
             }
         }
-#region click de los picturebox
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            flip(pictureBox1,0);
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-            flip(pictureBox2,1);
-        }
-
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-            flip(pictureBox3,2);
-        }
-
-        private void pictureBox4_Click(object sender, EventArgs e)
-        {
-            flip(pictureBox4,3);
-        }
-
-        private void pictureBox5_Click(object sender, EventArgs e)
-        {
-            flip(pictureBox5,4);
-        }
-
-        private void pictureBox6_Click(object sender, EventArgs e)
-        {
-            flip(pictureBox6,5);
-        }
-
-        private void pictureBox7_Click(object sender, EventArgs e)
-        {
-            flip(pictureBox7,6);
-        }
-
-        private void pictureBox8_Click(object sender, EventArgs e)
-        {
-            flip(pictureBox8,7);
-        }
-
-        private void pictureBox16_Click(object sender, EventArgs e)
-        {
-            flip(pictureBox16, 15);
-        }
-
-        private void pictureBox15_Click(object sender, EventArgs e)
-        {
-            flip(pictureBox15, 14);
-        }
-
-        private void pictureBox14_Click(object sender, EventArgs e)
-        {
-            flip(pictureBox14, 13);
-        }
-
-        private void pictureBox13_Click(object sender, EventArgs e)
-        {
-            flip(pictureBox13, 12);
-        }
-
-        private void pictureBox12_Click(object sender, EventArgs e)
-        {
-            flip(pictureBox12, 11);
-        }
-
-        private void pictureBox11_Click(object sender, EventArgs e)
-        {
-            flip(pictureBox11, 10);
-        }
-
-        private void pictureBox10_Click(object sender, EventArgs e)
-        {
-            flip(pictureBox10, 9);
-        }
-
-        private void pictureBox9_Click(object sender, EventArgs e)
-        {
-            flip(pictureBox9, 8);
-        }
-#endregion
-        private void reinicarToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            restart(); //reiniciar el juego con un random de cartas
-        }
-
+        #region click de los picturebox
+        private void pictureBox1_Click(object sender, EventArgs e) => flip(pictureBox1, 0);
+        private void pictureBox2_Click(object sender, EventArgs e) => flip(pictureBox2, 1);
+        private void pictureBox3_Click(object sender, EventArgs e) => flip(pictureBox3, 2);
+        private void pictureBox4_Click(object sender, EventArgs e) => flip(pictureBox4, 3);
+        private void pictureBox5_Click(object sender, EventArgs e) => flip(pictureBox5, 4);
+        private void pictureBox6_Click(object sender, EventArgs e) => flip(pictureBox6, 5);
+        private void pictureBox7_Click(object sender, EventArgs e) => flip(pictureBox7, 6);
+        private void pictureBox8_Click(object sender, EventArgs e) => flip(pictureBox8, 7);
+        private void pictureBox16_Click(object sender, EventArgs e) => flip(pictureBox16, 15);
+        private void pictureBox15_Click(object sender, EventArgs e) => flip(pictureBox15, 14);
+        private void pictureBox14_Click(object sender, EventArgs e) => flip(pictureBox14, 13);
+        private void pictureBox13_Click(object sender, EventArgs e) => flip(pictureBox13, 12);
+        private void pictureBox12_Click(object sender, EventArgs e) => flip(pictureBox12, 11);
+        private void pictureBox11_Click(object sender, EventArgs e) => flip(pictureBox11, 10);
+        private void pictureBox10_Click(object sender, EventArgs e) => flip(pictureBox10, 9);
+        private void pictureBox9_Click(object sender, EventArgs e) => flip(pictureBox9, 8);
+        #endregion
+        private void reinicarToolStripMenuItem_Click(object sender, EventArgs e) => restart(); //reiniciar el juego con un random de cartas
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
             axWMP1.close(); //silenciar al salir
             this.Close();
         }
-
-        private void silenciarToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            axWMP1.settings.mute = true; //silenciar dentro del juego
-        }
-
-        private void reproducirToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            axWMP1.settings.mute = false; //volver a reproducir
-        }
-
+        private void silenciarToolStripMenuItem_Click(object sender, EventArgs e) => axWMP1.settings.mute = true; //silenciar dentro del juego
+        private void reproducirToolStripMenuItem_Click(object sender, EventArgs e) => axWMP1.settings.mute = false; //volver a reproducir
         private void nivel1ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             dificultad = 1000; //dificultad principiante

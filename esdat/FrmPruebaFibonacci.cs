@@ -1,21 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-
 namespace esdat
 {
     public partial class FrmPruebaFibonacci : Form
     {
-        public FrmPruebaFibonacci()
-        {
-            InitializeComponent();
-        }
+        public FrmPruebaFibonacci() => InitializeComponent();
         private void Generar() 
         {
             dGViewFibo.Rows.Clear();
@@ -74,13 +63,7 @@ namespace esdat
                 MessageBox.Show("Solo numeros enteros de 1 en adelante","Solo numeros enteros positivos",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
         }
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Buscar();
-        }
-        private void FrmPruebaFibonacci_Load(object sender, EventArgs e)
-        {
-            Generar();
-        }
+        private void button1_Click(object sender, EventArgs e) => Buscar();
+        private void FrmPruebaFibonacci_Load(object sender, EventArgs e) => Generar();
     }
 }

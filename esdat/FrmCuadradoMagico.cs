@@ -14,10 +14,7 @@ namespace esdat
     {
         private Random R = new Random();
         private Regex validar = new Regex(@"^[0-9]+$");
-        public FrmCuadradoMagico()
-        {
-            InitializeComponent();
-        }
+        public FrmCuadradoMagico() => InitializeComponent();
         /// <summary>
         /// Prepara el cuadrado magico, con renglones, columnas y tamaño
         /// </summary>
@@ -129,10 +126,7 @@ namespace esdat
                 MessageBox.Show("Algun dato incorrecto en las tablas", "Solo numeros", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        private void FrmCuadradoMagico_Load(object sender, EventArgs e)
-        {
-            CuadroMagico();
-        }
+        private void FrmCuadradoMagico_Load(object sender, EventArgs e) => CuadroMagico();
         private void btEjemplo1_Click(object sender, EventArgs e)
         {
             Limpiar();
@@ -143,15 +137,8 @@ namespace esdat
             Limpiar();
             Ejemplo2();
         }
-        private void btLimpiar_Click(object sender, EventArgs e)
-        {
-            Limpiar();
-        }
-        private void btCalcular_Click(object sender, EventArgs e)
-        {
-            Validar();
-
-        }
+        private void btLimpiar_Click(object sender, EventArgs e) => Limpiar();
+        private void btCalcular_Click(object sender, EventArgs e) => Validar();
         private void dGVcuadradoMagico_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
             if (validar.IsMatch(dGVcuadradoMagico.CurrentCell.Value.ToString()))

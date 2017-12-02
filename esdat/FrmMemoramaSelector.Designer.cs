@@ -41,6 +41,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.sToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnSalir = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -190,11 +191,22 @@
             this.sToolStripMenuItem.Text = "Salir a Menú Principal";
             this.sToolStripMenuItem.Click += new System.EventHandler(this.sToolStripMenuItem_Click);
             // 
-            // SelectorMemorama
+            // btnSalir
+            // 
+            this.btnSalir.Location = new System.Drawing.Point(152, 480);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(143, 23);
+            this.btnSalir.TabIndex = 9;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
+            // FrmMemoramaSelector
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(449, 529);
+            this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btNina);
             this.Controls.Add(this.btNino);
@@ -207,7 +219,7 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.Name = "SelectorMemorama";
+            this.Name = "FrmMemoramaSelector";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Selector de Memorama";
             this.Load += new System.EventHandler(this.SelectorMemorama_Load);
@@ -235,5 +247,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem sToolStripMenuItem;
+        private System.Windows.Forms.Button btnSalir;
     }
 }

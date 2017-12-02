@@ -1,13 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-
 namespace esdat
 {
     public partial class FrmPosfijas : Form
@@ -15,10 +8,7 @@ namespace esdat
         private Stack<int> pilaint = new Stack<int>();
         private int op1, op2;
         private bool truena = false;
-        public FrmPosfijas()
-        {
-            InitializeComponent();
-        }
+        public FrmPosfijas() => InitializeComponent();
         /// <summary>
         /// Imprimir pila
         /// </summary>
@@ -37,7 +27,6 @@ namespace esdat
             tbExpresion.Clear();
             pilaint.Clear();
         }
-
         private void btmPasoaPaso_Click(object sender, EventArgs e)
         {
             lblResultado.Text = "0";
@@ -145,29 +134,18 @@ namespace esdat
                 }
             }
         }
-
         private void btnEjemplo1_Click(object sender, EventArgs e)
         {
             Limpiar();
             tbExpresion.Text = "1 2 - 3 * 4 / 5 + 6 +";
         }
-
         private void btnEjemplo2_Click(object sender, EventArgs e)
         {
             Limpiar();
             tbExpresion.Text = "1 2 - 3 * 4 / 5 + 6 + 7 * 8 + 9 +";
         }
-
-        private void btnSalir_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void btnReinicar_Click(object sender, EventArgs e)
-        {
-            Limpiar();
-        }
-
+        private void btnSalir_Click(object sender, EventArgs e) => this.Close();
+        private void btnReinicar_Click(object sender, EventArgs e) => Limpiar();
         private void btnEvaluar_Click(object sender, EventArgs e)
         {
             pilaint.Clear();
@@ -264,11 +242,6 @@ namespace esdat
                     MessageBox.Show("Error en la expresión", "Expresión incorrecta", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-        }
-
-        private void dGVposfija_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }

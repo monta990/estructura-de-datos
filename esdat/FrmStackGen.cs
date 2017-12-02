@@ -16,10 +16,7 @@ namespace esdat
     {
         Stack<string> pilastring = new Stack<string>();
         Regex valida = new Regex(@"^[a-zA-Z0-9]+$"); //solo numeros, letras mayusculas y minusculas 
-        public FrmStackGen()
-        {
-            InitializeComponent();
-        }
+        public FrmStackGen() => InitializeComponent();
         /// <summary>
         /// Limpia campos necesarios
         /// </summary>
@@ -157,14 +154,8 @@ namespace esdat
             //mover temporal a pila original
             pilastring = temp;
         }
-        private void btnSalir_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-        private void btnPush_Click(object sender, EventArgs e)
-        {
-            Push();
-        }
+        private void btnSalir_Click(object sender, EventArgs e) => this.Close();
+        private void btnPush_Click(object sender, EventArgs e) => Push();
         /// <summary>
         /// Prepara los botones con el texto necesario, tomandolo del textbox
         /// </summary>
@@ -183,45 +174,12 @@ namespace esdat
                 btnElementAT.Text = "ElementAt(\"\")";
             }
         }
-
-        private void btnPop_Click(object sender, EventArgs e)
-        {
-            Pop();
-        }
-
-        private void btnPeek_Click(object sender, EventArgs e)
-        {
-            Peek();
-        }
-
-        private void FrmStackGen_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnClear_Click(object sender, EventArgs e)
-        {
-            Clear();
-        }
-
-        private void btnReversa_Click(object sender, EventArgs e)
-        {
-            Reverse(pilastring);
-        }
-
-        private void btnContains_Click(object sender, EventArgs e)
-        {
-            Contains();
-        }
-
-        private void btnElementAT_Click(object sender, EventArgs e)
-        {
-            ElementAt();
-        }
-
-        private void llblInfo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            System.Diagnostics.Process.Start("https://es.wikipedia.org/wiki/Pila_(inform%C3%A1tica)");
-        }
+        private void btnPop_Click(object sender, EventArgs e) => Pop();
+        private void btnPeek_Click(object sender, EventArgs e) => Peek();
+        private void btnClear_Click(object sender, EventArgs e) => Clear();
+        private void btnReversa_Click(object sender, EventArgs e) => Reverse(pilastring);
+        private void btnContains_Click(object sender, EventArgs e) => Contains();
+        private void btnElementAT_Click(object sender, EventArgs e) => ElementAt();
+        private void llblInfo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) => System.Diagnostics.Process.Start("https://es.wikipedia.org/wiki/Pila_(inform%C3%A1tica)");
     }
 }

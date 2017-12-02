@@ -162,11 +162,11 @@
     <Compile Include="FrmTreeExplorer.Designer.cs">
       <DependentUpon>FrmTreeExplorer.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmTreeImagen.cs">
+    <Compile Include="FrmTreeIcono.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmTreeImagen.Designer.cs">
-      <DependentUpon>FrmTreeImagen.cs</DependentUpon>
+    <Compile Include="FrmTreeIcono.Designer.cs">
+      <DependentUpon>FrmTreeIcono.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmTreeRecorrido.cs">
       <SubType>Form</SubType>
@@ -198,11 +198,11 @@
     <Compile Include="FrmMenu.Designer.cs">
       <DependentUpon>FrmMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Practica1.cs">
+    <Compile Include="FrmPractica1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Practica1.Designer.cs">
-      <DependentUpon>Practica1.cs</DependentUpon>
+    <Compile Include="FrmPractica1.Designer.cs">
+      <DependentUpon>FrmPractica1.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -281,8 +281,8 @@
     <EmbeddedResource Include="FrmTreeExplorer.resx">
       <DependentUpon>FrmTreeExplorer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmTreeImagen.resx">
-      <DependentUpon>FrmTreeImagen.cs</DependentUpon>
+    <EmbeddedResource Include="FrmTreeIcono.resx">
+      <DependentUpon>FrmTreeIcono.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmTreeRecorrido.resx">
       <DependentUpon>FrmTreeRecorrido.cs</DependentUpon>
@@ -299,8 +299,8 @@
     <EmbeddedResource Include="FrmMenu.resx">
       <DependentUpon>FrmMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Practica1.resx">
-      <DependentUpon>Practica1.cs</DependentUpon>
+    <EmbeddedResource Include="FrmPractica1.resx">
+      <DependentUpon>FrmPractica1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

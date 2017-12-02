@@ -1,21 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-
 namespace esdat
 {
     public partial class FrmGenMatriz : Form
     {
-        public FrmGenMatriz()
-        {
-            InitializeComponent();
-        }
+        public FrmGenMatriz() => InitializeComponent();
         /// <summary>
         /// Verifica antes de cargar el siguiente Form
         /// </summary>
@@ -52,14 +41,7 @@ namespace esdat
                 }
             }
         }
-        private void Generar_Click(object sender, EventArgs e)
-        {
-            Verificar();
-        }
-
-        private void btnSalir_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+        private void Generar_Click(object sender, EventArgs e) => Verificar();
+        private void btnSalir_Click(object sender, EventArgs e) => this.Close();
     }
 }

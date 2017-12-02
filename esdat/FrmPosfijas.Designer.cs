@@ -116,7 +116,6 @@
             this.dGVposfija.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dGVposfija.Size = new System.Drawing.Size(232, 347);
             this.dGVposfija.TabIndex = 3;
-            this.dGVposfija.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGVposfija_CellContentClick);
             // 
             // Column1
             // 

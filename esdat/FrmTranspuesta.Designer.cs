@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmTranspuesta));
             this.dGVmatrizAT = new System.Windows.Forms.DataGridView();
             this.dGVmatrizA = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -36,10 +37,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnRandom = new System.Windows.Forms.Button();
             this.btnTranspuesta = new System.Windows.Forms.Button();
+            this.btnSalir = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dGVmatrizAT)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dGVmatrizA)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // dGVmatrizAT
@@ -121,11 +125,33 @@
             this.btnTranspuesta.UseVisualStyleBackColor = true;
             this.btnTranspuesta.Click += new System.EventHandler(this.btnTranspuesta_Click);
             // 
+            // btnSalir
+            // 
+            this.btnSalir.Location = new System.Drawing.Point(247, 429);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(125, 23);
+            this.btnSalir.TabIndex = 8;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(600, 22);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(431, 311);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
+            // 
             // FrmTranspuesta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1027, 487);
+            this.ClientSize = new System.Drawing.Size(1053, 487);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnTranspuesta);
             this.Controls.Add(this.btnRandom);
             this.Controls.Add(this.label2);
@@ -139,6 +165,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dGVmatrizA)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -154,5 +181,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnRandom;
         private System.Windows.Forms.Button btnTranspuesta;
+        private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

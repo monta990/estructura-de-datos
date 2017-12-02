@@ -1,24 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-//to-do
-//validaciones
-
 namespace esdat
 {
     public partial class FrmMaximoComunDivisor : Form
     {
-        public FrmMaximoComunDivisor()
+        public FrmMaximoComunDivisor() => InitializeComponent();
+        private void Limpiar()
         {
-            InitializeComponent();
+            lbMCDresultado.Text = "0";
+            tBentero1.Clear();
+            tBentero2.Clear();
+            tBentero1.Focus();
         }
-
         private int MCDmetodo(int a, int b)
         {
             if (a < 0 || b < 0)
@@ -30,14 +23,12 @@ namespace esdat
             else if (b > a)
             {
                 return MCDmetodo(b, a);
-
             }
             else if (b == 0)
             {
                 return a;
             }
             else return MCDmetodo(a-b,b);
-                
         }
         private void btCalcular_Click(object sender, EventArgs e)
         {
@@ -50,18 +41,7 @@ namespace esdat
                 MessageBox.Show("Solo numeros entero para elemento 1 y 2", "Solo enteros", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        private void btLimpiar_Click(object sender, EventArgs e)
-        {
-            lbMCDresultado.Text = "0";
-            tBentero1.Clear();
-            tBentero2.Clear();
-            tBentero1.Focus();
-        }
-
-        private void btSalir_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+        private void btLimpiar_Click(object sender, EventArgs e) => Limpiar();
+        private void btSalir_Click(object sender, EventArgs e) => this.Close();
     }
 }

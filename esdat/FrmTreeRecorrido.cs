@@ -1,13 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-
 namespace esdat
 {
     public partial class FrmTreeRecorrido : Form
@@ -15,21 +8,9 @@ namespace esdat
         private bool control = false;
         private string Rocorridos;
         private List<String> Lista = new List<String>();
-        public FrmTreeRecorrido()
-        {
-            InitializeComponent();
-        }
-
-        private void btnExpandir_Click(object sender, EventArgs e)
-        {
-            tVfolder.ExpandAll();
-        }
-
-        private void btnContraer_Click(object sender, EventArgs e)
-        {
-            tVfolder.CollapseAll();
-        }
-
+        public FrmTreeRecorrido() => InitializeComponent();
+        private void btnExpandir_Click(object sender, EventArgs e) => tVfolder.ExpandAll();
+        private void btnContraer_Click(object sender, EventArgs e) => tVfolder.CollapseAll();
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
             tVfolder.Nodes.Clear();
@@ -149,11 +130,7 @@ namespace esdat
             comboBpadre.Text = comboBpadre.Items[0].ToString();
             btnExpandir_Click(sender,e);
         }
-
-        private void btnSalir_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+        private void btnSalir_Click(object sender, EventArgs e) => this.Close();
         private void CallRecursive3(TreeView treeView)
         {
             TreeNodeCollection nodos = treeView.Nodes;
@@ -171,7 +148,6 @@ namespace esdat
                     Lista.Remove(comboBpadre.Text);
                     foreach (TreeNode hijos in item.Nodes)
                     {
-                        //MessageBox.Show(hijos.Text);
                         Lista.Remove(hijos.Text);
                     }
                     item.Remove();
@@ -179,14 +155,12 @@ namespace esdat
                 }
                 else
                 {
-                    //MessageBox.Show(item.Text);
                     ImprimirRecursivo3(item);
                 }
             }
         }
         private void btnPodarnodo_Click(object sender, EventArgs e)
         {
-            
             CallRecursive3(tVfolder);
             comboBpadre.Items.Clear();
             foreach (var item in Lista)
@@ -195,7 +169,6 @@ namespace esdat
             }
             comboBpadre.Text = comboBpadre.Items[0].ToString();
         }
-
         private void btnAgregarPadre_Click(object sender, EventArgs e)
         {
             tVfolder.Nodes.Add(tBraiz.Text);
@@ -207,7 +180,6 @@ namespace esdat
             control = false;
             Enadis();
         }
-
         private void btnAgregarHijo_Click(object sender, EventArgs e)
         {
             if (tBhijo.Text.Trim() == "")
@@ -224,12 +196,6 @@ namespace esdat
                 tBhijo.Focus();
             }
         }
-
-        private void tBhijo_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnRecorrido_Click(object sender, EventArgs e)
         {
             Recorrido(tVfolder.Nodes);

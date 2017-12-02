@@ -1,23 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-
 namespace esdat
 {
     public partial class Fibonacci : Form
     {
-        public Fibonacci()
-        {
-            InitializeComponent();
-        }
-
-        private void btnCalcular_Click(object sender, EventArgs e)
+        public Fibonacci() => InitializeComponent();
+        /// <summary>
+        /// Valida datos
+        /// </summary>
+        private void Validar()
         {
             if (int.TryParse(tBlimite.Text, out int s)) //verificar si es entero
             {
@@ -38,29 +29,16 @@ namespace esdat
             }
             else
             {
-                MessageBox.Show("Solo numeros enteros positivos", "El limite incorrecto",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show("Solo numeros enteros positivos", "El limite incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
+        private void btnCalcular_Click(object sender, EventArgs e) => Validar();
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
             dGViewFibo.Rows.Clear();
             tBlimite.Clear();
         }
-
-        private void btnSalir_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            System.Diagnostics.Process.Start("https://es.wikipedia.org/wiki/Sucesi%C3%B3n_de_Fibonacci");
-        }
-
-        private void Fibonacci_Load(object sender, EventArgs e)
-        {
-
-        }
+        private void btnSalir_Click(object sender, EventArgs e) => this.Close();
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) => System.Diagnostics.Process.Start("https://es.wikipedia.org/wiki/Sucesi%C3%B3n_de_Fibonacci");
     }
 }

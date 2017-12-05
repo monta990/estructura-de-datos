@@ -10,17 +10,17 @@ namespace esdat
         /// </summary>
         private void Validar()
         {
-            if (int.TryParse(tBlimite.Text, out int s)) //verificar si es entero
+            if (int.TryParse(tBlimite.Text, out int s) && Convert.ToInt32(tBlimite.Text) >= 1) //verificar si es entero
             {
-                dGViewFibo.Rows.Clear();
+               dGViewFibo.Rows.Clear();
                 double a = 0;
                 double b = 1;
-                for (double c = 0; c <= int.Parse(tBlimite.Text);) //se establece limite (c), 
+                for (double c = 0; c <= s;) //se establece limite (c), 
                 {
                     dGViewFibo.Rows.Add(c.ToString()); //se agrega c
                     if (c == 1)
                     {
-                        dGViewFibo.Rows.Add("1");
+                       dGViewFibo.Rows.Add("1");
                     }
                     c = a + b;
                     a = b;
@@ -29,7 +29,7 @@ namespace esdat
             }
             else
             {
-                MessageBox.Show("Solo numeros enteros positivos", "El limite incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Solo numeros que sean enteros positivos", "Caracter invalido", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void btnCalcular_Click(object sender, EventArgs e) => Validar();

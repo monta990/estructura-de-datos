@@ -90,7 +90,14 @@ namespace esdat
                 {
                     for (int r = 0; r < renglones; r++)
                     {
-                        dGVresultado[c, r].Value = int.Parse(dGVmatriz1[c, r].Value.ToString()) + int.Parse(dGVmatriz2[c, r].Value.ToString());
+                        if ((String)dGVmatriz1.Rows[renglones].Cells[columnas].Value == null || (String)dGVmatriz2.Rows[renglones].Cells[columnas].Value == null)
+                        {
+                            MessageBox.Show("Alguna celda esta vacia", "Celda Vacia", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                        else
+                        {
+                            dGVresultado[c, r].Value = int.Parse(dGVmatriz1[c, r].Value.ToString()) + int.Parse(dGVmatriz2[c, r].Value.ToString());
+                        }
                     }
                 }
             }
@@ -108,26 +115,36 @@ namespace esdat
         }
         private void dGVmatriz1_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
-            //validar.IsMatch(dGVmatriz1.CurrentCell.Value.ToString()
-            if (int.TryParse(dGVmatriz1.CurrentCell.Value.ToString(), out int r))
+            if ((String)dGVmatriz1.CurrentCell.Value == null)
             {
+                MessageBox.Show("Alguna celda esta vacia", "Celda Vacia", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-                MessageBox.Show("Solo numeros por favor", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (int.TryParse(dGVmatriz1.CurrentCell.Value.ToString(), out int r))
+                {
+                }
+                else
+                {
+                    MessageBox.Show("Solo numeros por favor", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
         private void dGVmatriz2_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
-            if (int.TryParse(dGVmatriz2.CurrentCell.Value.ToString(), out int r))
+            if ((String)dGVmatriz2.CurrentCell.Value == null)
             {
+                MessageBox.Show("Alguna celda esta vacia", "Celda Vacia", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-                MessageBox.Show("Solo numeros por favor", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                int colum = dGVmatriz2.CurrentCell.ColumnIndex;
-                int row = dGVmatriz2.CurrentCell.RowIndex;
-                dGVmatriz2.CurrentCell = dGVmatriz2.Rows[row].Cells[colum];
+                if (int.TryParse(dGVmatriz2.CurrentCell.Value.ToString(), out int r))
+                {
+                }
+                else
+                {
+                    MessageBox.Show("Solo numeros por favor", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
         private void FrmSumaMatrices_Load(object sender, EventArgs e)

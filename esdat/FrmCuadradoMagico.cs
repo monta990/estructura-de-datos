@@ -141,7 +141,7 @@ namespace esdat
         private void btCalcular_Click(object sender, EventArgs e) => Validar();
         private void dGVcuadradoMagico_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
-            if (validar.IsMatch(dGVcuadradoMagico.CurrentCell.Value.ToString()))
+            if (int.TryParse(dGVcuadradoMagico.CurrentCell.Value.ToString(), out int r))
             {
                 //valido
             }

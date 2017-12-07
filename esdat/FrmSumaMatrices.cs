@@ -108,7 +108,8 @@ namespace esdat
         }
         private void dGVmatriz1_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
-            if (validar.IsMatch(dGVmatriz1.CurrentCell.Value.ToString()))
+            //validar.IsMatch(dGVmatriz1.CurrentCell.Value.ToString()
+            if (int.TryParse(dGVmatriz1.CurrentCell.Value.ToString(), out int r))
             {
             }
             else
@@ -118,7 +119,7 @@ namespace esdat
         }
         private void dGVmatriz2_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
-            if (validar.IsMatch(dGVmatriz2.CurrentCell.Value.ToString()))
+            if (int.TryParse(dGVmatriz2.CurrentCell.Value.ToString(), out int r))
             {
             }
             else

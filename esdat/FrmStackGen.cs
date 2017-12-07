@@ -56,7 +56,7 @@ namespace esdat
             }
             else
             {
-                MessageBox.Show("Solo se pueden ingresar numero entero, \n letras mayusculas y minisculas","Carater no soportado", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Solo se pueden ingresar numeros enteros positivos, \n letras mayusculas y minisculas","Carater no soportado", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         /// <summary>

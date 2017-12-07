@@ -43,7 +43,7 @@ namespace esdat
         }
         private void Buscar()
         {
-            if (int.TryParse(textBox1.Text, out int r))
+            if (int.TryParse(textBox1.Text, out int r) && Convert.ToInt32(textBox1.Text) >= 1)
             {
                 if (int.Parse(textBox1.Text) == 1)
                 {

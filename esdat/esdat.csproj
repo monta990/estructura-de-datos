@@ -102,12 +102,6 @@
     <Compile Include="FrmHilbert.designer.cs">
       <DependentUpon>FrmHilbert.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmInversa.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmInversa.Designer.cs">
-      <DependentUpon>FrmInversa.cs</DependentUpon>
-    </Compile>
     <Compile Include="FrmOrdenamientoBusqueda.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -173,6 +167,9 @@
     </Compile>
     <Compile Include="FrmMaximoComunDivisor.Designer.cs">
       <DependentUpon>FrmMaximoComunDivisor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmInver.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="MemoramaNina.cs">
       <SubType>Form</SubType>
@@ -245,9 +242,6 @@
     <EmbeddedResource Include="FrmHilbert.resx">
       <DependentUpon>FrmHilbert.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmInversa.resx">
-      <DependentUpon>FrmInversa.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FrmOrdenamientoBusqueda.resx">
       <DependentUpon>FrmOrdenamientoBusqueda.cs</DependentUpon>
     </EmbeddedResource>
@@ -280,6 +274,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMaximoComunDivisor.resx">
       <DependentUpon>FrmMaximoComunDivisor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmInver.resx">
+      <DependentUpon>FrmInver.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MemoramaNina.resx">
       <DependentUpon>MemoramaNina.cs</DependentUpon>

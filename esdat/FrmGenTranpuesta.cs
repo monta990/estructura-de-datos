@@ -21,20 +21,27 @@ namespace esdat
             }
             else
             {
-                if (int.TryParse(tBcolumnas.Text, out int c) && int.TryParse(tBrenglones.Text, out int r))
+                try
                 {
-                    if (int.Parse(tBcolumnas.Text) >= 1 && int.Parse(tBrenglones.Text) >= 1)
+                    if (int.TryParse(tBcolumnas.Text, out int c) && int.TryParse(tBrenglones.Text, out int r))
                     {
-                        new FrmTranspuesta(int.Parse(tBcolumnas.Text), int.Parse(tBrenglones.Text)).Show();
+                        if (int.Parse(tBcolumnas.Text) >= 1 && int.Parse(tBrenglones.Text) >= 1)
+                        {
+                            new FrmTranspuesta(int.Parse(tBcolumnas.Text), int.Parse(tBrenglones.Text)).Show();
+                        }
+                        else
+                        {
+                            MessageBox.Show("El numero de renglones y columnas tiene que se positivo", "Solo numeros positivos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
                     else
                     {
-                        MessageBox.Show("El numero de renglones y columnas tiene que se positivo", "Solo numeros positivos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Solo numero enteros", "Solo enteros", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
-                else
+                catch (NullReferenceException)
                 {
-                    MessageBox.Show("Solo numero enteros", "Solo enteros", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Algun campo vacio");
                 }
             }
         }

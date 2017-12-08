@@ -90,13 +90,13 @@ namespace esdat
                 {
                     for (int r = 0; r < renglones; r++)
                     {
-                        if ((String)dGVmatriz1.Rows[renglones].Cells[columnas].Value == null || (String)dGVmatriz2.Rows[renglones].Cells[columnas].Value == null)
-                        {
-                            MessageBox.Show("Alguna celda esta vacia", "Celda Vacia", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
-                        else
+                        try
                         {
                             dGVresultado[c, r].Value = int.Parse(dGVmatriz1[c, r].Value.ToString()) + int.Parse(dGVmatriz2[c, r].Value.ToString());
+                        }
+                        catch (NullReferenceException)
+                        {
+                            MessageBox.Show("Algun campo esta vacio", "Campo vacio", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
                 }
@@ -109,10 +109,7 @@ namespace esdat
         private void btnIgual_Click(object sender, EventArgs e) => Igual();
         private void btnRandom_Click(object sender, EventArgs e) => Generar();
         private void button1_Click(object sender, EventArgs e) => this.Close();
-        private void btnEjemplo_Click(object sender, EventArgs e)
-        {
-            Ejemplo();
-        }
+        private void btnEjemplo_Click(object sender, EventArgs e) => Ejemplo();
         private void dGVmatriz1_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
             if ((String)dGVmatriz1.CurrentCell.Value == null)

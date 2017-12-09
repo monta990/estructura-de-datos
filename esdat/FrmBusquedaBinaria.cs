@@ -11,17 +11,24 @@ namespace esdat
             dGViewElementos.Rows.Clear();
             if (int.TryParse(tBelementos.Text,out int ele) && int.TryParse(tBlimite.Text, out int ele2))
             {
-                valores = new int[int.Parse(tBelementos.Text)]; //tBelementos
-                Random random1 = new Random();
-                for (int i = 0; i < valores.Length; i++)
+                if (ele2 <= 0)
                 {
-                    valores[i] = random1.Next(int.Parse(tBlimite.Text) + 1); //tBlimite.Text);
+                    MessageBox.Show("El limite no puede ser inferior 0", "Limite muy bajo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                Array.Sort(valores);
-                for (int i = 0; i < valores.Length; i++)
+                else
                 {
-                    dGViewElementos.Rows.Add(valores[i].ToString());
-                    dGViewElementos.Rows[i].HeaderCell.Value = i.ToString();
+                    valores = new int[ele]; //tBelementos
+                    Random random1 = new Random();
+                    for (int i = 0; i < valores.Length; i++)
+                    {
+                        valores[i] = random1.Next(ele2 + 1); //tBlimite.Text);
+                    }
+                    Array.Sort(valores);
+                    for (int i = 0; i < valores.Length; i++)
+                    {
+                        dGViewElementos.Rows.Add(valores[i].ToString());
+                        dGViewElementos.Rows[i].HeaderCell.Value = i.ToString();
+                    }
                 }
             }
             else
